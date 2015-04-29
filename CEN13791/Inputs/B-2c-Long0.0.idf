@@ -1,0 +1,1235 @@
+! European Standard CEN 13791 Test B-2c.idf
+! Basic file description: Whole Building test.
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     January 9, 2007
+! Run:
+! Building: Geometry B with west oriented double pane window with external shade.
+! Internal: Variable 15 W/m2, 50% radiant, 50% convective.
+! Ventilation:  Option c - constant 10 ach
+! System:   None.
+! Plant:    None.
+! Modified:
+
+  VERSION,8.1;
+
+  Site:Location,
+    UNKNOWN,                 !- Name
+    52.0,                    !- Latitude {deg}
+    0.0,                     !- Longitude {deg}
+    0,                       !- Time Zone {hr}
+    0;                       !- Elevation {m}
+
+  SimulationControl,
+    No,                      !- Do Zone Sizing Calculation
+    No,                      !- Do System Sizing Calculation
+    No,                      !- Do Plant Sizing Calculation
+    Yes,                     !- Run Simulation for Sizing Periods
+    No;                      !- Run Simulation for Weather File Run Periods
+
+  SizingPeriod:DesignDay,
+    LONDON/GATWICK Modified Ann Clg .4% Condns DB=>MWB,  !- Name
+    6,                       !- Month
+    15,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    28,                      !- Maximum Dry-Bulb Temperature {C}
+    16.0,                    !- Daily Dry-Bulb Temperature Range {deltaC}
+    DifferenceSchedule,      !- Dry-Bulb Temperature Range Modifier Type
+    Outdoor Temp Deltas,     !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    18.6,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    100582.,                 !- Barometric Pressure {Pa}
+    1.0,                     !- Wind Speed {m/s}
+    0.,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    Schedule,                !- Solar Model Indicator
+    Solar Data,              !- Beam Solar Day Schedule Name
+    Diffuse Data;            !- Diffuse Solar Day Schedule Name
+
+  Schedule:Day:List,
+    Outdoor Temp Deltas,     !- Name
+    Any Number,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    15,                      !- Minutes per Item
+    13.300,                  !- Value 1
+    13.500,                  !- <none>
+    13.700,                  !- <none>
+    13.900,                  !- <none>
+    14.100,                  !- <none>
+    14.300,                  !- <none>
+    14.500,                  !- <none>
+    14.700,                  !- <none>
+    14.875,                  !- <none>
+    15.050,                  !- <none>
+    15.225,                  !- <none>
+    15.400,                  !- <none>
+    15.500,                  !- <none>
+    15.600,                  !- <none>
+    15.700,                  !- <none>
+    15.800,                  !- <none>
+    15.850,                  !- <none>
+    15.900,                  !- <none>
+    15.950,                  !- <none>
+    16.000,                  !- <none>
+    15.925,                  !- <none>
+    15.850,                  !- <none>
+    15.775,                  !- <none>
+    15.700,                  !- <none>
+    15.500,                  !- <none>
+    15.300,                  !- <none>
+    15.100,                  !- <none>
+    14.900,                  !- <none>
+    14.525,                  !- <none>
+    14.150,                  !- <none>
+    13.775,                  !- <none>
+    13.400,                  !- <none>
+    12.900,                  !- <none>
+    12.400,                  !- <none>
+    11.900,                  !- <none>
+    11.400,                  !- <none>
+    10.800,                  !- <none>
+    10.200,                  !- <none>
+    9.600,                   !- <none>
+    9.000,                   !- <none>
+    8.300,                   !- <none>
+    7.600,                   !- <none>
+    6.900,                   !- <none>
+    6.200,                   !- <none>
+    5.575,                   !- <none>
+    4.950,                   !- <none>
+    4.325,                   !- <none>
+    3.700,                   !- <none>
+    3.225,                   !- <none>
+    2.750,                   !- <none>
+    2.275,                   !- <none>
+    1.800,                   !- <none>
+    1.475,                   !- <none>
+    1.150,                   !- <none>
+    0.825,                   !- <none>
+    0.500,                   !- <none>
+    0.375,                   !- <none>
+    0.250,                   !- <none>
+    0.125,                   !- <none>
+    0.000,                   !- <none>
+    0.125,                   !- <none>
+    0.250,                   !- <none>
+    0.375,                   !- <none>
+    0.500,                   !- <none>
+    0.775,                   !- <none>
+    1.050,                   !- <none>
+    1.325,                   !- <none>
+    1.600,                   !- <none>
+    2.050,                   !- <none>
+    2.500,                   !- <none>
+    2.950,                   !- <none>
+    3.400,                   !- <none>
+    3.900,                   !- <none>
+    4.400,                   !- <none>
+    4.900,                   !- <none>
+    5.400,                   !- <none>
+    5.925,                   !- <none>
+    6.450,                   !- <none>
+    6.975,                   !- <none>
+    7.500,                   !- <none>
+    7.950,                   !- <none>
+    8.400,                   !- <none>
+    8.850,                   !- <none>
+    9.300,                   !- <none>
+    9.700,                   !- <none>
+    10.100,                  !- <none>
+    10.500,                  !- <none>
+    10.900,                  !- <none>
+    11.225,                  !- <none>
+    11.550,                  !- <none>
+    11.875,                  !- <none>
+    12.200,                  !- <none>
+    12.425,                  !- <none>
+    12.650,                  !- <none>
+    12.875,                  !- <none>
+    13.100;                  !- <none>
+
+  Schedule:Day:List,
+    Solar Data,              !- Name
+    Any Number,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    15,                      !- Minutes per Item
+    0,                       !- Value 1
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    53.028,                  !- <none>
+    106.055,                 !- <none>
+    159.083,                 !- <none>
+    212.110,                 !- <none>
+    281.926,                 !- <none>
+    351.742,                 !- <none>
+    421.558,                 !- <none>
+    491.374,                 !- <none>
+    529.647,                 !- <none>
+    567.920,                 !- <none>
+    606.193,                 !- <none>
+    644.466,                 !- <none>
+    666.385,                 !- <none>
+    688.304,                 !- <none>
+    710.223,                 !- <none>
+    732.141,                 !- <none>
+    745.228,                 !- <none>
+    758.316,                 !- <none>
+    771.403,                 !- <none>
+    784.490,                 !- <none>
+    792.440,                 !- <none>
+    800.390,                 !- <none>
+    808.339,                 !- <none>
+    816.289,                 !- <none>
+    820.329,                 !- <none>
+    824.368,                 !- <none>
+    828.408,                 !- <none>
+    832.447,                 !- <none>
+    833.854,                 !- <none>
+    835.260,                 !- <none>
+    836.666,                 !- <none>
+    838.072,                 !- <none>
+    836.651,                 !- <none>
+    835.229,                 !- <none>
+    833.808,                 !- <none>
+    832.386,                 !- <none>
+    828.331,                 !- <none>
+    824.276,                 !- <none>
+    820.220,                 !- <none>
+    816.165,                 !- <none>
+    808.199,                 !- <none>
+    800.233,                 !- <none>
+    792.266,                 !- <none>
+    784.300,                 !- <none>
+    771.196,                 !- <none>
+    758.091,                 !- <none>
+    744.986,                 !- <none>
+    731.881,                 !- <none>
+    709.945,                 !- <none>
+    688.008,                 !- <none>
+    666.072,                 !- <none>
+    644.135,                 !- <none>
+    605.849,                 !- <none>
+    567.563,                 !- <none>
+    529.276,                 !- <none>
+    490.990,                 !- <none>
+    421.195,                 !- <none>
+    351.399,                 !- <none>
+    281.604,                 !- <none>
+    211.808,                 !- <none>
+    158.856,                 !- <none>
+    105.904,                 !- <none>
+    52.952,                  !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0;                       !- <none>
+
+  Schedule:Day:List,
+    Diffuse Data,            !- Name
+    Any Number,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    15,                      !- Minutes per Item
+    0,                       !- Value 1
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    8.50,                    !- <none>
+    17.00,                   !- <none>
+    25.50,                   !- <none>
+    34.00,                   !- <none>
+    43.75,                   !- <none>
+    53.50,                   !- <none>
+    63.25,                   !- <none>
+    73.00,                   !- <none>
+    78.00,                   !- <none>
+    83.00,                   !- <none>
+    88.00,                   !- <none>
+    93.00,                   !- <none>
+    95.75,                   !- <none>
+    98.50,                   !- <none>
+    101.25,                  !- <none>
+    104.00,                  !- <none>
+    105.50,                  !- <none>
+    107.00,                  !- <none>
+    108.50,                  !- <none>
+    110.00,                  !- <none>
+    111.00,                  !- <none>
+    112.00,                  !- <none>
+    113.00,                  !- <none>
+    114.00,                  !- <none>
+    114.50,                  !- <none>
+    115.00,                  !- <none>
+    115.50,                  !- <none>
+    116.00,                  !- <none>
+    116.25,                  !- <none>
+    116.50,                  !- <none>
+    116.75,                  !- <none>
+    117.00,                  !- <none>
+    116.75,                  !- <none>
+    116.50,                  !- <none>
+    116.25,                  !- <none>
+    116.00,                  !- <none>
+    115.50,                  !- <none>
+    115.00,                  !- <none>
+    114.50,                  !- <none>
+    114.00,                  !- <none>
+    113.00,                  !- <none>
+    112.00,                  !- <none>
+    111.00,                  !- <none>
+    110.00,                  !- <none>
+    108.50,                  !- <none>
+    107.00,                  !- <none>
+    105.50,                  !- <none>
+    104.00,                  !- <none>
+    101.25,                  !- <none>
+    98.50,                   !- <none>
+    95.75,                   !- <none>
+    93.00,                   !- <none>
+    88.00,                   !- <none>
+    83.00,                   !- <none>
+    78.00,                   !- <none>
+    73.00,                   !- <none>
+    63.25,                   !- <none>
+    53.50,                   !- <none>
+    43.75,                   !- <none>
+    34.00,                   !- <none>
+    25.50,                   !- <none>
+    17.00,                   !- <none>
+    8.50,                    !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0,                       !- <none>
+    0;                       !- <none>
+
+  Material,
+    Type 1-OuterLayer,       !- Name
+    Smooth,                  !- Roughness
+    0.115,                   !- Thickness {m}
+    0.99,                    !- Conductivity {W/m-K}
+    1800.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 1-InsulatingLayer,  !- Name
+    Smooth,                  !- Roughness
+    0.06,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    30.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 1-Masonry,          !- Name
+    Smooth,                  !- Roughness
+    0.175,                   !- Thickness {m}
+    0.79,                    !- Conductivity {W/m-K}
+    1600.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 1-InternalPlaster,  !- Name
+    Smooth,                  !- Roughness
+    0.015,                   !- Thickness {m}
+    0.70,                    !- Conductivity {W/m-K}
+    1400.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 2-GypsumPlaster,    !- Name
+    Smooth,                  !- Roughness
+    0.012,                   !- Thickness {m}
+    0.21,                    !- Conductivity {W/m-K}
+    900.,                    !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 2-InsulatingLayer,  !- Name
+    Smooth,                  !- Roughness
+    0.10,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    30.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-PlasticCovering-Interior,  !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1500.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-PlasticCovering-Exterior,  !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1500.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-CementFloor,      !- Name
+    Smooth,                  !- Roughness
+    0.06,                    !- Thickness {m}
+    1.40,                    !- Conductivity {W/m-K}
+    2000.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-InsulatingLayer,  !- Name
+    Smooth,                  !- Roughness
+    0.04,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    50.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-Concrete-Interior,!- Name
+    Smooth,                  !- Roughness
+    0.18,                    !- Thickness {m}
+    2.10,                    !- Conductivity {W/m-K}
+    2400.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 3-Concrete-Exterior,!- Name
+    Smooth,                  !- Roughness
+    0.18,                    !- Thickness {m}
+    2.10,                    !- Conductivity {W/m-K}
+    2400.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-PlasticCovering-Interior,  !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1500.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-PlasticCovering-Exterior,  !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1500.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-CementFloor,      !- Name
+    Smooth,                  !- Roughness
+    0.06,                    !- Thickness {m}
+    1.4,                     !- Conductivity {W/m-K}
+    2000.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-InsulatingLayer,  !- Name
+    Smooth,                  !- Roughness
+    0.04,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    50.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-Concrete,         !- Name
+    Smooth,                  !- Roughness
+    0.18,                    !- Thickness {m}
+    2.1,                     !- Conductivity {W/m-K}
+    2400.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-InsulatingLayer2, !- Name
+    Smooth,                  !- Roughness
+    0.10,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    50.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-AcousticBoard-Interior,  !- Name
+    Smooth,                  !- Roughness
+    0.02,                    !- Thickness {m}
+    0.06,                    !- Conductivity {W/m-K}
+    400.,                    !- Density {kg/m3}
+    840.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 4-AcousticBoard-Exterior,  !- Name
+    Smooth,                  !- Roughness
+    0.02,                    !- Thickness {m}
+    0.06,                    !- Conductivity {W/m-K}
+    400.,                    !- Density {kg/m3}
+    840.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 5-ExternalLayer,    !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1300.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.9,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 5-InsulatingLayer,  !- Name
+    Smooth,                  !- Roughness
+    0.08,                    !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    50.,                     !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.6,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    Type 5-Concrete,         !- Name
+    Smooth,                  !- Roughness
+    0.20,                    !- Thickness {m}
+    2.1,                     !- Conductivity {W/m-K}
+    2400.,                   !- Density {kg/m3}
+    850.0,                   !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    1.0,                     !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Construction,
+    CONST 1,                 !- Name
+    Type 1-OuterLayer,       !- Outside Layer
+    Type 1-InsulatingLayer,  !- Layer 2
+    Type 1-Masonry,          !- Layer 3
+    Type 1-InternalPlaster;  !- Layer 4
+
+  Construction,
+    CONST 2,                 !- Name
+    Type 2-GypsumPlaster,    !- Outside Layer
+    Type 2-InsulatingLayer,  !- Layer 2
+    Type 2-GypsumPlaster;    !- Layer 3
+
+  Construction,
+    CONST 3-Ceiling,         !- Name
+    Type 3-PlasticCovering-Exterior,  !- Outside Layer
+    Type 3-CementFloor,      !- Layer 2
+    Type 3-InsulatingLayer,  !- Layer 3
+    Type 3-Concrete-Interior;!- Layer 4
+
+  Construction,
+    CONST 3-Floor,           !- Name
+    Type 3-Concrete-Exterior,!- Outside Layer
+    Type 3-InsulatingLayer,  !- Layer 2
+    Type 3-CementFloor,      !- Layer 3
+    Type 3-PlasticCovering-Interior;  !- Layer 4
+
+  Construction,
+    CONST 4-Ceiling,         !- Name
+    Type 4-PlasticCovering-Exterior,  !- Outside Layer
+    Type 4-CementFloor,      !- Layer 2
+    Type 4-InsulatingLayer,  !- Layer 3
+    Type 4-Concrete,         !- Layer 4
+    Type 4-InsulatingLayer2, !- Layer 5
+    Type 4-AcousticBoard-Interior;  !- Layer 6
+
+  Construction,
+    CONST 4-Floor,           !- Name
+    Type 4-AcousticBoard-Exterior,  !- Outside Layer
+    Type 4-InsulatingLayer2, !- Layer 2
+    Type 4-Concrete,         !- Layer 3
+    Type 4-InsulatingLayer,  !- Layer 4
+    Type 4-CementFloor,      !- Layer 5
+    Type 4-PlasticCovering-Interior;  !- Layer 6
+
+  Construction,
+    CONST 5,                 !- Name
+    Type 5-ExternalLayer,    !- Outside Layer
+    Type 5-InsulatingLayer,  !- Layer 2
+    Type 5-Concrete;         !- Layer 3
+
+  WindowMaterial:Glazing,
+    Glass Type 1,            !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.003175,                !- Thickness {m}
+    0.84,                    !- Solar Transmittance at Normal Incidence
+    0.08,                    !- Front Side Solar Reflectance at Normal Incidence
+    0.08,                    !- Back Side Solar Reflectance at Normal Incidence
+    0.84,                    !- Visible Transmittance at Normal Incidence
+    0.08,                    !- Front Side Visible Reflectance at Normal Incidence
+    0.08,                    !- Back Side Visible Reflectance at Normal Incidence
+    0.0,                     !- Infrared Transmittance at Normal Incidence
+    0.000001,                !- Front Side Infrared Hemispherical Emissivity
+    0.000001,                !- Back Side Infrared Hemispherical Emissivity
+    100.;                    !- Conductivity {W/m-K}
+
+  Material:AirGap,
+    Air Space Resistance 1,  !- Name
+    0.08;                    !- Thermal Resistance {m2-K/W}
+
+  Material:AirGap,
+    Air Space Resistance 2,  !- Name
+    0.173;                   !- Thermal Resistance {m2-K/W}
+
+!  MATERIAL:WINDOWGLASS,
+!    Glass Type 1,            !- Name
+!    SpectralAverage,         !- Optical Data Type
+!    ,                        !- Name of Window Glass Spectral Data Set
+!    0.003175,                !- Thickness {m}
+!    0.86156,                 !- Solar Transmittance at Normal Incidence
+!    0.07846,                 !- Solar Reflectance at Normal Incidence: Front Side
+!    0.07846,                 !- Solar Reflectance at Normal Incidence: Back Side
+!    0.91325,                 !- Visible Transmittance at Normal Incidence
+!    0.08200,                 !- Visible Reflectance at Normal Incidence: Front Side
+!    0.08200,                 !- Visible Reflectance at Normal Incidence: Back Side
+!    0.0,                     !- IR Transmittance at Normal Incidence
+!    0.84,                    !- IR Hemispherical Emissivity: Front Side
+!    0.84,                    !- IR Hemispherical Emissivity: Back Side
+!    1.06;                    !- Conductivity {W/m-K}
+!
+
+  WindowMaterial:Gas,
+    AIR 13MM,                !- Name
+    Air,                     !- Gas Type
+    0.0127;                  !- Thickness {m}
+
+  WindowMaterial:Gas,
+    AIR 6MM,                 !- Name
+    Air,                     !- Gas Type
+    0.0063;                  !- Thickness {m}
+
+  WindowMaterial:Gas,
+    AIR 3MM,                 !- Name
+    Air,                     !- Gas Type
+    0.0032;                  !- Thickness {m}
+
+  WindowMaterial:Gas,
+    AIR 2MM,                 !- Name
+    Air,                     !- Gas Type
+    0.0021;                  !- Thickness {m}
+
+  WindowMaterial:Gas,
+    AIR 2.4MM,               !- Name
+    Air,                     !- Gas Type
+    0.0025;                  !- Thickness {m}
+
+  Construction,
+    Double Pane Window,      !- Name
+    Glass Type 1,            !- Outside Layer
+    AIR 2.4MM,               !- Layer 2
+    Glass Type 1;            !- Layer 3
+
+!  Input for Second Try with Vertical Shade in Front of Window and specifying Film Coefficients
+
+  Shading:Building:Detailed,
+    WEST WINDOW SHADE,       !- Name
+    Window Shade Transmittance,  !- Transmittance Schedule Name
+    4,                       !- Number of Vertices
+    -0.02,3.30,2.5665,  !- X,Y,Z ==> Vertex 1 {m}
+    -0.02,3.30,0.2335,  !- X,Y,Z ==> Vertex 2 {m}
+    -0.02,0.30,0.2335,  !- X,Y,Z ==> Vertex 3 {m}
+    -0.02,0.30,2.5665;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Schedule:Day:Hourly,
+    Day Sch Shade,           !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.2,                     !- Hour 1
+    0.2,                     !- Hour 2
+    0.2,                     !- Hour 3
+    0.2,                     !- Hour 4
+    0.2,                     !- Hour 5
+    0.2,                     !- Hour 6
+    0.2,                     !- Hour 7
+    0.2,                     !- Hour 8
+    0.2,                     !- Hour 9
+    0.2,                     !- Hour 10
+    0.2,                     !- Hour 11
+    0.2,                     !- Hour 12
+    0.2,                     !- Hour 13
+    0.2,                     !- Hour 14
+    0.2,                     !- Hour 15
+    0.2,                     !- Hour 16
+    0.2,                     !- Hour 17
+    0.2,                     !- Hour 18
+    0.2,                     !- Hour 19
+    0.2,                     !- Hour 20
+    0.2,                     !- Hour 21
+    0.2,                     !- Hour 22
+    0.2,                     !- Hour 23
+    0.2;                     !- Hour 24
+
+  Schedule:Week:Daily,
+    Week Sch Shade,          !- Name
+    Day Sch Shade,           !- Sunday Schedule:Day Name
+    Day Sch Shade,           !- Monday Schedule:Day Name
+    Day Sch Shade,           !- Tuesday Schedule:Day Name
+    Day Sch Shade,           !- Wednesday Schedule:Day Name
+    Day Sch Shade,           !- Thursday Schedule:Day Name
+    Day Sch Shade,           !- Friday Schedule:Day Name
+    Day Sch Shade,           !- Saturday Schedule:Day Name
+    Day Sch Shade,           !- Holiday Schedule:Day Name
+    Day Sch Shade,           !- SummerDesignDay Schedule:Day Name
+    Day Sch Shade,           !- WinterDesignDay Schedule:Day Name
+    Day Sch Shade,           !- CustomDay1 Schedule:Day Name
+    Day Sch Shade;           !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Window Shade Transmittance,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Week Sch Shade,          !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SUBSURFACE 1 WEST WINDOW,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    6.5,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  Timestep,60;
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE NORTH,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    2.5,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE SOUTH,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    2.5,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE EAST,       !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    2.5,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE WEST,       !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    13.5,                    !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE FLOOR,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    0.7,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    0.7,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE CEILING,    !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    5.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    5.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  Site:HeightVariation,
+    0.0,                     !- Wind Speed Profile Exponent
+    370,                     !- Wind Speed Profile Boundary Layer Thickness {m}
+    0.0;                     !- Air Temperature Gradient Coefficient {K/m}
+
+  ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    1;                       !- Calculation Frequency
+
+!  Ground temps according to Table 2 of specification is the mean monthly external air temp
+!  For June the temp ranges from 22C to 34 C, mean is 28C
+
+  Site:GroundTemperature:BuildingSurface,20.,20.,20.,20.,20.,20.,20.,20.,20.,20.,20.,20.;
+
+  Site:GroundReflectance,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2;
+
+  Building,
+    Test B-2c,               !- Name
+    0.0,                     !- North Axis {deg}
+    Country,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  Zone,
+    ZONE ONE,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.8,                     !- Ceiling Height {m}
+    55.44;                   !- Volume {m3}
+
+  ! ZoneCapacitanceMultiplier,1;
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE SOUTH,      !- Name
+    Wall,                    !- Surface Type
+    CONST 2,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE SOUTH,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,0.0,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    5.5,0.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    5.5,0.0,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE WEST,       !- Name
+    Wall,                    !- Surface Type
+    CONST 1,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,3.6,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,3.6,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0,0.0,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE SUBSURFACE 1 WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    Double Pane Window,      !- Construction Name
+    ZONE SURFACE WEST,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.5,                     !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.00,3.30,2.5665,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,3.30,0.2335,  !- X,Y,Z ==> Vertex 2 {m}
+    0.00,0.30,0.2335,  !- X,Y,Z ==> Vertex 3 {m}
+    0.00,0.30,2.5665;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE NORTH,      !- Name
+    Wall,                    !- Surface Type
+    CONST 2,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE NORTH,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    5.5,3.6,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    5.5,3.6,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0,3.6,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0,3.6,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE EAST,       !- Name
+    Wall,                    !- Surface Type
+    CONST 2,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE EAST,       !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    5.5,0.0,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    5.5,0.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    5.5,3.6,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    5.5,3.6,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE CEILING,    !- Name
+    Ceiling,                 !- Surface Type
+    CONST 3-Ceiling,         !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE CEILING,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,3.6,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,0.0,2.8,  !- X,Y,Z ==> Vertex 2 {m}
+    5.5,0.0,2.8,  !- X,Y,Z ==> Vertex 3 {m}
+    5.5,3.6,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE FLOOR,      !- Name
+    Floor,                   !- Surface Type
+    CONST 3-Floor,           !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE FLOOR,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,3.6,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    5.5,3.6,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    5.5,0.0,0.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  ScheduleTypeLimits,
+    Fraction,                !- Name
+    0.0,                     !- Lower Limit Value
+    1.0,                     !- Upper Limit Value
+    Continuous;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Any Number,              !- Name
+    0.0,                     !- Lower Limit Value
+    1000.0,                  !- Upper Limit Value
+    Continuous;              !- Numeric Type
+
+  OtherEquipment,
+    ZONE ONE OthEq 1,        !- Name
+    ZONE ONE,                !- Zone Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    297.0,                   !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.500,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  Schedule:Day:Hourly,
+    Day Sch 1,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0.0666667,               !- Hour 8
+    0.0666667,               !- Hour 9
+    0.0666667,               !- Hour 10
+    0.0666667,               !- Hour 11
+    0.666667,                !- Hour 12
+    0.666667,                !- Hour 13
+    0.666667,                !- Hour 14
+    0.666667,                !- Hour 15
+    0.0666667,               !- Hour 16
+    0.0666667,               !- Hour 17
+    0.0666667,               !- Hour 18
+    1.0,                     !- Hour 19
+    1.0,                     !- Hour 20
+    1.0,                     !- Hour 21
+    1.0,                     !- Hour 22
+    0.666667,                !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Week:Daily,
+    Week Sch 1,              !- Name
+    Day Sch 1,               !- Sunday Schedule:Day Name
+    Day Sch 1,               !- Monday Schedule:Day Name
+    Day Sch 1,               !- Tuesday Schedule:Day Name
+    Day Sch 1,               !- Wednesday Schedule:Day Name
+    Day Sch 1,               !- Thursday Schedule:Day Name
+    Day Sch 1,               !- Friday Schedule:Day Name
+    Day Sch 1,               !- Saturday Schedule:Day Name
+    Day Sch 1,               !- Holiday Schedule:Day Name
+    Day Sch 1,               !- SummerDesignDay Schedule:Day Name
+    Day Sch 1,               !- WinterDesignDay Schedule:Day Name
+    Day Sch 1,               !- CustomDay1 Schedule:Day Name
+    Day Sch 1;               !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Sch 1,                   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Week Sch 1,              !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  ZoneInfiltration:DesignFlowRate,
+    ZONE ONE Infil 1,        !- Name
+    ZONE ONE,                !- Zone or ZoneList Name
+    Sch 2,                   !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.0154,                  !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1.0,                     !- Constant Term Coefficient
+    0.0,                     !- Temperature Term Coefficient
+    0.0,                     !- Velocity Term Coefficient
+    0.0;                     !- Velocity Squared Term Coefficient
+
+  Schedule:Day:Hourly,
+    Day Sch 2,               !- Name
+    Any Number,              !- Schedule Type Limits Name
+    10.0,                    !- Hour 1
+    10.0,                    !- Hour 2
+    10.0,                    !- Hour 3
+    10.0,                    !- Hour 4
+    10.0,                    !- Hour 5
+    10.0,                    !- Hour 6
+    10.0,                    !- Hour 7
+    10.0,                    !- Hour 8
+    10.0,                    !- Hour 9
+    10.0,                    !- Hour 10
+    10.0,                    !- Hour 11
+    10.0,                    !- Hour 12
+    10.0,                    !- Hour 13
+    10.0,                    !- Hour 14
+    10.0,                    !- Hour 15
+    10.0,                    !- Hour 16
+    10.0,                    !- Hour 17
+    10.0,                    !- Hour 18
+    10.0,                    !- Hour 19
+    10.0,                    !- Hour 20
+    10.0,                    !- Hour 21
+    10.0,                    !- Hour 22
+    10.0,                    !- Hour 23
+    10.0;                    !- Hour 24
+
+  Schedule:Week:Daily,
+    Week Sch 2,              !- Name
+    Day Sch 2,               !- Sunday Schedule:Day Name
+    Day Sch 2,               !- Monday Schedule:Day Name
+    Day Sch 2,               !- Tuesday Schedule:Day Name
+    Day Sch 2,               !- Wednesday Schedule:Day Name
+    Day Sch 2,               !- Thursday Schedule:Day Name
+    Day Sch 2,               !- Friday Schedule:Day Name
+    Day Sch 2,               !- Saturday Schedule:Day Name
+    Day Sch 2,               !- Holiday Schedule:Day Name
+    Day Sch 2,               !- SummerDesignDay Schedule:Day Name
+    Day Sch 2,               !- WinterDesignDay Schedule:Day Name
+    Day Sch 2,               !- CustomDay1 Schedule:Day Name
+    Day Sch 2;               !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Sch 2,                   !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Week Sch 2,              !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,timestep;
+
+  Output:Variable,*,Site Wind Speed,timestep;
+
+  Output:Variable,*,Zone Mean Air Temperature,timestep;
+
+  Output:Variable,*,Zone Mean Radiant Temperature,timestep;
+
+  Output:Variable,*,Zone Operative Temperature,timestep;
+
+  Output:Variable,*,Site Diffuse Solar Radiation Rate per Area,timestep;
+
+  Output:Variable,*,Site Direct Solar Radiation Rate per Area,timestep;
+
+  Output:Variable,*,Site Ground Reflected Solar Radiation Rate per Area,timestep;
+
+  Output:Variable,*,Surface Inside face Temperature,timestep;
+
+  Output:Variable,*,Surface Outside face Temperature,timestep;
+
+  Output:Variable,*,Surface Inside Face Convection Heat Transfer Coefficient,timestep;
+
+  Output:Variable,*,Surface Outside Face Convection Heat Transfer Coefficient,timestep;
+
+  Output:Variable,*,Zone Air System Sensible Heating Energy,timestep;
+
+  Output:Variable,*,Zone Air System Sensible Cooling Energy,timestep;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Surfaces:List,Details;
+
+  Output:Constructions,Constructions;
+
+  Output:Variable,*,Surface Outside Face Sunlit Area,timestep;
+
+  Output:Variable,*,Surface Outside Face Sunlit Fraction,timestep;
+
+  report variable dictionary;
+
+  Output:Variable,*,Site Solar Azimuth Angle,timestep;
+
+  Output:Variable,*,Site Solar Altitude Angle,timestep;
+
+  Output:VariableDictionary,Regular;
+

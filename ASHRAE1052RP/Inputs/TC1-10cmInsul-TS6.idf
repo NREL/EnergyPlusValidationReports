@@ -1,0 +1,149 @@
+! ASHRAE Analytical TestTC1-10cmInsul.idf
+! Basic file description: ASHRAE Analytical Test-Transient Conduction-Adiabatic Wall.
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     December 19, 2000
+! Run:      Step change in outdoor drybulb temperature, no sun, no wind
+! Building: Cube 3m x 3m x 3m, one surface type.
+! Internal: None.
+! System:   None, floating temperature.
+! Plant:    None.
+! Modified: Conforms with Beta 4 input
+
+  VERSION,.;
+
+  Output:Diagnostics,
+    DisplayAdvancedReportVariables;  !- Key 1
+
+  Site:Location,
+    GOLDEN COLORADO,         !- Name
+    39.80,                   !- Latitude {deg}
+    -104.90,                 !- Longitude {deg}
+    -7.000000,               !- Time Zone {hr}
+    1609.0;                  !- Elevation {m}
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    ,                        !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    ,                        !- Apply Weekend Holiday Rule
+    ,                        !- Use Weather File Rain Indicators
+    ;                        !- Use Weather File Snow Indicators
+
+  Material,
+    LAYER 1,                 !- Name
+    Smooth,                  !- Roughness
+    0.10000,                 !- Thickness {m}
+    0.03000,                 !- Conductivity {W/m-K}
+    30.000,                  !- Density {kg/m3}
+    1300.00,                 !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+             ! Material layer names follow:
+
+  Construction,
+    TESTSURFACE,             !- Name
+    LAYER 1;                 !- Outside Layer
+
+  Timestep,6;
+
+! INSIDE CONVECTION ALGORITHM,     SIMPLE;
+! OUTSIDE CONVECTION ALGORITHM,    1;
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE NORTH,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    3.076,                   !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    10.22,                   !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    1;                       !- Calculation Frequency
+
+  Site:GroundReflectance,0,0,0,0,0,0,0,0,0,0,0,0;
+
+  Building,
+    TestTC1-10cmInsul,       !- Name
+    0.0,                     !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  Zone,
+    ZONE ONE,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    3.000,                   !- Ceiling Height {m}
+    27.0000;                 !- Volume {m3}
+
+  ! ZoneCapacitanceMultiplier,1;
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE NORTH,      !- Name
+    Wall,                    !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.000,3.000,3.000,  !- X,Y,Z ==> Vertex 1 {m}
+    3.000,3.000,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000,3.000,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000,3.000,3.000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+
+  Output:Variable,*,Zone Mean Air Temperature,Hourly;
+
+  Output:Variable,*,Site Diffuse Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Site Direct Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Site Ground Reflected Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Surface Inside face Temperature,Hourly;
+
+  Output:Variable,*,Surface Outside face Temperature,Hourly;
+
+  Output:Variable,*,Surface Inside Face Convection Heat Transfer Coefficient,Hourly;
+
+  Output:Variable,*,Surface Outside Face Convection Heat Transfer Coefficient,Hourly;
+
+  Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
+
+  Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Surfaces:List,Details;
+
+  Output:Constructions,Constructions;
+

@@ -1,0 +1,54 @@
+                        ! Material layer names follow:
+!  Version,
+!    3.2;                    !- Version Identifier
+!  Version,
+!    7.0;                    !- Version Identifier
+!  Version,
+!    7.2.0.002;              !- Version Identifier
+!  Version,
+!    8.0;                    !- Version Identifier
+!  Version,
+!    8.0;                    !- Version Identifier
+
+!  Version,
+!    8.0;                    !- Version Identifier
+
+  Construction,
+    WALL,                    !- Name
+    20 CM WOOD;              !- Outside Layer
+
+!  MATERIAL:REGULAR,
+!       0.1 MM ALUMINUM,   ! Material Name, Test 1.1
+!         1 CM CONCRETE,   ! Material Name, Test 3.1
+!         5 CM CONCRETE,   ! Material Name, Test 3.2
+!        10 CM CONCRETE,   ! Material Name, Test 3.3
+!        20 CM CONCRETE,   ! Material Name, Test 3.4
+!       1 CM INSULATION,   ! Material Name, Test 5.1
+!       5 CM INSULATION,   ! Material Name, Test 5.2
+!      10 CM INSULATION,   ! Material Name, Test 5.3
+!      20 CM INSULATION,   ! Material Name, Test 5.4
+!             1 CM WOOD,   ! Material Name, Test 7.1
+!             5 CM WOOD,   ! Material Name, Test 7.2
+!            10 CM WOOD,   ! Material Name, Test 7.3
+!            20 CM WOOD,   ! Material Name, Test 7.4
+!            2 MM GLASS,   ! Material Name, Test 9.1
+!         5 CM ALUMINUM,   ! Material Name, Test 10.1
+!             5 CM WOOD,   ! Materail Name, Test 11.1, Layer 1
+!             5 CM WOOD,   ! Materail Name, Test 11.1, Layer 2
+!             1 CM WOOD,   ! Materail Name, Test 11.2, Layer 1
+!      20 CM INSULATION,   ! Materail Name, Test 11.2, Layer 2
+!       0.1 MM ALUMINUM,   ! Materail Name, Test 11.3, Layer 1
+!      20 CM INSULATION,   ! Materail Name, Test 11.3, Layer 2
+
+  SurfaceProperty:ConvectionCoefficients:MultipleSurface,
+    AllExteriorSurfaces,     !- Surface Type
+    Outside,                 !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    10.79,                   !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Inside,                  !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    0.1,                     !- Convection Coefficient 2 {W/m2-K}
+    ;                        !- Convection Coefficient 2 Schedule Name
+

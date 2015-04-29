@@ -1,0 +1,25 @@
+- Version: 6.0.0.023
+  Code-Changes: Changed hot water heating coil model to variable UA
+
+- Version: 6.0.0.023
+  Code-Changes: Changed the default for hot water heating coil ratio value from 1.0 to 0.5
+
+- Version: 6.0.0.023
+  Code-Changes: Corrected error in Coil:Cooling:Water object where equation Q = UA \* LMTD was unbalanced
+
+- Version: 7.0.0.036
+  Code-Changes: Changed chilled water cooling coil model to variable UA (CR8530)
+
+- Version: 7.0.0.036
+  Code-Changes: Added feature to model water cooling coils with glycol mixtures
+
+- Version: 7.1.0.012
+  Input-File-Changes: Changed cooling coil design water flow rate from 0.001589 m/s to 0.00177 m/s
+
+- Version: 8.1.0.009
+  Code-Changes: For central hot water coils (Coil:Heating:Water) the autosizing calculations for UA were fixed to use the correct airflow rate for the rated conditions. (If the coil is operated at a different flow rate, the UA is adjusted up or down accordingly.) (CR9268)
+
+- Version: 8.2.0
+  Code-Changes: The EnergyPlus source code was converted from FORTRAN to C++. This produced negligible differences in results
+
+

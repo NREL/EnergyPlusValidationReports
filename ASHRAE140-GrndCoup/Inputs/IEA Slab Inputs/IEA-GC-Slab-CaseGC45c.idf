@@ -1,0 +1,90 @@
+! Slab Ground Temperature Calculator Input File  IEA-GC-Slab-CaseGC45c.IDF 
+! Slab input for BESTEST Ground-Coupled Indepth Case GC45c
+! Uninsulated slab, 36m x 4m slab floor, fixed deep boundary condition FixBC=TRUE
+! Using 5 inch slab thickness, smallest thickness allowed
+
+
+!    ===========  ALL OBJECTS IN CLASS: MATERIALS ===========
+
+Materials,
+    2,                       !- NMAT: Number of materials
+    0.0,                     !- ALBEDO: Surface Albedo: No Snow
+    0.0,                     !- ALBEDO: Surface Albedo: Snow
+    0.000001,                  !- EPSLW: Surface Emissivity: No Snow
+    0.000001,                  !- EPSLW: Surface Emissivity: Snow
+    0.000001,                  !- Z0: Surface Roughness: No Snow
+    0.000001,                  !- Z0: Surface Roughness: Snow
+    7.95,                     !- HIN: Indoor HConv: Downward Flow {W/m2-K}
+    7.95;                    !- HIN: Indoor HConv: Upward {W/m2-K}
+
+
+!    ===========  ALL OBJECTS IN CLASS: MATLPROPS ===========
+
+MatlProps,
+    1490,                    !  N1[RHO: Slab Material density: Validity: 2300.0 kg/m**3]
+    1490,                    !  N2[RHO: Soil Density: 1200.0 kg/m**3]
+    1800,                    !  N3[CP: Slab CP: Validity: 650.0 J/kg-K] 
+    1800,                    !  N4[CP: Soil CP: Validity: 1200.0 J/kg-K]
+    1.9,                     !  N5[TCON: Slab k: Validity: .9 W/m-K]
+    1.9;                     !  N6[TCON: Soil k: Vailidity: 1.0 W/m-K]
+
+
+!    ===========  ALL OBJECTS IN CLASS: BOUNDCONDS ===========
+
+BoundConds,
+    FALSE,                    !  A1 [EVTR: TRUE/FALSE: Is surface evapotranspiration modeled]
+    TRUE,                     !  A2 [FIXBC: TRUE/FALSE: is the lower boundary at a fixed temperature]
+    10,                       !  N1 [TDEEPin: User input lower boundary temperature if FIXBC is TRUE: C]
+    TRUE,                     !  A3 [USRHflag: TRUE/FALSE:  Is the ground surface h specified by the user?
+    100;                      !  N2 USERH: User specified ground surface heat transfer coeff: W/(m2 K)]
+
+
+!    ===========  ALL OBJECTS IN CLASS: BLDGPROPS ===========
+
+BldgProps,
+    25,                      !  N1[IYRS: Number of years to iterate: 10]
+    0,                       !  N2[Shape: Slab shape: 0 ONLY]
+    2.7,                     !  N3[HBLDG: Building height 0-20 m]
+    30,                      !  N4[TIN: January Indoor temperature set point: 21 C]
+    30,                      !  N5[TIN: February Indoor temperature set point: 21 C]
+    30,                      !  N6[TIN: March Indoor temperature set point: 21 C]
+    30,                      !  N7[TIN: April Indoor temperature set point: 21 C]
+    30,                      !  N8[TIN: May Indoor temperature set point: 21 C]
+    30,                      !  N9[TIN: June Indoor temperature set point: 21 C]
+    30,                      !  N10[TIN: July Indoor temperature set point: 21 C]
+    30,                      !  N11[TIN: August Indoor temperature set point: 21 C]
+    30,                      !  N12[TIN: September Indoor temperature set point: 21 C]
+    30,                      !  N13[TIN: October Indoor temperature set point: 21 C]
+    30,                      !  N14[TIN: November Indoor temperature set point: 21 C]
+    30,                      !  N15[TIN: December Indoor temperature set point: 21 C]
+    0,                       !  N16[TINAmp: Daily indoor sine wave variation amplitude: 0]
+    0.1;                     !  N17[ConvTol: Convergence Tolerance]
+
+    
+    
+!    ===========  ALL OBJECTS IN CLASS: INSULATION ===========
+
+Insulation,
+    0.,                       !  N1[RINS: R value of under slab insulation 0-2.0 W/m-K]
+    0.,                       !  N2[DINS: Width of strip of under slab insulation 0-2.0 m]
+    0.,                       !  N3[RVINS: R value of vertical insulation 0-3.0 W/m-K]
+    0.2,                      !  N4[ZVINS: Depth of vertical insulation .2 .4 .6 .8 1.0 1.5 2.0 2.5 3.0 m ONLY]
+    0;                        !  N5[IVINS: Flag: Is there vertical insulation 1=yes 0=no]
+
+
+!    ===========  ALL OBJECTS IN CLASS: EQUIVSLAB ===========
+
+EquivSlab,
+    1.8,                  !  N1[APRatio: The area to perimeter ratio for this slab: m]
+    TRUE;                   !  A1[EquivSizing: Flag: Will the dimensions of an equivalent slab 
+!                                 be calculated (TRUE) or will the dimensions be input directly? (FALSE)]
+
+
+!    ===========  ALL OBJECTS IN CLASS: EQUIVAUTOGRID ===========
+
+EquivAutoGrid, ! NOTE: EquivAutoGrid only necessary when EquivSizing is true 
+    0.1285059,                   !  N1[SLABDEPTH: Thickness of slab on grade, 0.1 m]  3 inches, smallest thickness allowed
+    8,                      !  N2[CLEARANCE: Distance from edge of slab to domain edge, 15.0 m]
+    15;                     !  N3 [ZCLEARANCE: Depth of region below slab, m] 
+
+

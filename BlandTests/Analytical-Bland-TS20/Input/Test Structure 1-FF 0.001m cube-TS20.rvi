@@ -1,0 +1,40 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Mean Radiant Temperature
+Zone Surface North,Surface Inside face Temperature
+Zone Surface North,Surface Outside face Temperature
+Zone Surface North,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface North,Surface Outside Face Convection Heat Transfer Coefficient
+Zone Surface South,Surface Inside face Temperature
+Zone Surface South,Surface Outside face Temperature
+Zone Surface South,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface South,Surface Outside Face Convection Heat Transfer Coefficient
+Zone Surface East,Surface Inside face Temperature
+Zone Surface East,Surface Outside face Temperature
+Zone Surface East,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface East,Surface Outside Face Convection Heat Transfer Coefficient
+Zone Surface West,Surface Inside face Temperature
+Zone Surface West,Surface Outside face Temperature
+Zone Surface West,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface West,Surface Outside Face Convection Heat Transfer Coefficient
+Zone Surface Top,Surface Inside face Temperature
+Zone Surface Top,Surface Outside face Temperature
+Zone Surface Top,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface Top,Surface Outside Face Convection Heat Transfer Coefficient
+Zone Surface Bottom,Surface Inside face Temperature
+Zone Surface Bottom,Surface Outside face Temperature
+Zone Surface Bottom,Surface Inside Face Convection Heat Transfer Coefficient
+Zone Surface Bottom,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+0
+
+
+
+
+
+

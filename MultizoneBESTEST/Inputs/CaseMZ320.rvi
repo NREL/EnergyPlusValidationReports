@@ -1,0 +1,56 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+ZONE A SURFACE WEST,Surface Inside face Temperature
+ZONE A SURFACE WEST,Surface Outside face Temperature
+ZONE A SURFACE NORTH,Surface Inside face Temperature
+ZONE A SURFACE NORTH,Surface Outside face Temperature
+ZONE A SURFACE EAST,Surface Inside face Temperature
+ZONE A SURFACE EAST,Surface Outside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE A SURFACE FLOOR,Surface Inside face Temperature
+ZONE A SURFACE FLOOR,Surface Outside face Temperature
+ZONE A SURFACE ROOF,Surface Inside face Temperature
+ZONE A SURFACE ROOF,Surface Outside face Temperature
+ZONE B SURFACE WEST,Surface Inside face Temperature
+ZONE B SURFACE WEST,Surface Outside face Temperature
+ZONE B SURFACE EAST,Surface Inside face Temperature
+ZONE B SURFACE EAST,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE NORTH,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE NORTH,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE SOUTH,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE SOUTH,Surface Outside face Temperature
+ZONE B SURFACE FLOOR,Surface Inside face Temperature
+ZONE B SURFACE FLOOR,Surface Outside face Temperature
+ZONE B SURFACE ROOF,Surface Inside face Temperature
+ZONE B SURFACE ROOF,Surface Outside face Temperature
+ZONE C SURFACE WEST,Surface Inside face Temperature
+ZONE C SURFACE WEST,Surface Outside face Temperature
+ZONE C SURFACE SOUTH,Surface Inside face Temperature
+ZONE C SURFACE SOUTH,Surface Outside face Temperature
+ZONE C SURFACE EAST,Surface Inside face Temperature
+ZONE C SURFACE EAST,Surface Outside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE C SURFACE FLOOR,Surface Inside face Temperature
+ZONE C SURFACE FLOOR,Surface Outside face Temperature
+ZONE C SURFACE ROOF,Surface Inside face Temperature
+ZONE C SURFACE ROOF,Surface Outside face Temperature
+ZONE A,Zone Other Equipment Convective Heating Energy
+ZONE B,Zone Other Equipment Convective Heating Energy
+ZONE C,Zone Other Equipment Convective Heating Energy
+ZONE A,Zone Mean Air Temperature
+ZONE B,Zone Mean Air Temperature
+ZONE C,Zone Mean Air Temperature
+ZONE A,Zone Air System Sensible Heating Energy
+ZONE A,Zone Air System Sensible Cooling Energy
+ZONE B,Zone Air System Sensible Heating Energy
+ZONE B,Zone Air System Sensible Cooling Energy
+ZONE C,Zone Air System Sensible Heating Energy
+ZONE C,Zone Air System Sensible Cooling Energy
+0
+
+
+
+

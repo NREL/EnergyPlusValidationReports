@@ -1,0 +1,17 @@
+- Version: 5.0.0.031
+  Code-Changes: Slab program and its inputs were i ntegrated into the EnergyPlus main program
+
+- Version: 6.0.0.001
+  Code-Changes: Added an error trap for out of range temperatures resulting from unstable solution (CR8113)
+
+- Version: 6.0.0.003
+  Code-Changes: Fixed verification of valid insulation depth (CR8145)
+
+- Version: 7.0.0.014
+  Code-Changes: Improved input validation for Slab preprocessor. (CR7114)
+
+- Version: 8.2.0
+  Code-Changes: The EnergyPlus source code was converted from FORTRAN to C++. This produced negligible differences in results
+
+
+

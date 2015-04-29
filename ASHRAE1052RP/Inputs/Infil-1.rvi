@@ -1,0 +1,34 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Outdoor Air Humidity Ratio
+Site Outdoor Air Enthalpy
+Site Outdoor Air Density
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+ZONE ONE,Zone Infiltration Sensible Heat Loss Energy
+ZONE ONE,Zone Infiltration Sensible Heat Gain Energy
+ZONE ONE,Zone Infiltration Current Density Volume
+ZONE ONE,Zone Infiltration Mass
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE ONE,Opening Factor Multiplier for COMIS Venting Modulation
+ZONE ONE,Inside Temp Setpoint for COMIS Venting
+ZONE ONE,AFN Surface Venting Availability Status
+ZONE ONE,Air Flow from FromZone to ToZone through COMIS Link
+ZONE ONE,Air Flow from ToZone to FromZone through COMIS Link
+Site Wind Speed
+0
+
+
+
+
+
+
+

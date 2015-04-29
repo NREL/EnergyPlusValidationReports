@@ -1,0 +1,68 @@
+- Version: 1.0.0.015
+  Code-Changes: Fixed shade fin inverted coordinates problem
+
+- Version: 1.0.1.001
+  Code-Changes: Change in weather processing file
+
+- Version: 1.0.1.008
+  Code-Changes: Change in solar position calculation
+
+- Version: 1.0.1.010
+  Code-Changes: Sunlit area calculation done for each timestep
+
+- Version: 1.0.1.037
+  Code-Changes: Added ability to input monthly ground reflectance
+
+- Version: 1.1.1.004
+  Code-Changes: Modify window calculation of transmittance and reflectance versus angle of incidence for single glass layer
+
+- Version: 1.0.1.040
+  Input-File-Changes: Set monthly ground reflectance to 0.20. Previously defaulted to 0.2 – 0.6 depending on month
+
+- Version: 1.0.1.026
+  Input-File-Changes: Set SHADOW CALCULATIONS = 1; previously defaulted to 20
+
+- Version: 1.0.3.006
+  Code-Changes: Changed weather interpolation to previous hour
+
+- Version: 1.0.3.015
+  Code-Changes: Changed to “half” interpolation for solar radiation
+
+- Version: 1.1.0.003
+  Input-File-Changes: Set surface inside convection coefficients to constants for certain tests
+  Code-Changes: New ConvectionCoefficients input object addeda
+
+- Version: 1.1.1.004
+  Code-Changes: Changed surface convection coefficient algorithms
+
+- Version: 1.2.0
+  Code-Changes: More changes to exterior convection coefficient algorithms
+
+- Version: 1.3.0.018
+  Input-File-Changes: Included new SITE ATMOSPHERIC VARIATION object which allows calculation of local outdoor air temperature and wind speed for each exterior surface. Air temperature gradient coefficient set to 0.0 to lockout air temperature variation.
+
+- Version: 1.3.018
+  Code-Changes: Algorithm error corrected for calculating when sun comes up – sun rises 10 minutes earlier now
+
+- Version: 2.1.0.023
+  Code-Changes: The methodology for handling solar diffuse through a window was completely reworked and was changed from uniform interior distribution of transmitted diffuse solar to distribution based on approximate view factors between transmitting windows and zone heat transfer surfaces. (CR7237)
+
+- Version: 3.0.0.028
+  Code-Changes: The algorithm for variable system timestep was revised. Changes include uniform system timestep length across zone timestep and stricter management of history terms for zone air conditions.
+
+- Version: 7.0.0.036
+  Input-File-Changes: For Test Case TC1, used the HeatBalanceAlgorithm object to override the convection coefficient lower limit of 0.1 to allow the inside surface convection coefficient to be set to 0.000001 which brought results closer to the ASHRAE 1052RP curve
+  Code-Changes: Shadow calculations were improved for non-convex shading surfaces. Had small impact on IntSolDist test results
+
+- Version: 8.0.0.008
+  Input-File-Changes: For all test cases using adiabatic massless surfaces where the specific heat for materials was set to 0.5 J/kg-K, the specific heat was reset to the new minimum value of 100 J/kg-K.
+  Code-Changes: The minimum value of the specific heat used for material specification was changed from \>0 J/kg-K to = \>100 J/kg-K 
+
+- Version: 8.0.0.008
+  Input-File-Changes: Changed solar position calculations for 1hr timesteps to help match better with other sub-hourly timesteps.
+
+- Version: 8.2.0
+  Code-Changes: The EnergyPlus source code was converted from FORTRAN to C++. This produced negligible differences in results
+
+
+

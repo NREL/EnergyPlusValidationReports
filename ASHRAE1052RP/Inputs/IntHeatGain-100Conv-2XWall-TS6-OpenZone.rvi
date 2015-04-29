@@ -1,0 +1,31 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Total Internal Radiant Heating Energy
+ZONE ONE,Zone Total Internal Convective Heating Energy
+ZONE ONE,Zone Other Equipment Radiant Heating Energy
+ZONE ONE,Zone Other Equipment Convective Heating Energy
+ZONE ONE,Zone Other Equipment Lost Heat Energy
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE NORTH,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE NORTH,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE EAST,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE WEST,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE CEILING,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE FLOOR,Surface Inside Face Convection Heat Transfer Coefficient
+Site Wind Speed
+0
+
+
+
+
+
+
+

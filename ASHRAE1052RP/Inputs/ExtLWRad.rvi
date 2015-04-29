@@ -1,0 +1,26 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+Site Ground Reflected Solar Radiation Rate per Area
+Site Sky Temperature
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Mean Air Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Thermal Radiation to Air Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Thermal Radiation to Sky Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Thermal Radiation to Ground Heat Transfer Coefficient
+Site Wind Speed
+0
+
+
+
+
+
+
+

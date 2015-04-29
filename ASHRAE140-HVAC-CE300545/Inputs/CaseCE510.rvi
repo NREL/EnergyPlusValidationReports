@@ -1,0 +1,38 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Outdoor Air Humidity Ratio
+ZONE ONE,Zone Other Equipment Radiant Heating Energy
+ZONE ONE,Zone Other Equipment Convective Heating Energy
+ZONE ONE,Zone Other Equipment Latent Gain Energy
+ZONE ONE,Zone Other Equipment Lost Heat Energy
+ZONE ONE,Zone Other Equipment Total Heating Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+ZONE ONE,Zone Air Relative Humidity
+HVAC,Average,DX Coil Total Cooling Rate
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Total Cooling Rate
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Total Cooling Energy
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Sensible Cooling Rate
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Sensible Cooling Energy
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Latent Cooling Rate
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Latent Cooling Energy
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Electric Power
+Heat Pump 1 With OA Cooling Coil,Cooling Coil Electric Energy
+Heat Pump DX Heating Coil 1,Heating Coil Total Heating Rate
+Heat Pump DX Heating Coil 1,Heating Coil Total Heating Energy
+Heat Pump 1 with OA Supply Fan,fan electric power
+Heat Pump 1 with OA Supply Fan,Fan Rise in Air Temperature
+ZONE ONE AirTermInletNode,System Node Temperature
+ZONE ONE AirTermInletNode,System Node Mass Flow Rate
+Heat Pump 1 with OA Air Loop Inlet Node,System Node Temperature
+Heat Pump 1 with OA Air Loop Inlet Node,System Node Mass Flow Rate
+Heat Pump 1 with OA Mixed Air Node,System Node Temperature
+Heat Pump 1 with OA Mixed Air Node,System Node Mass Flow Rate
+0
+
+
+
+
+
+

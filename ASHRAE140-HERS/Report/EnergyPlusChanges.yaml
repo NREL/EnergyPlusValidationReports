@@ -1,0 +1,9 @@
+- Version: 7.2.0.006
+  Code-Changes: The model coefficients for the DOE-2 outside face convection correlations were changed
+
+- Version: 8.0.0.008
+  Code-Changes: Corrected thermal resistance of the soil which affected cases using F-factor method(CR8886)
+
+- Version: 8.2.0
+  Code-Changes: EnergyPlus code was converted to C++
+

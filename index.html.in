@@ -1,0 +1,46 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+ table { margin: 1em; }
+ table thead { border-bottom: 1px solid #000; }
+ table td { padding: 5px; }
+ table th { padding: 5px; }
+</style>
+
+</head>
+
+<body>
+<table class="table-striped">
+  <tr><td colspan=3><strong>Public Reports</strong></td></tr>
+<tr><td>EnergyPlus ${ENERGYPLUS_VERSION} Testing with Building Thermal Envelope and Fabric Load Tests from ANSI/ASHRAE Standard 140-2011</td><td><a href="ASHRAE140-Envelope/ASHRAE140-Envelope-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-Envelope-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with ASHRAE 1052-RP Toolkit - Building Fabric Analytical Tests</td><td><a href="ASHRAE1052RP/ASHRAE1052RP-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE1052RP-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with Fuel-Fired Furnace Tests HE100 to HE230 from ANSI/ASHRAE Standard 140-2011</td><td><a href="ASHRAE140-HVAC-HE100230/ASHRAE140-HVAC-HE100230-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-HVAC-HE100230-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with Global Energy Balance Test</td><td><a href="GlobalEnergyBalance/GlobalEnergyBalance-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="GlobalEnergyBalance-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with HERS BESTEST Tests from ANSI/ASHRAE Standard 140-2011</td><td><a href="ASHRAE140-HERS/ASHRAE140-HERS-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-HERS-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with HVAC Equipment Component Tests</td><td><a href="HVACComponent/HVACComponent-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="HVACComponent-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with HVAC Equipment Performance Tests CE100 to CE200 from ANSI/ASHRAE Standard 140-2011</td><td><a href="ASHRAE140-HVAC-CE100200/ASHRAE140-HVAC-CE100200-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-HVAC-CE100200-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with HVAC Equipment Performance Tests CE300 to CE545 from ANSI/ASHRAE Standard 140-2011</td><td><a href="ASHRAE140-HVAC-CE300545/ASHRAE140-HVAC-CE300545-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-HVAC-CE300545-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with IEA BESTEST In-Depth Ground Coupled Heat Transfer Tests Related to Slab-on-Grade Construction</td><td><a href="ASHRAE140-GrndCoup/ASHRAE140-GrndCoup-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="ASHRAE140-GrndCoup-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with IEA BESTEST Mechanical Equipment &amp; Control Strategies for a Chilled Water and a Hot Water System</td><td><a href="IEAMechanical/IEAMechanical-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="IEAMechanical-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>EnergyPlus Testing with IEA BESTEST Multi-Zone Non-Airflow In-Depth Diagnostic Cases MZ320 - MZ360</td><td><a href="MultizoneBESTEST/MultizoneBESTEST-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="MultizoneBESTEST-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+
+<tr><td colspan=3><strong>Internal Reports</strong></td></tr>
+
+<tr><td>EnergyPlus Testing with BEpac/Bland Conduction Tests, Energyplus Version ${ENERGYPLUS_VERSION}</td><td><a href="BlandTests/BlandTests-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="BlandTests-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>IEA Bestest Multi-Zone With Air Flow Cases MA101 - MA103 and Cases MA301 - MA304, Energyplus version ${ENERGYPLUS_VERSION}</td><td><a href="MultizoneBESTESTWithAirflow/MultizoneBESTESTWithAirflow-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="MultizoneBESTESTWithAirflow-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>Self-Comparison Test Suite for Shading Calculations, Energyplus version ${ENERGYPLUS_VERSION}</td><td><a href="Shading/Shading-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="Shading-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>Tests for Software Accreditation and Verification CIBSE TM33: 2006 Report, Energyplus version ${ENERGYPLUS_VERSION}</td><td><a href="CIBSE_TM33/CIBSE_TM33-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="CIBSE_TM33-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+<tr><td>Thermal Performance of Buildings European Standard en iso 13791 Testing Report, Energyplus Version ${ENERGYPLUS_VERSION}</td><td><a href="CEN13791/CEN13791-${ENERGYPLUS_VERSION}.html">html</a></td><td><a href="CEN13791-${ENERGYPLUS_VERSION}.pdf">pdf</a></td></tr>
+
+
+</table>
+</body>
+</html>

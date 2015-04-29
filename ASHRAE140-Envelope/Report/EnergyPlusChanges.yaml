@@ -1,0 +1,135 @@
+- Version: 1.0.1.001
+  Code-Changes: Change in weather processing file
+
+- Version: 1.0.1.008
+  Code-Changes: Change in solar position calculation
+
+- Version: 1.0.1.037
+  Code-Chnages: Added ability to input monthly ground reflectance
+
+- Version: 1.0.1.040
+  Input-File-Changes: Set monthly ground reflectance to 0.20. Previously defaulted to 0.2 – 0.6 depending on month
+
+- Version: 1.0.1.026
+  Input-File-Changes: Set SHADOW CALCULATIONS = 1; previously defaulted to 20
+
+- Version: 1.0.3.006
+  Code-Changes: Changed weather interpolation to previous hour
+
+- Version: 1.0.3.015
+  Code-Changes: Changed to “half” interpolation for solar radiation
+
+- Version: 1.1.1.004
+  Code-Changes: Changed surface convection coefficient algorithms
+
+- Version: 1.2.0
+  Code-Changes: More changes to exterior convection coefficient algorithms
+
+- Version: 1.3.0.018
+  Input-File-Changes: Included new SITE ATMOSPHERIC VARIATION object to allow calculation of local outdoor air temperature and wind speed for each exterior surface
+
+- Version: 1.3.0.018
+  Input-File-Changes: For Case 960, changed solar distribution option from FullExterior to FullInteriorAndExterior; also for case 960, corrected the order of coordinates for the common wall
+
+- Version: 1.3.0.018
+  Input-File-Changes: For all cases, began using a new Drycold weather file converted directly from TMY to EPW format with EnergyPlus weather converter; previously used a weather file that was first converted to BLAST format and then to EPW format.
+
+- Version: 1.4.0.004
+  Code-Changes: The sunlit area calculation for DOORS was corrected. This affected the results for Cases 200, 210, 215, 220, 230, 240, 250, 395, 400, 410, 420 and 430 where windows were replaced with an opaque surface which had been modeled as a DOOR. (CR6989)
+
+- Version: 2.1.0.023
+  Code-Changes: The methodology for handling solar diffuse through a window was completely reworked and was changed from uniform interior distribution of transmitted diffuse solar to distribution based on approximate view factors between transmitting windows and zone heat transfer surfaces. (CR7237)
+  Description: |
+    Significant changes also occurred in EnergyPlus version 2.1.0.023 where
+    the methodology for treating window diffuse solar radiation within a
+    zone was changed. The annual and peak heating results were less than
+    those reported with version 2.0.0.025 and annual and peak cooling
+    results were greater than those reported previously. Annual heating
+    changed by as much as -2.7% and annual cooling changed by as much as +7%
+    depending on the test case. Peak heating changed by as much as -0.3% and
+    peak cooling changed by as much as +2.1% depending on the test case.
+
+- Version: 3.0.0.028
+  Code-Changes: The algorithm for variable system timestep was revised. Changes include uniform system timestep length across zone timestep and stricter management of history terms for zone air conditions.
+  Description: |
+    The change highlighted above for version 3.0.0.028 had only a small
+    impact on results (usually \<0.5% change) compared to results obtained
+    with version 2.2.0.023 except for the heating/cooling temperature
+    setback cases 640 and 940. For both cases the annual heating decreased
+    by about 5% while the peak heating decreased by 12-15%. In the case of
+    640 peak heating, the impact was to move EnergyPlus to within the bounds
+    of the other programs. In the case of 940 annual heating it moved
+    EnergyPlus just outside the range of other programs.
+
+- Version: 3.1.0.027
+  Input-File-Changes: Changed SurfaceConvectionAlgorithm:Outside from Detailed to DOE-2 method.
+  Code-Changes: The default for SurfaceConvectionAlgorithm:Outside was changed from Detailed to DOE-2 method. (CR7703)
+  Description: |
+    For EnergyPlus version 3.1.0.027, the default value for
+    SurfaceConvectionAlgorithm:Outside was changed from Detailed to DOE-2
+    method. This change was made because the Detailed method was flawed when
+    applied to small surfaces or subsurfaces which are part of a larger
+    overall building facade. The input files for the test suite were
+    modified to use this new default method. The change to the DOE-2 outside
+    convection coefficient algorithm in EnergyPlus version 3.1.0.027 had the
+    overall result of reducing annual heating results and consequently for 3
+    additional cases the EnergyPlus annual heating results moved outside the
+    range of the other programs.
+
+- Version: 4.0.0.013
+  Code-Changes: Algorithms for window convection coefficients were changed (CR7820)
+  Description: |
+    For EnergyPlus 4.0.0.013, the window convection coefficient algorithms
+    were changed due to errors which occurred when temperatures were out of
+    range and with one routine where the temperature being passed was in K
+    rather than C.
+
+- Version: 4.0.0.024
+  Input-File-Changes: For Case 960 the Common Wall (wall between conditioned zone and sunspace) solar absorptance was changed from 0.75 to 0.60 to conform to specification.
+  Description: |
+    For EnergyPlus version 4.0.0.024, the solar absorptance for the Common
+    Wall separating the conditioned zone and the sunspace in Case 960 was
+    changed from 0.75 to 0.60, correcting an input error. As a result the
+    annual heating increased by 3.7% and the annual cooling decreased by
+    4.0% bringing both results closer to the middle of the range of results
+    for the other programs.
+
+- Version: 6.0.0.012
+  Input-File-Changes: Changed SurfaceConvectionAlgorithm:Inside from Detailed to TARP which gives same results; eliminated the ZoneCapacitanceMultiplier object to let it default
+
+- Version: 7.1.0.007
+  Code-Changes: The interpolation of rain and snow flags in the weather data was revised to better match how the other weather data are interpolated. (CR8800)
+
+- Version: 7.1.0.012
+  Description: |
+    For EnergyPlus version 7.1.0.012, the interpolation of the rain and snow
+    flags in the weather data was revised to better match how other weather
+    data are interpolated. This had a small impact on exterior surface heat
+    transfer due to changes in the surface exterior film coefficient and
+    temperature difference across the surface. Changes on the order of 0.5%
+    or less occurred in annual zone heating or zone annual sensible cooling
+    for many test cases.
+
+- Version: 7.2.0.006
+  Code-Changes: The model coefficients for the DOE-2 outside face convection correlations were changed
+  Description: |
+    In version 7.2.0.006 the model coefficients for the DOE-2 outside face
+    convection correlations were changed which resulted in annual heating
+    loads increasing by as much as 5.5% and annual cooling loads decreasing
+    by as much as 12.2%.
+
+- Version: 8.2.0
+  Input-File-Changes: Corrected error in Case 800, changed floor construction from LTFLOOR to HWFLOOR
+  Code-Changes: EnergyPlus code was converted to C++
+  Description: |
+    In version 8.2.0 an error was found with the input for Case 800 and
+    corrected. The floor construction had been previously specified as light
+    weight construction (LWFLOOR) and should be heavy weight construction
+    (HWFLOOR). The result was a reduction of 1% in annual heating and peak
+    heating and a reduction of 17% in annual cooling and peak cooling.
+    Results remained within the bounds of the other test program results.
+
+    For EnergyPlus version 8.2.0, the source code was converted from FORTRAN
+    to C++. This produced negligible differences in results.
+
+

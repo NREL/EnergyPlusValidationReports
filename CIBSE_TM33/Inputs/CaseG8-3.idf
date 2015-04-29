@@ -1,0 +1,704 @@
+! CIBSE TM33 Case G8.3-Overheating Risk
+! Basic file description: Two zone building with all surfaces different
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     Dec 19, 2012
+! Run:      CIBSE TM33 Design Summer Year
+! Building: Fictional 2 zone building, lightweight construction with Type A glass
+! Internal: None.
+! System:   None.
+! Plant:    None.
+
+  VERSION,7.2;
+
+  Site:Location,
+    LONDON,                  !- Name
+    51.48,                   !- Latitude {deg}
+    -0.45,                   !- Longitude {deg}
+    0,                       !- Time Zone {hr}
+    24.0;                    !- Elevation {m}
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    ,                        !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    ,                        !- Apply Weekend Holiday Rule
+    ,                        !- Use Weather File Rain Indicators
+    ;                        !- Use Weather File Snow Indicators
+
+  Material,
+    BRICK,                   !- Name
+    Smooth,                  !- Roughness
+    0.115,                   !- Thickness {m}
+    0.99,                    !- Conductivity {W/m-K}
+    1800.,                   !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.8,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+  Material,
+    INSULATION 1,            !- Name
+    Smooth,                  !- Roughness
+    0.060,                   !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    30.,                     !- Density {kg/m3}
+    850,                     !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    MASONRY,                 !- Name
+    Smooth,                  !- Roughness
+    0.175,                   !- Thickness {m}
+    0.79,                    !- Conductivity {W/m-K}
+    1600.,                   !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    PLASTER 1,               !- Name
+    Smooth,                  !- Roughness
+    0.015,                   !- Thickness {m}
+    0.70,                    !- Conductivity {W/m-K}
+    1400.,                   !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.3,                     !- Solar Absorptance
+    0.3;                     !- Visible Absorptance
+
+             ! Material layer names follow:
+
+  Construction,
+    EXT WALL,                !- Name
+    BRICK,                   !- Outside Layer
+    INSULATION 1,            !- Layer 2
+    MASONRY,                 !- Layer 3
+    PLASTER 1;               !- Layer 4
+
+  Material,
+    PLASTER 2,               !- Name
+    Smooth,                  !- Roughness
+    0.012,                   !- Thickness {m}
+    0.21,                    !- Conductivity {W/m-K}
+    900.,                    !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.3,                     !- Solar Absorptance
+    0.3;                     !- Visible Absorptance
+
+             ! Material layer names follow:
+
+  Construction,
+    INT WALL 1,              !- Name
+    PLASTER 2,               !- Outside Layer
+    INSULATION 1,            !- Layer 2
+    PLASTER 2;               !- Layer 3
+
+  Material,
+    INSULATION 2,            !- Name
+    Smooth,                  !- Roughness
+    1.000,                   !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    50.,                     !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material,
+    TIMBER,                  !- Name
+    Smooth,                  !- Roughness
+    0.025,                   !- Thickness {m}
+    0.15,                    !- Conductivity {W/m-K}
+    650.,                    !- Density {kg/m3}
+    1600.,                   !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.8,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+             ! Material layer names follow:
+
+  Construction,
+    FLOOR 2,                 !- Name
+    INSULATION 2,            !- Outside Layer
+    TIMBER;                  !- Layer 2
+
+  Material,
+    TILES,                   !- Name
+    Smooth,                  !- Roughness
+    0.004,                   !- Thickness {m}
+    0.23,                    !- Conductivity {W/m-K}
+    1500.,                   !- Density {kg/m3}
+    1300.,                   !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.9,                     !- Solar Absorptance
+    0.9;                     !- Visible Absorptance
+
+  Material,
+    CONCRETE-ROOF,           !- Name
+    Smooth,                  !- Roughness
+    0.200,                   !- Thickness {m}
+    2.1,                     !- Conductivity {W/m-K}
+    2400.,                   !- Density {kg/m3}
+    850.,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.3,                     !- Solar Absorptance
+    0.3;                     !- Visible Absorptance
+
+  Material,
+    ACOUSTIC TILE,           !- Name
+    Smooth,                  !- Roughness
+    0.020,                   !- Thickness {m}
+    0.06,                    !- Conductivity {W/m-K}
+    400.,                    !- Density {kg/m3}
+    840.,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.3,                     !- Solar Absorptance
+    0.3;                     !- Visible Absorptance
+
+  Material:AirGap,
+    ROOF AIR SPACE,          !- Name
+    0.18;                    !- Thermal Resistance {m2-K/W}
+
+             ! Material layer names follow:
+
+  Construction,
+    ROOF 2,                  !- Name
+    TILES,                   !- Outside Layer
+    INSULATION 2,            !- Layer 2
+    CONCRETE-ROOF,           !- Layer 3
+    ROOF AIR SPACE,          !- Layer 4
+    ACOUSTIC TILE;           !- Layer 5
+
+  WindowMaterial:Glazing,
+    TM33 Clear Glass,        !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.006,                   !- Thickness {m}
+    0.789,                   !- Solar Transmittance at Normal Incidence
+    0.072,                   !- Front Side Solar Reflectance at Normal Incidence
+    0.072,                   !- Back Side Solar Reflectance at Normal Incidence
+    0.789,                   !- Visible Transmittance at Normal Incidence
+    0.072,                   !- Front Side Visible Reflectance at Normal Incidence
+    0.072,                   !- Back Side Visible Reflectance at Normal Incidence
+    0.0,                     !- Infrared Transmittance at Normal Incidence
+    0.837,                   !- Front Side Infrared Hemispherical Emissivity
+    0.837,                   !- Back Side Infrared Hemispherical Emissivity
+    1.06;                    !- Conductivity {W/m-K}
+
+  WindowMaterial:Glazing,
+    TM33 Low E Glass,        !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.006,                   !- Thickness {m}
+    0.678,                   !- Solar Transmittance at Normal Incidence
+    0.091,                   !- Front Side Solar Reflectance at Normal Incidence
+    0.108,                   !- Back Side Solar Reflectance at Normal Incidence
+    0.678,                   !- Visible Transmittance at Normal Incidence
+    0.091,                   !- Front Side Visible Reflectance at Normal Incidence
+    0.108,                   !- Back Side Visible Reflectance at Normal Incidence
+    0.0,                     !- Infrared Transmittance at Normal Incidence
+    0.837,                   !- Front Side Infrared Hemispherical Emissivity
+    0.17,                    !- Back Side Infrared Hemispherical Emissivity
+    1.06;                    !- Conductivity {W/m-K}
+
+  WindowMaterial:Gas,
+    Air Space Resistance,    !- Name
+    AIR,                     !- Gas Type
+    0.012;                   !- Thickness {m}
+
+  Construction,
+    TM33 Type A Window,      !- Name
+    TM33 Clear Glass,        !- Outside Layer
+    Air Space Resistance,    !- Layer 2
+    TM33 Low E Glass;        !- Layer 3
+
+  Site:GroundTemperature:BuildingSurface,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0;
+
+  Site:GroundReflectance,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2;
+
+  Timestep,6;
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE EAST,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE ROOF,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE FLOOR,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    0.7,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE WEST,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE ROOF,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE FLOOR,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    0.7,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE NORTH,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE SOUTH,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE ONE SURFACE WEST,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE NORTH,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE SOUTH,  !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE TWO SURFACE EAST,   !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    8.0,                     !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  ShadowCalculation,
+    1;                       !- Calculation Frequency
+
+  Building,
+    Case G8.3,               !- Name
+    0.0000000E+00,           !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  Zone,
+    ZONE ONE,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.7000,                  !- Ceiling Height {m}
+    129.6;                   !- Volume {m3}
+
+  ZoneCapacitanceMultiplier:ResearchSpecial,
+    1,                       !- Temperature Capacity Multiplier
+    1,                       !- Humidity Capacity Multiplier
+    1,                       !- Carbon Dioxide Capacity Multiplier
+    1.0;                     !- Generic Contaminant Capacity Multiplier
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    WorldCoordinateSystem;   !- Coordinate System
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE NORTH,  !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    0.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    0.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE EAST,   !- Name
+    Wall,                    !- Surface Type
+    INT WALL 1,              !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE TWO SURFACE WEST,   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,0.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,0.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,0.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,0.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,0.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,0.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE ONE SUBSURFACE,     !- Name
+    Window,                  !- Surface Type
+    TM33 Type A WINDOW,      !- Construction Name
+    ZONE ONE SURFACE SOUTH,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.5,                     !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.50,0.00,2.45,  !- X,Y,Z ==> Vertex 1 {m}
+    0.50,0.00,0.20,  !- X,Y,Z ==> Vertex 2 {m}
+    2.50,0.00,0.20,  !- X,Y,Z ==> Vertex 3 {m}
+    2.50,0.00,2.45;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE WEST,   !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    0.00,0.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    0.00,0.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE FLOOR,  !- Name
+    Floor,                   !- Surface Type
+    FLOOR 2,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.00,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,0.00,0.00,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,0.00,0.00;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE ONE SURFACE ROOF,   !- Name
+    Roof,                    !- Surface Type
+    ROOF 2,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.00,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    0.00,0.00,2.70,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,0.00,2.70,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE TWO,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.7000,                  !- Ceiling Height {m}
+    129.6;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE NORTH,  !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    6.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE EAST,   !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.00,0.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    6.00,0.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    6.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    6.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    EXT WALL,                !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,0.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,0.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    6.00,0.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    6.00,0.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE TWO SUBSURFACE,     !- Name
+    Window,                  !- Surface Type
+    TM33 Type A WINDOW,      !- Construction Name
+    ZONE TWO SURFACE SOUTH,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.5,                     !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    3.50,0.00,2.45,  !- X,Y,Z ==> Vertex 1 {m}
+    3.50,0.00,0.20,  !- X,Y,Z ==> Vertex 2 {m}
+    5.50,0.00,0.20,  !- X,Y,Z ==> Vertex 3 {m}
+    5.50,0.00,2.45;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE WEST,   !- Name
+    Wall,                    !- Surface Type
+    INT WALL 1,              !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE ONE SURFACE EAST,   !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    3.00,0.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    3.00,0.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE FLOOR,  !- Name
+    Floor,                   !- Surface Type
+    FLOOR 2,                 !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.00,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,0.00,0.00,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,8.00,0.00,  !- X,Y,Z ==> Vertex 2 {m}
+    6.00,8.00,0.00,  !- X,Y,Z ==> Vertex 3 {m}
+    6.00,0.00,0.00;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE TWO SURFACE ROOF,   !- Name
+    Roof,                    !- Surface Type
+    ROOF 2,                  !- Construction Name
+    ZONE TWO,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.00,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    3.00,8.00,2.70,  !- X,Y,Z ==> Vertex 1 {m}
+    3.00,0.00,2.70,  !- X,Y,Z ==> Vertex 2 {m}
+    6.00,0.00,2.70,  !- X,Y,Z ==> Vertex 3 {m}
+    6.00,8.00,2.70;  !- X,Y,Z ==> Vertex 4 {m}
+
+  ScheduleTypeLimits,
+    Fraction,                !- Name
+    0.0,                     !- Lower Limit Value
+    1.0,                     !- Upper Limit Value
+    Continuous;              !- Numeric Type
+
+  Schedule:Day:Hourly,
+    Day Sch 1,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+    1,                       !- Hour 1
+    1,                       !- Hour 2
+    1,                       !- Hour 3
+    1,                       !- Hour 4
+    1,                       !- Hour 5
+    1,                       !- Hour 6
+    1,                       !- Hour 7
+    1,                       !- Hour 8
+    1,                       !- Hour 9
+    1,                       !- Hour 10
+    1,                       !- Hour 11
+    1,                       !- Hour 12
+    1,                       !- Hour 13
+    1,                       !- Hour 14
+    1,                       !- Hour 15
+    1,                       !- Hour 16
+    1,                       !- Hour 17
+    1,                       !- Hour 18
+    1,                       !- Hour 19
+    1,                       !- Hour 20
+    1,                       !- Hour 21
+    1,                       !- Hour 22
+    1,                       !- Hour 23
+    1;                       !- Hour 24
+
+  Schedule:Week:Daily,
+    Week Sch 1,              !- Name
+    Day Sch 1,               !- Sunday Schedule:Day Name
+    Day Sch 1,               !- Monday Schedule:Day Name
+    Day Sch 1,               !- Tuesday Schedule:Day Name
+    Day Sch 1,               !- Wednesday Schedule:Day Name
+    Day Sch 1,               !- Thursday Schedule:Day Name
+    Day Sch 1,               !- Friday Schedule:Day Name
+    Day Sch 1,               !- Saturday Schedule:Day Name
+    Day Sch 1,               !- Holiday Schedule:Day Name
+    Day Sch 1,               !- SummerDesignDay Schedule:Day Name
+    Day Sch 1,               !- WinterDesignDay Schedule:Day Name
+    Day Sch 1,               !- CustomDay1 Schedule:Day Name
+    Day Sch 1;               !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Sch 1,                   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Week Sch 1,              !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  ZoneInfiltration:DesignFlowRate,
+    ZONE ONE Infil 1,        !- Name
+    ZONE ONE,                !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.018,                  !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1.0,                     !- Constant Term Coefficient
+    0.0,                     !- Temperature Term Coefficient
+    0.0,                     !- Velocity Term Coefficient
+    0.0;                     !- Velocity Squared Term Coefficient
+
+  ZoneInfiltration:DesignFlowRate,
+    ZONE TWO Infil 1,        !- Name
+    ZONE TWO,                !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.018,                  !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1.0,                     !- Constant Term Coefficient
+    0.0,                     !- Temperature Term Coefficient
+    0.0,                     !- Velocity Term Coefficient
+    0.0;                     !- Velocity Squared Term Coefficient
+
+
+  Output:Variable,*,Outdoor Dry Bulb,Hourly;
+
+  Output:Variable,*,Wind Speed,Hourly;
+
+  Output:Variable,*,Zone Infiltration Sensible Heat Loss;
+
+  Output:Variable,*,Zone Infiltration Sensible Heat Gain;
+
+  Output:Variable,*,Zone Infiltration Volume Current Density;
+
+  Output:Variable,*,Zone Infiltration Mass;
+
+  Output:Variable,*,Zone Mean Air Temperature,Hourly;
+
+  Output:Variable,*,Zone Operative Temperature,Hourly;
+
+  Output:Variable,*,Zone Air Relative Humidity,Hourly;
+
+  Output:Variable,*,Zone/Sys Sensible Heating Energy,Hourly;
+
+  Output:Variable,*,Zone/Sys Sensible Cooling Energy,Hourly;
+
+  Output:Variable,*,direct solar,Hourly;
+
+  Output:Variable,*,diffuse solar,Hourly;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Surfaces:List,Details;
+
+  Output:Constructions,Constructions;
+
+  Output:VariableDictionary,Regular;
+

@@ -1,0 +1,49 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!--
+<style>
+ table { border: none; border-collapse: collapse; }
+table td { border-left: 1px solid #000; }
+table td:first-child { border-left: none; }
+</style>
+-->
+<style>
+ table { margin: 1em; }
+ table thead { border-bottom: 1px solid #000; }
+ table td { padding: 5px; }
+ table th { padding: 5px; }
+</style>
+
+<script>
+  window.onload = function() {
+    var tables = document.getElementsByTagName("table")
+
+    for (i = 0; i < tables.length; ++i) {
+      tables[i].className += " table-striped ";
+    }
+  }
+
+<!--
+/*
+//Add a div to each table cell so these don't break across pages when printed
+//See http://stackoverflow.com/a/17982110/201648
+$(document).ready(function () {
+        var ctlTd = $('.dontSplit td');
+            if (ctlTd.length > 0)
+                {
+                        //console.log('Found ctlTd');
+                        ctlTd.wrapInner('<div class="avoidBreak" />');
+                            }
+                            });
+*/
+
+</script>
+
+

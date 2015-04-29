@@ -1,0 +1,746 @@
+!-Generator IDFEditor 1.43
+!-Option OriginalOrderTop UseSpecialFormat
+
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+SizingPeriod:DesignDay,
+    EDINBURGH Ann Clg 1% Condns DB=>MWB,  !- Name
+    12,                      !- Month
+    22,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    25.1,                    !- Maximum Dry-Bulb Temperature {C}
+    9.7,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    ,                        !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    17.6,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    100582.,                 !- Barometric Pressure {Pa}
+    3.5,                     !- Wind Speed {m/s}
+    90,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    1.00;                    !- Sky Clearness
+
+SimulationControl,
+    Yes,                     !- Do Zone Sizing Calculation
+    Yes,                     !- Do System Sizing Calculation
+    No,                      !- Do Plant Sizing Calculation
+    No,                      !- Run Simulation for Sizing Periods
+    Yes;                     !- Run Simulation for Weather File Run Periods
+
+HVACTemplate:Zone:VAV,
+    ZONE ONE,                !- Zone Name
+    VAVSYS-1,                !- Template VAV System Name
+    Thermostat-1,            !- Template Thermostat Name
+    6,                       !- Supply Air Maximum Flow Rate {m3/s}
+    1,                       !- Zone Heating Sizing Factor
+    1,                       !- Zone Cooling Sizing Factor
+    FixedFlowRate,           !- Zone Minimum Air Flow Input Method
+    1,                       !- Constant Minimum Air Flow Fraction
+    6,                       !- Fixed Minimum Air Flow Rate {m3/s}
+    ,                        !- Minimum Air Flow Fraction Schedule Name
+    Flow/Zone,               !- Outdoor Air Method
+    ,                        !- Outdoor Air Flow Rate per Person {m3/s}
+    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+    1.2,                     !- Outdoor Air Flow Rate per Zone {m3/s}
+    None,                    !- Reheat Coil Type
+    ,                        !- Reheat Coil Availability Schedule Name
+    Reverse,                 !- Damper Heating Action
+    ,                        !- Maximum Flow per Zone Floor Area During Reheat {m3/s-m2}
+    ,                        !- Maximum Flow Fraction During Reheat
+    ,                        !- Maximum Reheat Air Temperature {C}
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Supply Plenum Name
+    ,                        !- Return Plenum Name
+    None,                    !- Baseboard Heating Type
+    ,                        !- Baseboard Heating Availability Schedule Name
+    autosize,                !- Baseboard Heating Capacity {W}
+    SystemSupplyAirTemperature,  !- Zone Cooling Design Supply Air Temperature Input Method
+    11.5,                    !- Zone Cooling Design Supply Air Temperature {C}
+    ,                        !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
+    SupplyAirTemperature,    !- Zone Heating Design Supply Air Temperature Input Method
+    16,                      !- Zone Heating Design Supply Air Temperature {C}
+    ;                        !- Zone Heating Design Supply Air Temperature Difference {deltaC}
+
+HVACTemplate:System:VAV,
+    VAVSYS-1,                !- Name
+    ,                        !- System Availability Schedule Name
+    6,                       !- Supply Fan Maximum Flow Rate {m3/s}
+    6,                       !- Supply Fan Minimum Flow Rate {m3/s}
+    0.75,                    !- Supply Fan Total Efficiency
+    800,                     !- Supply Fan Delta Pressure {Pa}
+    0.95,                    !- Supply Fan Motor Efficiency
+    1,                       !- Supply Fan Motor in Air Stream Fraction
+    ChilledWater,            !- Cooling Coil Type
+    ,                        !- Cooling Coil Availability Schedule Name
+    ,                        !- Cooling Coil Setpoint Schedule Name
+    11.5,                    !- Cooling Coil Design Setpoint {C}
+    HotWater,                !- Heating Coil Type
+    ,                        !- Heating Coil Availability Schedule Name
+    ,                        !- Heating Coil Setpoint Schedule Name
+    16,                      !- Heating Coil Design Setpoint {C}
+    ,                        !- Gas Heating Coil Efficiency
+    ,                        !- Gas Heating Coil Parasitic Electric Load {W}
+    None,                    !- Preheat Coil Type
+    ,                        !- Preheat Coil Availability Schedule Name
+    ,                        !- Preheat Coil Setpoint Schedule Name
+    7.2,                     !- Preheat Coil Design Setpoint {C}
+    0.8,                     !- Gas Preheat Coil Efficiency
+    ,                        !- Gas Preheat Coil Parasitic Electric Load {W}
+    6,                       !- Maximum Outdoor Air Flow Rate {m3/s}
+    6,                       !- Minimum Outdoor Air Flow Rate {m3/s}
+    ProportionalMinimum,     !- Minimum Outdoor Air Control Type
+    ,                        !- Minimum Outdoor Air Schedule Name
+    DifferentialEnthalpy,    !- Economizer Type
+    NoLockout,               !- Economizer Lockout
+    ,                        !- Economizer Upper Temperature Limit {C}
+    ,                        !- Economizer Lower Temperature Limit {C}
+    ,                        !- Economizer Upper Enthalpy Limit {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Supply Plenum Name
+    ,                        !- Return Plenum Name
+    DrawThrough,             !- Supply Fan Placement
+    ASHRAE90.1-2004AppendixG,!- Supply Fan Part-Load Power Coefficients
+    StayOff,                 !- Night Cycle Control
+    ,                        !- Night Cycle Control Zone Name
+    None,                    !- Heat Recovery Type
+    0.7,                     !- Sensible Heat Recovery Effectiveness
+    0.65,                    !- Latent Heat Recovery Effectiveness
+    None,                    !- Cooling Coil Setpoint Reset Type
+    None,                    !- Heating Coil Setpoint Reset Type
+    CoolReheat,              !- Dehumidification Control Type
+    ZONE ONE,                !- Dehumidification Control Zone Name
+    55,                      !- Dehumidification Setpoint {percent}
+    None,                    !- Humidifier Type
+    ,                        !- Humidifier Availability Schedule Name
+    0.000001,                !- Humidifier Rated Capacity {m3/s}
+    autosize,                !- Humidifier Rated Electric Power {W}
+    ,                        !- Humidifier Control Zone Name
+    30,                      !- Humidifier Setpoint {percent}
+    NonCoincident;           !- Sizing Option
+
+HVACTemplate:Thermostat,
+    Thermostat-1,            !- Name
+    ,                        !- Heating Setpoint Schedule Name
+    22.999,                  !- Constant Heating Setpoint {C}
+    ,                        !- Cooling Setpoint Schedule Name
+    23.001;                  !- Constant Cooling Setpoint {C}
+
+HVACTemplate:Plant:ChilledWaterLoop,
+    CHW Loop-1,              !- Name
+    ,                        !- Pump Schedule Name
+    Intermittent,            !- Pump Control Type
+    Default,                 !- Chiller Plant Operation Scheme Type
+    ,                        !- Chiller Plant Equipment Operation Schemes Name
+    ,                        !- Chilled Water Setpoint Schedule Name
+    5,                       !- Chilled Water Design Setpoint {C}
+    ConstantPrimaryNoSecondary,  !- Chilled Water Pump Configuration
+    179352,                  !- Primary Chilled Water Pump Rated Head {Pa}
+    179352,                  !- Secondary Chilled Water Pump Rated Head {Pa}
+    Default,                 !- Condenser Plant Operation Scheme Type
+    ,                        !- Condenser Equipment Operation Schemes Name
+    ,                        !- Condenser Water Temperature Control Type
+    ,                        !- Condenser Water Setpoint Schedule Name
+    29.4,                    !- Condenser Water Design Setpoint {C}
+    179352,                  !- Condenser Water Pump Rated Head {Pa}
+    None,                    !- Chilled Water Setpoint Reset Type
+    12.2,                    !- Chilled Water Setpoint at Outdoor Dry-Bulb Low {C}
+    15.6,                    !- Chilled Water Reset Outdoor Dry-Bulb Low {C}
+    6.7,                     !- Chilled Water Setpoint at Outdoor Dry-Bulb High {C}
+    26.7,                    !- Chilled Water Reset Outdoor Dry-Bulb High {C}
+    SinglePump,              !- Chilled Water Primary Pump Type
+    SinglePump,              !- Chilled Water Secondary Pump Type
+    SinglePump,              !- Condenser Water Pump Type
+    Yes,                     !- Chilled Water Supply Side Bypass Pipe
+    Yes,                     !- Chilled Water Demand Side Bypass Pipe
+    Yes,                     !- Condenser Water Supply Side Bypass Pipe
+    Yes,                     !- Condenser Water Demand Side Bypass Pipe
+    Water,                   !- Fluid Type
+    6.67,                    !- Loop Design Delta Temperature {deltaC}
+    ,                        !- Minimum Outdoor Dry Bulb Temperature {C}
+    Sequential,              !- Chilled Water Load Distribution Scheme
+    Sequential;              !- Condenser Water Load Distribution Scheme
+
+HVACTemplate:Plant:Chiller,
+    Chiller-1,               !- Name
+    ElectricReciprocatingChiller,  !- Chiller Type
+    100000,                  !- Capacity {W}
+    3.5,                     !- Nominal COP {W/W}
+    WaterCooled,             !- Condenser Type
+    ,                        !- Priority
+    1,                       !- Sizing Factor
+    ,                        !- Minimum Part Load Ratio
+    1,                       !- Maximum Part Load Ratio
+    1,                       !- Optimum Part Load Ratio
+    0.25,                    !- Minimum Unloading Ratio
+    5;                       !- Leaving Chilled Water Lower Temperature Limit {C}
+
+HVACTemplate:Plant:Tower,
+    Tower-1,                 !- Name
+    ,                        !- Tower Type
+    autosize,                !- High Speed Nominal Capacity {W}
+    autosize,                !- High Speed Fan Power {W}
+    autosize,                !- Low Speed Nominal Capacity {W}
+    autosize,                !- Low Speed Fan Power {W}
+    autosize,                !- Free Convection Capacity {W}
+    ,                        !- Priority
+    1;                       !- Sizing Factor
+
+HVACTemplate:Plant:HotWaterLoop,
+    HW Loop-1,               !- Name
+    ,                        !- Pump Schedule Name
+    Intermittent,            !- Pump Control Type
+    Default,                 !- Hot Water Plant Operation Scheme Type
+    ,                        !- Hot Water Plant Equipment Operation Schemes Name
+    ,                        !- Hot Water Setpoint Schedule Name
+    80,                      !- Hot Water Design Setpoint {C}
+    ConstantFlow,            !- Hot Water Pump Configuration
+    179352,                  !- Hot Water Pump Rated Head {Pa}
+    None,                    !- Hot Water Setpoint Reset Type
+    82.2,                    !- Hot Water Setpoint at Outdoor Dry-Bulb Low {C}
+    -6.7,                    !- Hot Water Reset Outdoor Dry-Bulb Low {C}
+    65.6,                    !- Hot Water Setpoint at Outdoor Dry-Bulb High {C}
+    10,                      !- Hot Water Reset Outdoor Dry-Bulb High {C}
+    SinglePump,              !- Hot Water Pump Type
+    Yes,                     !- Supply Side Bypass Pipe
+    Yes,                     !- Demand Side Bypass Pipe
+    Water,                   !- Fluid Type
+    11,                      !- Loop Design Delta Temperature {deltaC}
+    ,                        !- Maximum Outdoor Dry Bulb Temperature {C}
+    Sequential;              !- Load Distribution Scheme
+
+HVACTemplate:Plant:Boiler,
+    Boiler-1,                !- Name
+    HotWaterBoiler,          !- Boiler Type
+    100000,                  !- Capacity {W}
+    0.8,                     !- Efficiency
+    NaturalGas,              !- Fuel Type
+    ,                        !- Priority
+    1,                       !- Sizing Factor
+    ,                        !- Minimum Part Load Ratio
+    1.1,                     !- Maximum Part Load Ratio
+    1,                       !- Optimum Part Load Ratio
+    100;                     !- Water Outlet Upper Temperature Limit {C}
+
+! BESTEST Case 195.idf
+! Basic file description: BESTEST Low-Mass Building Diagnostic loads test - Solid Conduction.
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     March 17, 2000
+! Run:      Annual run for Golden, CO location
+! Building: Fictional 1 zone building with resistive walls and no window.
+!           No internal load, no infiltration
+!           Changed material absorptance and emissivity = 0.1
+! Internal: None.
+! System:   None.
+! Plant:    None.
+! Modified:
+Version,8.0;
+
+Site:Location,
+    GOLDEN COLORADO,         !- Name
+    39.80,                   !- Latitude {deg}
+    -104.90,                 !- Longitude {deg}
+    -7.000000,               !- Time Zone {hr}
+    1609.0;                  !- Elevation {m}
+
+RunPeriod,
+    ,                        !- Name
+    7,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    7,                       !- End Month
+    7,                       !- End Day of Month
+    ,                        !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    ,                        !- Apply Weekend Holiday Rule
+    ,                        !- Use Weather File Rain Indicators
+    ;                        !- Use Weather File Snow Indicators
+
+! DesignDay,
+!   DENVER CONSTANT WINTER-NOSUN,     ! Design Day Name
+!     -17.22222    ,     ! Max Dry-Bulb {C}
+!     0.0000000E+00,     ! Daily Temp Range {C}
+!     -17.22222    ,     ! Wet-Bulb at Max {C}
+!      83442.47    ,     ! Barometric Pressure {N/M**2}
+!      4.115816    ,     ! Wind Speed {M/Sec}
+!      169.0000    ,     ! Wind Direction {Degrees N=0, S=180}
+!     0.0000000E+00,     ! Clearness {0.0 to 1.1}
+!                 0,     ! Rain {0-no,1-yes}
+!                 0,     ! Snow on ground {0-no,1-yes}
+!                21,     ! Day of Month
+!                 1,     ! Month
+!            Monday,     ! Day Type
+!                 0;     ! Daylight Savings Time Indicator
+!
+! DesignDay,
+!  DENVER CONSTANT SUMMER-NOSUN,     ! Design Day Name
+!     32.77778    ,     ! Max Dry-Bulb {C}
+!     0.000000    ,     ! Daily Temp Range {C}
+!     15.00000    ,     ! Wet-Bulb at Max {C}
+!     84139.90    ,     ! Barometric Pressure {N/M**2}
+!     3.971544    ,     ! Wind Speed {M/Sec}
+!     146.0000    ,     ! Wind Direction {Degrees N=0, S=180}
+!     0.0000      ,     ! Clearness {0.0 to 1.1}
+!                0,     ! Rain {0-no,1-yes}
+!                0,     ! Snow on ground {0-no,1-yes}
+!               21,     ! Day of Month
+!                7,     ! Month
+!           Monday,     ! Day Type
+!                0;     ! Daylight Savings Time Indicator
+Material,
+    PLASTERBOARD-1,          !- Name
+    Rough,                   !- Roughness
+    0.01200,                 !- Thickness {m}
+    0.16000,                 !- Conductivity {W/m-K}
+    950.000,                 !- Density {kg/m3}
+    840.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+Material,
+    FIBERGLASS QUILT-1,      !- Name
+    Rough,                   !- Roughness
+    0.066,                   !- Thickness {m}
+    0.040,                   !- Conductivity {W/m-K}
+    12.000,                  !- Density {kg/m3}
+    840.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+Material,
+    WOOD SIDING-1,           !- Name
+    Rough,                   !- Roughness
+    0.00900,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    530.000,                 !- Density {kg/m3}
+    900.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+! Material layer names follow:
+Construction,
+    LTWALL,                  !- Name
+    WOOD SIDING-1,           !- Outside Layer
+    FIBERGLASS QUILT-1,      !- Layer 2
+    PLASTERBOARD-1;          !- Layer 3
+
+Material,
+    TIMBER FLOORING,         !- Name
+    Rough,                   !- Roughness
+    0.02500,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    650.000,                 !- Density {kg/m3}
+    1200.0,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+Material:NoMass,
+    R-25 INSULATION,         !- Name
+    Rough,                   !- Roughness
+    25.075,                  !- Thermal Resistance {m2-K/W}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+! Material layer names follow:
+Construction,
+    LTFLOOR,                 !- Name
+    R-25 INSULATION,         !- Outside Layer
+    TIMBER FLOORING;         !- Layer 2
+
+Material,
+    PLASTERBOARD-2,          !- Name
+    Rough,                   !- Roughness
+    0.01000,                 !- Thickness {m}
+    0.16000,                 !- Conductivity {W/m-K}
+    950.000,                 !- Density {kg/m3}
+    840.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+Material,
+    FIBERGLASS QUILT-2,      !- Name
+    Rough,                   !- Roughness
+    0.1118,                  !- Thickness {m}
+    0.040,                   !- Conductivity {W/m-K}
+    12.000,                  !- Density {kg/m3}
+    840.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+Material,
+    ROOF DECK,               !- Name
+    Rough,                   !- Roughness
+    0.01900,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    530.000,                 !- Density {kg/m3}
+    900.00,                  !- Specific Heat {J/kg-K}
+    0.1000000,               !- Thermal Absorptance
+    0.100000,                !- Solar Absorptance
+    0.100000;                !- Visible Absorptance
+
+! Material layer names follow:
+Construction,
+    LTROOF,                  !- Name
+    ROOF DECK,               !- Outside Layer
+    FIBERGLASS QUILT-2,      !- Layer 2
+    PLASTERBOARD-2;          !- Layer 3
+
+Site:GroundTemperature:BuildingSurface,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0;
+Site:GroundReflectance,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2;
+Timestep,4;
+SurfaceConvectionAlgorithm:Inside,TARP;
+SurfaceConvectionAlgorithm:Outside,DOE-2;
+
+ShadowCalculation,
+    1;                       !- Calculation Frequency
+
+Building,
+    BESTEST Case 195,        !- Name
+    0,                       !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+Zone,
+    ZONE ONE,                !- Name
+    0,                       !- Direction of Relative North {deg}
+    0, 0, 0,                            !- X,Y,Z  {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.7000,                  !- Ceiling Height {m}
+    129.6;                   !- Volume {m3}
+
+! ZoneCapacitanceMultiplier,1;
+GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    World;                   !- Coordinate System
+
+BuildingSurface:Detailed,
+    ZONE SURFACE NORTH,      !- Name
+    Wall,                    !- Surface Type
+    LTWALL,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE NORTH,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000, 6.000000, 2.700000,       !- X,Y,Z  1 {m}
+    8.000000, 6.000000, 0,              !- X,Y,Z  2 {m}
+    0, 6.000000, 0,                     !- X,Y,Z  3 {m}
+    0, 6.000000, 2.700000;              !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    ZONE SURFACE EAST,       !- Name
+    Wall,                    !- Surface Type
+    LTWALL,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE EAST,       !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000, 0, 2.700000,              !- X,Y,Z  1 {m}
+    8.000000, 0, 0,                     !- X,Y,Z  2 {m}
+    8.000000, 6.000000, 0,              !- X,Y,Z  3 {m}
+    8.000000, 6.000000, 2.700000;       !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    ZONE SURFACE SOUTH,      !- Name
+    Wall,                    !- Surface Type
+    LTWALL,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE SOUTH,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 0, 2.700000,                     !- X,Y,Z  1 {m}
+    0, 0, 0,                            !- X,Y,Z  2 {m}
+    8.000000, 0, 0,                     !- X,Y,Z  3 {m}
+    8.000000, 0, 2.700000;              !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    ZONE SURFACE WEST,       !- Name
+    Wall,                    !- Surface Type
+    LTWALL,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE WEST,       !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.5000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 6.000000, 2.700000,              !- X,Y,Z  1 {m}
+    0, 6.000000, 0,                     !- X,Y,Z  2 {m}
+    0, 0, 0,                            !- X,Y,Z  3 {m}
+    0, 0, 2.700000;                     !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    ZONE SURFACE FLOOR,      !- Name
+    Floor,                   !- Surface Type
+    LTFLOOR,                 !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE FLOOR,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 0, 0,                            !- X,Y,Z  1 {m}
+    0, 6.000000, 0,                     !- X,Y,Z  2 {m}
+    8.000000, 6.000000, 0,              !- X,Y,Z  3 {m}
+    8.000000, 0, 0;                     !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    ZONE SURFACE ROOF,       !- Name
+    Roof,                    !- Surface Type
+    LTROOF,                  !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE SURFACE ROOF,       !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0,                       !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0, 6.000000, 2.700000,              !- X,Y,Z  1 {m}
+    0, 0, 2.700000,                     !- X,Y,Z  2 {m}
+    8.000000, 0, 2.700000,              !- X,Y,Z  3 {m}
+    8.000000, 6.000000, 2.700000;       !- X,Y,Z  4 {m}
+
+!  ZoneControl:Thermostat,
+!    Zone 1 Thermostat,       !- Name
+!    ZONE ONE,                !- Zone or ZoneList Name
+!    Zone Control Type Sched, !- Control Type Schedule Name
+!    ThermostatSetpoint:SingleHeatingOrCooling,  !- Control 1 Object Type
+!    Constant Setpoints;      !- Control 1 Name
+!
+!  ThermostatSetpoint:SingleHeatingOrCooling,
+!    Constant Setpoints,      !- Name
+!    Heating Setpoints;       !- Setpoint Temperature Schedule Name
+!
+!  ScheduleTypeLimits,
+!    Temperature,             !- Name
+!    -60,                     !- Lower Limit Value
+!    200,                     !- Upper Limit Value
+!    Continuous;              !- Numeric Type
+!
+!          ! Next Arguments represent each hour of day
+!
+!  Schedule:Day:Hourly,
+!    Zone Heating Setpoint All Days,  !- Name
+!    Temperature,             !- Schedule Type Limits Name
+!    20.,                     !- Hour 1
+!    20.,                     !- Hour 2
+!    20.,                     !- Hour 3
+!    20.,                     !- Hour 4
+!    20.,                     !- Hour 5
+!    20.,                     !- Hour 6
+!    20.,                     !- Hour 7
+!    20.,                     !- Hour 8
+!    20.,                     !- Hour 9
+!    20.,                     !- Hour 10
+!    20.,                     !- Hour 11
+!    20.,                     !- Hour 12
+!    20.,                     !- Hour 13
+!    20.,                     !- Hour 14
+!    20.,                     !- Hour 15
+!    20.,                     !- Hour 16
+!    20.,                     !- Hour 17
+!    20.,                     !- Hour 18
+!    20.,                     !- Hour 19
+!    20.,                     !- Hour 20
+!    20.,                     !- Hour 21
+!    20.,                     !- Hour 22
+!    20.,                     !- Hour 23
+!    20.;                     !- Hour 24
+!
+!          ! Next arguments are names (DaySchedules) for the days
+!
+!  Schedule:Week:Daily,
+!    Zone Heating Setpoint All Weeks,  !- Name
+!    Zone Heating Setpoint All Days,  !- Sunday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Monday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Tuesday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Wednesday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Thursday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Friday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Saturday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- Holiday Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- SummerDesignDay Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- WinterDesignDay Schedule:Day Name
+!    Zone Heating Setpoint All Days,  !- CustomDay1 Schedule:Day Name
+!    Zone Heating Setpoint All Days;  !- CustomDay2 Schedule:Day Name
+!
+!          ! remaining arguments are grouped [Name (WeekSchedules),startmonth,startday,endmonth,endday]
+!          ! 18 periods allowed
+!
+!  Schedule:Year,
+!    Heating Setpoints,       !- Name
+!    Temperature,             !- Schedule Type Limits Name
+!    Zone Heating Setpoint All Weeks,  !- Schedule:Week Name 1
+!    1,                       !- Start Month 1
+!    1,                       !- Start Day 1
+!    12,                      !- End Month 1
+!    31;                      !- End Day 1
+!
+!  ScheduleTypeLimits,
+!    Control Type,            !- Name
+!    0,                       !- Lower Limit Value
+!    4,                       !- Upper Limit Value
+!    Discrete;                !- Numeric Type
+!
+!          ! Next Arguments represent each hour of day
+!
+!  Schedule:Day:Hourly,
+!    Control Type All Days,   !- Name
+!    Control Type,            !- Schedule Type Limits Name
+!    3,                       !- Hour 1
+!    3,                       !- Hour 2
+!    3,                       !- Hour 3
+!    3,                       !- Hour 4
+!    3,                       !- Hour 5
+!    3,                       !- Hour 6
+!    3,                       !- Hour 7
+!    3,                       !- Hour 8
+!    3,                       !- Hour 9
+!    3,                       !- Hour 10
+!    3,                       !- Hour 11
+!    3,                       !- Hour 12
+!    3,                       !- Hour 13
+!    3,                       !- Hour 14
+!    3,                       !- Hour 15
+!    3,                       !- Hour 16
+!    3,                       !- Hour 17
+!    3,                       !- Hour 18
+!    3,                       !- Hour 19
+!    3,                       !- Hour 20
+!    3,                       !- Hour 21
+!    3,                       !- Hour 22
+!    3,                       !- Hour 23
+!    3;                       !- Hour 24
+!
+!          ! Next arguments are names (DaySchedules) for the days
+!
+!  Schedule:Week:Daily,
+!    Control Type All Weeks,  !- Name
+!    Control Type All Days,   !- Sunday Schedule:Day Name
+!    Control Type All Days,   !- Monday Schedule:Day Name
+!    Control Type All Days,   !- Tuesday Schedule:Day Name
+!    Control Type All Days,   !- Wednesday Schedule:Day Name
+!    Control Type All Days,   !- Thursday Schedule:Day Name
+!    Control Type All Days,   !- Friday Schedule:Day Name
+!    Control Type All Days,   !- Saturday Schedule:Day Name
+!    Control Type All Days,   !- Holiday Schedule:Day Name
+!    Control Type All Days,   !- SummerDesignDay Schedule:Day Name
+!    Control Type All Days,   !- WinterDesignDay Schedule:Day Name
+!    Control Type All Days,   !- CustomDay1 Schedule:Day Name
+!    Control Type All Days;   !- CustomDay2 Schedule:Day Name
+!
+!          ! remaining arguments are grouped [Name (WeekSchedules),startmonth,startday,endmonth,endday]
+!          ! 18 periods allowed
+!
+!  Schedule:Year,
+!    Zone Control Type Sched, !- Name
+!    Control Type,            !- Schedule Type Limits Name
+!    Control Type All Weeks,  !- Schedule:Week Name 1
+!    1,                       !- Start Month 1
+!    1,                       !- Start Day 1
+!    12,                      !- End Month 1
+!    31;                      !- End Day 1
+!
+!    !*****************ZONE EQUIPMENT SPECIFICATION*********************
+!    !Zone Heating and Cooling Equipment are attached to zones by the following statements:
+!
+!  ZoneHVAC:EquipmentConnections,
+!    ZONE ONE,                !- Zone Name
+!    Zone1Equipment,          !- Zone Conditioning Equipment List Name
+!    Zone1Inlets,             !- Zone Air Inlet Node or NodeList Name
+!    ,                        !- Zone Air Exhaust Node or NodeList Name
+!    NODE_2,                  !- Zone Air Node Name
+!    NODE_3;                  !- Zone Return Air Node Name
+!
+!        !List equipment in simulation order
+!
+!  ZoneHVAC:EquipmentList,
+!    Zone1Equipment,          !- Name
+!    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+!    Zone1Air,                !- Zone Equipment 1 Name
+!    1,                       !- Zone Equipment 1 Cooling Sequence
+!    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+!
+!  ZoneHVAC:IdealLoadsAirSystem,
+!    Zone1Air,                !- Name
+!    ,                        !- Availability Schedule Name
+!    NODE_1,                  !- Zone Supply Air Node Name
+!    ,                        !- Zone Exhaust Air Node Name
+!    50,                      !- Maximum Heating Supply Air Temperature {C}
+!    13,                      !- Minimum Cooling Supply Air Temperature {C}
+!    0.010,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!    0.010,                   !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!    ,                        !- Heating Limit
+!    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!    ,                        !- Maximum Sensible Heating Capacity {W}
+!    ,                        !- Cooling Limit
+!    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!    ,                        !- Maximum Total Cooling Capacity {W}
+!    ,                        !- Heating Availability Schedule Name
+!    ,                        !- Cooling Availability Schedule Name
+!    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+!    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+!    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+!    ,                        !- Design Specification Outdoor Air Object Name
+!    ,                        !- Outdoor Air Inlet Node Name
+!    ,                        !- Demand Controlled Ventilation Type
+!    ,                        !- Outdoor Air Economizer Type
+!    ,                        !- Heat Recovery Type
+!    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+!    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+NodeList,
+    Zone1Inlets,             !- Name
+    NODE_1;                  !- Node 1 Name
+
+Output:Variable,*,Outdoor Dry Bulb,hourly;
+Output:Variable,*,Zone Mean Air Temperature,Hourly;
+Output:Variable,*,Zone/Sys Sensible Heating Energy,Hourly;
+Output:Variable,*,Zone/Sys Sensible Cooling Energy,Hourly;
+Output:Variable,*,direct solar,Hourly;
+Output:Variable,*,diffuse solar,Hourly;
+Output:Surfaces:Drawing,DXF;
+Output:Constructions,Constructions;
+Output:VariableDictionary,IDF;
+Output:Variable,*,Total Water Cooling Coil Energy,Hourly;
+Output:Variable,*,Total Water Heating Coil Energy,Hourly;
+Output:Variable,*,Fan Electric Power,Hourly;
+Output:Variable,*,System Node Temp,Hourly;
+Output:Variable,*,System Node MassFlowRate,Hourly;
+Output:Variable,*,System Node Volume Flow Rate Standard Density,Hourly;
+Output:Variable,*,Total Water Heating Coil Energy,Hourly;
+Output:Variable,*,Total Water Cooling Coil Energy,Hourly;
+Output:Variable,*,System Node Setpoint Temp,Hourly;
+Output:Variable,*,Zone Air Relative Humidity,Hourly;

@@ -1,0 +1,219 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+ZONE A,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE A,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE A,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE A,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE A,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE B,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE B,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE B,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE B,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE B,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE C,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE C,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE C,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE C,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE C,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE D,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE D,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE D,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE D,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE D,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE E,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE E,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE E,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE E,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE E,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE F,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE F,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE F,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE A SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE A SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE A SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE A SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE A SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE A SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE A SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE A SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE A SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE B SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE B SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE B SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE B SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE B SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE B SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE B SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE B SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE B SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE B SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE B SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE B SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE C SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE C SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE C SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE C SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE C SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE C SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE C SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE C SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE C SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE C SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE C SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE C SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE D SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE D SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE D SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE D SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE D SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE D SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE D SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE D SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE D SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE D SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE D SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE D SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE E SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE E SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE E SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE E SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE E SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE E SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE E SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE E SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE E SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE E SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE E SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE E SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE F SURFACE WEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE F SURFACE WEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE F SURFACE WEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE F SURFACE WEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE F SUBSURFACE WEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE F SUBSURFACE WEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE F SUBSURFACE WEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE F SUBSURFACE WEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE F SUBSURFACE WEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE F SUBSURFACE WEST WINDOW,Surface Window Heat Gain Rate
+ZONE F SUBSURFACE WEST WINDOW,Surface Window Heat Loss Rate
+ZONE F SUBSURFACE WEST WINDOW,Surface Window System Solar Transmittance
+ZONE A SURFACE WEST,Surface Inside face Temperature
+ZONE A SURFACE WEST,Surface Outside face Temperature
+ZONE A SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE A SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE A SURFACE NORTH,Surface Inside face Temperature
+ZONE A SURFACE NORTH,Surface Outside face Temperature
+ZONE A SURFACE EAST,Surface Inside face Temperature
+ZONE A SURFACE EAST,Surface Outside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE A SURFACE FLOOR,Surface Inside face Temperature
+ZONE A SURFACE FLOOR,Surface Outside face Temperature
+ZONE A SURFACE CEILING,Surface Inside face Temperature
+ZONE A SURFACE CEILING,Surface Outside face Temperature
+ZONE B SURFACE WEST,Surface Inside face Temperature
+ZONE B SURFACE WEST,Surface Outside face Temperature
+ZONE B SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE B SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE B SURFACE EAST,Surface Inside face Temperature
+ZONE B SURFACE EAST,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE NORTH,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE NORTH,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE SOUTH,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE SOUTH,Surface Outside face Temperature
+ZONE B SURFACE FLOOR,Surface Inside face Temperature
+ZONE B SURFACE FLOOR,Surface Outside face Temperature
+ZONE B SURFACE CEILING,Surface Inside face Temperature
+ZONE B SURFACE CEILING,Surface Outside face Temperature
+ZONE C SURFACE WEST,Surface Inside face Temperature
+ZONE C SURFACE WEST,Surface Outside face Temperature
+ZONE C SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE C SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE C SURFACE SOUTH,Surface Inside face Temperature
+ZONE C SURFACE SOUTH,Surface Outside face Temperature
+ZONE C SURFACE EAST,Surface Inside face Temperature
+ZONE C SURFACE EAST,Surface Outside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE C SURFACE FLOOR,Surface Inside face Temperature
+ZONE C SURFACE FLOOR,Surface Outside face Temperature
+ZONE C SURFACE CEILING,Surface Inside face Temperature
+ZONE C SURFACE CEILING,Surface Outside face Temperature
+ZONE D SURFACE WEST,Surface Inside face Temperature
+ZONE D SURFACE WEST,Surface Outside face Temperature
+ZONE D SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE D SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE D SURFACE NORTH,Surface Inside face Temperature
+ZONE D SURFACE NORTH,Surface Outside face Temperature
+ZONE D SURFACE EAST,Surface Inside face Temperature
+ZONE D SURFACE EAST,Surface Outside face Temperature
+ZONE D COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE D COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE D SURFACE FLOOR,Surface Inside face Temperature
+ZONE D SURFACE FLOOR,Surface Outside face Temperature
+ZONE D SURFACE ROOF,Surface Inside face Temperature
+ZONE D SURFACE ROOF,Surface Outside face Temperature
+ZONE E SURFACE WEST,Surface Inside face Temperature
+ZONE E SURFACE WEST,Surface Outside face Temperature
+ZONE E SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE E SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE E SURFACE EAST,Surface Inside face Temperature
+ZONE E SURFACE EAST,Surface Outside face Temperature
+ZONE E COMMON WALL SURFACE NORTH,Surface Inside face Temperature
+ZONE E COMMON WALL SURFACE NORTH,Surface Outside face Temperature
+ZONE E COMMON WALL SURFACE SOUTH,Surface Inside face Temperature
+ZONE E COMMON WALL SURFACE SOUTH,Surface Outside face Temperature
+ZONE E SURFACE FLOOR,Surface Inside face Temperature
+ZONE E SURFACE FLOOR,Surface Outside face Temperature
+ZONE E SURFACE ROOF,Surface Inside face Temperature
+ZONE E SURFACE ROOF,Surface Outside face Temperature
+ZONE F SURFACE WEST,Surface Inside face Temperature
+ZONE F SURFACE WEST,Surface Outside face Temperature
+ZONE F SUBSURFACE WEST WINDOW,Surface Inside face Temperature
+ZONE F SUBSURFACE WEST WINDOW,Surface Outside face Temperature
+ZONE F SURFACE SOUTH,Surface Inside face Temperature
+ZONE F SURFACE SOUTH,Surface Outside face Temperature
+ZONE F SURFACE EAST,Surface Inside face Temperature
+ZONE F SURFACE EAST,Surface Outside face Temperature
+ZONE F COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE F COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE F SURFACE FLOOR,Surface Inside face Temperature
+ZONE F SURFACE FLOOR,Surface Outside face Temperature
+ZONE F SURFACE ROOF,Surface Inside face Temperature
+ZONE F SURFACE ROOF,Surface Outside face Temperature
+ZONE A,Zone Mean Air Temperature
+ZONE B,Zone Mean Air Temperature
+ZONE C,Zone Mean Air Temperature
+ZONE D,Zone Mean Air Temperature
+ZONE E,Zone Mean Air Temperature
+ZONE F,Zone Mean Air Temperature
+ZONE A,Zone Air System Sensible Heating Energy
+ZONE A,Zone Air System Sensible Cooling Energy
+ZONE B,Zone Air System Sensible Heating Energy
+ZONE B,Zone Air System Sensible Cooling Energy
+ZONE C,Zone Air System Sensible Heating Energy
+ZONE C,Zone Air System Sensible Cooling Energy
+ZONE D,Zone Air System Sensible Heating Energy
+ZONE D,Zone Air System Sensible Cooling Energy
+ZONE E,Zone Air System Sensible Heating Energy
+ZONE E,Zone Air System Sensible Cooling Energy
+ZONE F,Zone Air System Sensible Heating Energy
+ZONE F,Zone Air System Sensible Cooling Energy
+ZONE A PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE B PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE C PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE D PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE E PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE F PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+DistrictCooling:HVAC
+0
+
+
+
+

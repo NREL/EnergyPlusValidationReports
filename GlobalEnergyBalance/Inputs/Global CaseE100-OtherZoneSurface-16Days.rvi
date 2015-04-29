@@ -1,0 +1,101 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Outdoor Air Humidity Ratio
+Site Wind Speed
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+Site Day Type Index
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE EAST,Surface Inside face Temperature
+ZONE SURFACE EAST,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE WEST,Surface Inside face Temperature
+ZONE SURFACE WEST,Surface Outside face Temperature
+ZONE SURFACE FLOOR,Surface Inside face Temperature
+ZONE SURFACE FLOOR,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE ONE,Zone Total Internal Radiant Heating Energy
+ZONE ONE,Zone Total Internal Convective Heating Energy
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Total Internal Total Heating Energy
+ZONE ONE LIGHTS 1,Lights Electric Energy
+ZONE ONE ELECTEQ 1,Electric Equipment Electric Energy
+ZONE ONE GASEQ 1,Gas Equipment Total Heating Energy
+ZONE ONE STEAMEQ 1,Steam Equipment Total Heating Energy
+ZONE ONE OTHEQ 1,Other Equipment Total Heating Energy
+ZONE ONE OTHEQ 2,Other Equipment Total Heating Energy
+ZONE ONE OTHEQ 3,Other Equipment Total Heating Energy
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+ZONE ONE,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Sensible Load to Heating Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Sensible Load to Cooling Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Moisture Load Moisture Transfer Rate
+ZONE ONE,Zone Thermostat Heating Setpoint Temperature
+ZONE ONE,Zone Thermostat Cooling Setpoint Temperature
+ZONE1WINDACFAN,Fan Electric Power
+ZONE1WINDACFAN,Fan Rise in Air Temperature
+ZONE1WINDACFAN,Fan Electric Energy
+ZONE1WINDACDXCOIL,Cooling Coil Total Cooling Energy
+ZONE1WINDACDXCOIL,Cooling Coil Sensible Cooling Rate
+ZONE1WINDACDXCOIL,Cooling Coil Sensible Cooling Energy
+ZONE1WINDACDXCOIL,Cooling Coil Latent Cooling Rate
+ZONE1WINDACDXCOIL,Cooling Coil Latent Cooling Energy
+ZONE1WINDACDXCOIL,Cooling Coil Electric Power
+ZONE1WINDACDXCOIL,Cooling Coil Electric Energy
+ZONE1WINDAC,Zone Window Air Conditioner Total Cooling Rate
+ZONE1WINDAC,Zone Window Air Conditioner Total Cooling Energy
+ZONE1WINDAC,Zone Window Air Conditioner Sensible Cooling Rate
+ZONE1WINDAC,Zone Window Air Conditioner Sensible Cooling Energy
+ZONE1WINDAC,Zone Window Air Conditioner Latent Cooling Rate
+ZONE1WINDAC,Zone Window Air Conditioner Latent Cooling Energy
+ZONE1WINDAC,Zone Window Air Conditioner Electric Power
+ZONE1WINDAC,Zone Window Air Conditioner Electric Energy
+ZONE1WINDAC,Zone Window Air Conditioner Fan Part Load Ratio
+ZONE1WINDAC,Zone Window Air Conditioner Compressor Part Load Ratio
+ZONE1WINDACOAINNODE,System Node Temperature
+ZONE1WINDACOAINNODE,System Node Mass Flow Rate
+ZONE1WINDACOAINNODE,System Node Humidity Ratio
+ZONE1WINDACAIROUTLETNODE,System Node Temperature
+ZONE1WINDACAIROUTLETNODE,System Node Mass Flow Rate
+ZONE1WINDACAIROUTLETNODE,System Node Humidity Ratio
+ZONE1WINDACAIRINLETNODE,System Node Temperature
+ZONE1WINDACAIRINLETNODE,System Node Mass Flow Rate
+ZONE1WINDACAIRINLETNODE,System Node Humidity Ratio
+ZONE 1 NODE,System Node Temperature
+ZONE 1 NODE,System Node Mass Flow Rate
+ZONE 1 NODE,System Node Humidity Ratio
+ZONE 1 OUTLET NODE,System Node Temperature
+ZONE 1 OUTLET NODE,System Node Mass Flow Rate
+ZONE 1 OUTLET NODE,System Node Humidity Ratio
+ZONE1WINDACEXHNODE,System Node Temperature
+ZONE1WINDACEXHNODE,System Node Mass Flow Rate
+ZONE1WINDACEXHNODE,System Node Humidity Ratio
+ZONE1WINDACDXCOILOUTLETNODE,System Node Temperature
+ZONE1WINDACDXCOILOUTLETNODE,System Node Mass Flow Rate
+ZONE1WINDACDXCOILOUTLETNODE,System Node Humidity Ratio
+ZONE1WINDACOAMIXEROUTLETNODE,System Node Temperature
+ZONE1WINDACOAMIXEROUTLETNODE,System Node Mass Flow Rate
+ZONE1WINDACOAMIXEROUTLETNODE,System Node Humidity Ratio
+SCH LIGHTS,Schedule Value
+SCH ELECTEQ,Schedule Value
+SCH OTHEREQ 1,Schedule Value
+SCH OTHEREQ 2,Schedule Value
+SCH OTHEREQ 3,Schedule Value
+SCH GASEQ,Schedule Value
+SCH STEAMEQ,Schedule Value
+HEATCOOL SETPOINTS,Schedule Value
+ZONE CONTROL TYPE SCHED,Schedule Value
+FANANDCOILAVAILSCHED,Schedule Value
+OUTVARSCHED,Schedule Value
+0
+
+
+
+

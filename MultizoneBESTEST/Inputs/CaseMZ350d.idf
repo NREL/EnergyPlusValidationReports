@@ -1,0 +1,1450 @@
+! Multi-Zone BESTEST Case MZ350d.idf
+! Basic file description: 2-story, 6-Zone Base Case Building with Windows on West.
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     March 15, 2005
+! Run:      Annual run with weather file MZ340TM2.epw
+! Building: 6-Zone building suspended in air
+!           Non-conductive walls and ideal windows.
+!           Internal heat transfer surfaces separating zones
+!           All zones - 20C constant temp
+!           External detached shading surface
+! Internal: No internal loads
+! System:   All zones, heat always off;  cooling on if Tspace > 20C
+! Plant:    None.
+! Modified: Sept 7, 2005 -- New spec dated August 2005 required change in zone dimensions for Case MZ350
+!           ALSO the external shade surface was heightened from 12m to 18
+!           ALSO there is a new MZ340.TM2 weather file dated 9/7/05 to be used with this case
+!           Sept 12, 2006 -- Revised zone dimensions and shade surface dimensions per new spec dated August 2006
+
+  VERSION,.;
+
+  Building,
+    BESTEST Case MZ350d,     !- Name
+    0.0000000E+00,           !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  Timestep,4;
+
+  SurfaceProperty:ConvectionCoefficients:MultipleSurface,
+    AllExteriorWalls,        !- Surface Type
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    30.4872,                 !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    30.4872,                 !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients:MultipleSurface,
+    AllExteriorWindows,      !- Surface Type
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    30.4872,                 !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    30.4872,                 !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients:MultipleSurface,
+    AllInteriorSurfaces,     !- Surface Type
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    30.4872,                 !- Convection Coefficient 1 {W/m2-K}
+    ;                        !- Convection Coefficient 1 Schedule Name
+
+  Site:HeightVariation,
+    0.22,                    !- Wind Speed Profile Exponent
+    370,                     !- Wind Speed Profile Boundary Layer Thickness {m}
+    0.0;                     !- Air Temperature Gradient Coefficient {K/m}
+
+  ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    1;                       !- Calculation Frequency
+
+  ! ZoneCapacitanceMultiplier,1;
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    ,                        !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    ,                        !- Apply Weekend Holiday Rule
+    ,                        !- Use Weather File Rain Indicators
+    ;                        !- Use Weather File Snow Indicators
+
+  Site:Location,
+    Artificial Conditions,   !- Name
+    25.80,                   !- Latitude {deg}
+    -80.30,                  !- Longitude {deg}
+    -5.000000,               !- Time Zone {hr}
+    2.0;                     !- Elevation {m}
+
+  Site:GroundReflectance,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0;
+
+  Material:NoMass,
+    Wall-ExteriorLayer,      !- Name
+    VerySmooth,              !- Roughness
+    500000.00,               !- Thermal Resistance {m2-K/W}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+  Material:NoMass,
+    Wall-InteriorLayer,      !- Name
+    VerySmooth,              !- Roughness
+    500000.00,               !- Thermal Resistance {m2-K/W}
+    0.000001,                !- Thermal Absorptance
+    1.000000,                !- Solar Absorptance
+    1.000000;                !- Visible Absorptance
+
+  Construction,
+    ComWALL,                 !- Name
+    Wall-InteriorLayer,      !- Outside Layer
+    Wall-InteriorLayer;      !- Layer 2
+
+  Construction,
+    ExtWall,                 !- Name
+    Wall-ExteriorLayer,      !- Outside Layer
+    Wall-InteriorLayer;      !- Layer 2
+
+  WindowMaterial:Glazing,
+    IDEAL GLASS,             !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.003175,                !- Thickness {m}
+    0.99999999,              !- Solar Transmittance at Normal Incidence
+    0.000000001,             !- Front Side Solar Reflectance at Normal Incidence
+    0.000000001,             !- Back Side Solar Reflectance at Normal Incidence
+    0.99999999,              !- Visible Transmittance at Normal Incidence
+    0.000000001,             !- Front Side Visible Reflectance at Normal Incidence
+    0.000000001,             !- Back Side Visible Reflectance at Normal Incidence
+    0.0,                     !- Infrared Transmittance at Normal Incidence
+    0.000000001,             !- Front Side Infrared Hemispherical Emissivity
+    0.000000001,             !- Back Side Infrared Hemispherical Emissivity
+    0.000000001;             !- Conductivity {W/m-K}
+
+               ! Material layer names follow:
+
+  Construction,
+    IDEAL WINDOW,            !- Name
+    IDEAL GLASS;             !- Outside Layer
+
+  Shading:Building:Detailed,
+    Large Shade Surface,     !- Name
+    ,                        !- Transmittance Schedule Name
+    4,                       !- Number of Vertices
+    -24.0000,5.000000,24.00000,  !- X,Y,Z ==> Vertex 1 {m}
+    -24.0000,5.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,5.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,5.000000,24.00000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    WorldCoordinateSystem;   !- Coordinate System
+
+  Zone,
+    ZONE A,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE A SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE A SURFACE NORTH,    !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE A SURFACE NORTH,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,18.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE A SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE A SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,18.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE A SURFACE CEILING,  !- Name
+    Ceiling,                 !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE A SURFACE CEILING,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,18.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE A SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE A SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,18.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,0.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE A COMMON WALL SURFACE,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE A,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE A COMMON WALL SURFACE,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE A SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE A SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,17.00000,4.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,17.00000,0.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,13.00000,0.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,13.00000,4.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE B,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE B SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE B SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE B SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE B SURFACE CEILING,  !- Name
+    Ceiling,                 !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE B SURFACE CEILING,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE B SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE B SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,0.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE B COMMON WALL SURFACE NORTH,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE B COMMON WALL SURFACE NORTH,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,12.00000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE B COMMON WALL SURFACE SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE B,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE B COMMON WALL SURFACE SOUTH,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE B SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE B SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,11.00000,4.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,11.00000,0.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,7.000000,0.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,7.000000,4.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE C,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE C SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,0.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,0.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE C SURFACE SOUTH,    !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE C SURFACE SOUTH,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,0.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,0.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE C SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE C SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,0.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE C SURFACE CEILING,  !- Name
+    Ceiling,                 !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE C SURFACE CEILING,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE C SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE C SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,0.000000,0.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE C COMMON WALL SURFACE,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE C,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE C COMMON WALL SURFACE,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,6.000000,0.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE C SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE C SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,5.000000,4.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,5.000000,0.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,1.000000,0.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,1.000000,4.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE D,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE D SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE D SURFACE NORTH,    !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE D SURFACE NORTH,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,18.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,18.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE D SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE D SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,18.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE D SURFACE ROOF,     !- Name
+    Roof,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE D SURFACE ROOF,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,18.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE D SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE D SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,18.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE D COMMON WALL SURFACE,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE D,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE D COMMON WALL SURFACE,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE D SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE D SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,17.00000,9.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,17.00000,5.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,13.00000,5.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,13.00000,9.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE E,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE E SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE E SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE E SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE E SURFACE ROOF,     !- Name
+    Roof,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE E SURFACE ROOF,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,12.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE E SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE E SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE E COMMON WALL SURFACE NORTH,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE E COMMON WALL SURFACE NORTH,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,12.00000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,12.00000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,12.00000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE E COMMON WALL SURFACE SOUTH,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE E,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE E COMMON WALL SURFACE SOUTH,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE E SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE E SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,11.00000,9.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,11.00000,5.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,7.000000,5.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,7.000000,9.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Zone,
+    ZONE F,                  !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    5.0000,                  !- Ceiling Height {m}
+    240.0;                   !- Volume {m3}
+
+  BuildingSurface:Detailed,
+    ZONE F SURFACE WEST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,0.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE F SURFACE SOUTH,    !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE F SURFACE SOUTH,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,0.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,0.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE F SURFACE EAST,     !- Name
+    Wall,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE F SURFACE EAST,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,0.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE F SURFACE ROOF,     !- Name
+    Roof,                    !- Surface Type
+    ExtWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE F SURFACE ROOF,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,0.000000,10.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,10.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    8.000000,6.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE F SURFACE FLOOR,    !- Name
+    Floor,                   !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE F SURFACE FLOOR,    !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    8.000000,0.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,0.000000,5.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE F COMMON WALL SURFACE,  !- Name
+    Wall,                    !- Surface Type
+    ComWall,                 !- Construction Name
+    ZONE F,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    ZONE F COMMON WALL SURFACE,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000,               !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.000000,6.000000,10.000000,  !- X,Y,Z ==> Vertex 1 {m}
+    8.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,6.000000,5.000000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,6.000000,10.000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    ZONE F SUBSURFACE WEST WINDOW,  !- Name
+    Window,                  !- Surface Type
+    IDEAL WINDOW,            !- Construction Name
+    ZONE F SURFACE WEST,     !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    0.0000000,               !- View Factor to Ground
+    ,                        !- Shading Control Name
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000,5.000000,9.500000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000000,5.000000,5.500000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000000,1.000000,5.500000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000000,1.000000,9.500000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  ScheduleTypeLimits,
+    Fraction,                !- Name
+    0.0,                     !- Lower Limit Value
+    1.0,                     !- Upper Limit Value
+    Continuous;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    Continuous;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Control Type,            !- Name
+    0,                       !- Lower Limit Value
+    4,                       !- Upper Limit Value
+    Discrete;                !- Numeric Type
+
+  Schedule:Day:Hourly,
+    Day Sch 1,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+    1,                       !- Hour 1
+    1,                       !- Hour 2
+    1,                       !- Hour 3
+    1,                       !- Hour 4
+    1,                       !- Hour 5
+    1,                       !- Hour 6
+    1,                       !- Hour 7
+    1,                       !- Hour 8
+    1,                       !- Hour 9
+    1,                       !- Hour 10
+    1,                       !- Hour 11
+    1,                       !- Hour 12
+    1,                       !- Hour 13
+    1,                       !- Hour 14
+    1,                       !- Hour 15
+    1,                       !- Hour 16
+    1,                       !- Hour 17
+    1,                       !- Hour 18
+    1,                       !- Hour 19
+    1,                       !- Hour 20
+    1,                       !- Hour 21
+    1,                       !- Hour 22
+    1,                       !- Hour 23
+    1;                       !- Hour 24
+
+  Schedule:Week:Daily,
+    Week Sch 1,              !- Name
+    Day Sch 1,               !- Sunday Schedule:Day Name
+    Day Sch 1,               !- Monday Schedule:Day Name
+    Day Sch 1,               !- Tuesday Schedule:Day Name
+    Day Sch 1,               !- Wednesday Schedule:Day Name
+    Day Sch 1,               !- Thursday Schedule:Day Name
+    Day Sch 1,               !- Friday Schedule:Day Name
+    Day Sch 1,               !- Saturday Schedule:Day Name
+    Day Sch 1,               !- Holiday Schedule:Day Name
+    Day Sch 1,               !- SummerDesignDay Schedule:Day Name
+    Day Sch 1,               !- WinterDesignDay Schedule:Day Name
+    Day Sch 1,               !- CustomDay1 Schedule:Day Name
+    Day Sch 1;               !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Sch 1,                   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Week Sch 1,              !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  OtherEquipment,
+    ZONE A OthEq 1,          !- Name
+    ZONE A,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  OtherEquipment,
+    ZONE B OthEq 1,          !- Name
+    ZONE B,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  OtherEquipment,
+    ZONE C OthEq 1,          !- Name
+    ZONE C,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  OtherEquipment,
+    ZONE D OthEq 1,          !- Name
+    ZONE D,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  OtherEquipment,
+    ZONE E OthEq 1,          !- Name
+    ZONE E,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+  OtherEquipment,
+    ZONE F OthEq 1,          !- Name
+    ZONE F,                  !- Zone or ZoneList Name
+    Sch 1,                   !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0.0,                     !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/Person}
+    0.000,                   !- Fraction Latent
+    0.000,                   !- Fraction Radiant
+    0.000;                   !- Fraction Lost
+
+! -------------------------------------------------------------
+! New objects created from CompactHVAC objects
+! -------------------------------------------------------------
+!
+
+  ScheduleTypeLimits,
+    COMPACT HVAC Any Number; !- Name
+
+  Schedule:Compact,
+    COMPACT HVAC-ALWAYS 2,   !- Name
+    COMPACT HVAC Any Number, !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,2;          !- Field 3
+
+  Schedule:Compact,
+    COMPACT HVAC-ALWAYS 0,   !- Name
+    COMPACT HVAC Any Number, !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0;          !- Field 3
+
+  Schedule:Compact,
+    COMPACT HVAC-ALWAYS 20,  !- Name
+    COMPACT HVAC Any Number, !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,20;         !- Field 3
+
+  ThermostatSetpoint:SingleCooling,
+    All Zones Single Cooling SP Control,  !- Name
+    COMPACT HVAC-ALWAYS 20;  !- Setpoint Temperature Schedule Name
+
+  ZoneControl:Thermostat,
+    Zone A Thermostat,       !- Name
+    Zone A,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone A,                  !- Zone Name
+    Zone A Equipment,        !- Zone Conditioning Equipment List Name
+    Zone A Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone A Zone Air Node,    !- Zone Air Node Name
+    Zone A Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone A Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone A Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone A Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone A Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneControl:Thermostat,
+    Zone B Thermostat,       !- Name
+    Zone B,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone B,                  !- Zone Name
+    Zone B Equipment,        !- Zone Conditioning Equipment List Name
+    Zone B Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone B Zone Air Node,    !- Zone Air Node Name
+    Zone B Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone B Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone B Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone B Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone B Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneControl:Thermostat,
+    Zone C Thermostat,       !- Name
+    Zone C,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone C,                  !- Zone Name
+    Zone C Equipment,        !- Zone Conditioning Equipment List Name
+    Zone C Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone C Zone Air Node,    !- Zone Air Node Name
+    Zone C Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone C Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone C Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone C Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone C Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneControl:Thermostat,
+    Zone D Thermostat,       !- Name
+    Zone D,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone D,                  !- Zone Name
+    Zone D Equipment,        !- Zone Conditioning Equipment List Name
+    Zone D Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone D Zone Air Node,    !- Zone Air Node Name
+    Zone D Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone D Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone D Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone D Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone D Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneControl:Thermostat,
+    Zone E Thermostat,       !- Name
+    Zone E,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone E,                  !- Zone Name
+    Zone E Equipment,        !- Zone Conditioning Equipment List Name
+    Zone E Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone E Zone Air Node,    !- Zone Air Node Name
+    Zone E Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone E Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone E Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone E Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone E Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneControl:Thermostat,
+    Zone F Thermostat,       !- Name
+    Zone F,                  !- Zone or ZoneList Name
+    COMPACT HVAC-ALWAYS 2,   !- Control Type Schedule Name
+    ThermostatSetpoint:SingleCooling,  !- Control 1 Object Type
+    All Zones Single Cooling SP Control;  !- Control 1 Name
+
+  ZoneHVAC:EquipmentConnections,
+    Zone F,                  !- Zone Name
+    Zone F Equipment,        !- Zone Conditioning Equipment List Name
+    Zone F Supply Inlet,     !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone F Zone Air Node,    !- Zone Air Node Name
+    Zone F Return Outlet;    !- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    Zone F Equipment,        !- Name
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    Zone F Purchased Air,    !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    Zone F Purchased Air,    !- Name
+    ,                        !- Availability Schedule Name
+    Zone F Supply Inlet,     !- Zone Supply Air Node Name
+    ,                        !- Zone Exhaust Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    0.015,                   !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.01,                    !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    ,                        !- Maximum Sensible Heating Capacity {W}
+    NoLimit,                 !- Cooling Limit
+    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+    ,                        !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ConstantSupplyHumidityRatio,  !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ConstantSupplyHumidityRatio,  !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    ,                        !- Demand Controlled Ventilation Type
+    ,                        !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    ,                        !- Sensible Heat Recovery Effectiveness {dimensionless}
+    ;                        !- Latent Heat Recovery Effectiveness {dimensionless}
+
+!-   ===========  ALL OBJECTS IN CLASS: REPORT VARIABLE ===========
+
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+
+  Output:Variable,*,Zone Mean Air Temperature,Hourly;
+
+!report variable,,zone latent load,hourly;
+!report variable,,lights return air load,hourly;
+!report variable,,electric load,hourly;
+!report variable,,Electric Load,hourly;
+!report variable,,Mean Radiant Temperature,hourly;
+
+  Output:Variable,*,Surface Inside face Temperature,Hourly;
+
+  Output:Variable,*,Surface Outside face Temperature,Hourly;
+
+!report variable,,Other Eq-Convective Heat Gain,hourly;
+!report variable,,Surface Inside Face Convection Heat Transfer Coefficient,hourly;
+!report variable,,Surface Outside Face Convection Heat Transfer Coefficient,hourly;
+!report variable,,Surface Outside Face Thermal Radiation to Air Heat Transfer Coefficient,hourly;
+!report variable,,Surface Outside Face Thermal Radiation to Sky Heat Transfer Coefficient,hourly;
+!report variable,,Surface Outside Face Thermal Radiation to Ground Heat Transfer Coefficient,hourly;
+
+  Output:Variable,*,Zone Air System Sensible Heating Energy,Hourly;
+
+  Output:Variable,*,Zone Air System Sensible Cooling Energy,Hourly;
+
+  Output:Variable,*,Zone Windows Total Transmitted Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Surface Window Transmitted Solar Radiation Rate,Hourly;
+
+  Output:Variable,*,Surface Window System Solar Transmittance,Hourly;
+
+  Output:Variable,*,Surface Window Heat Gain Rate,Hourly;
+
+  Output:Variable,*,Surface Window Heat Loss Rate,Hourly;
+
+  Output:Variable,*,Surface Outside Face Incident Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Surface Outside Face Incident Beam Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area,Hourly;
+
+  Output:Variable,*,Zone Ideal Loads Supply Air Total Cooling Energy,Hourly;
+
+  Output:Meter,DistrictCooling:HVAC,Hourly;
+
+  Output:Meter,DistrictCooling:HVAC,RunPeriod;
+
+!-   ===========  ALL OBJECTS IN CLASS: REPORT ===========
+!report variable,,Zone/Sys Sensible Heating Rate,hourly;
+!report variable,,Zone/Sys Sensible Cooling Rate,hourly;
+!report variable,,Zone/Sys Air Temp,hourly;
+!report variable,,Zone Air Humidity Ratio,hourly;
+!report variable,,System Node Temp,hourly;
+!report variable,,System Node MassFlowRate,hourly;
+!report variable,,System Node Humidity Ratio,hourly;
+!report variable,,SimAir Iterations,hourly;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Surfaces:List,Details;
+
+  Output:Constructions,Constructions;
+
+  Output:VariableDictionary,IDF;
+

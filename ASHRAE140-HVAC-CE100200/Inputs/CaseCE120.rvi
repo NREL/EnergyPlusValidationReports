@@ -1,0 +1,55 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Outdoor Air Wetbulb Temperature
+ENVIRONMENT,Site Outdoor Air Dewpoint Temperature
+ENVIRONMENT,Site Outdoor Air Enthalpy
+ENVIRONMENT,Site Outdoor Air Humidity Ratio
+ENVIRONMENT,Site Outdoor Air Relative Humidity
+ENVIRONMENT,Site Outdoor Air Density
+ENVIRONMENT,Site Outdoor Air Barometric Pressure
+ENVIRONMENT,Site Wind Speed
+ENVIRONMENT,Site Diffuse Solar Radiation Rate per Area
+ENVIRONMENT,Site Direct Solar Radiation Rate per Area
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Air Humidity Ratio
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+Zone1WindAC,Zone Air System Sensible Heating Energy
+Zone1WindAC,Zone Air System Sensible Cooling Energy
+Zone1WindAC,Zone Air Temperature
+Zone1WindAC,Zone Air Humidity Ratio
+Zone1WindAC,Zone Window Air Conditioner Total Cooling Rate
+Zone1WindAC,Zone Window Air Conditioner Total Cooling Energy
+Zone1WindAC,Zone Window Air Conditioner Sensible Cooling Rate
+Zone1WindAC,Zone Window Air Conditioner Sensible Cooling Energy
+Zone1WindAC,Zone Window Air Conditioner Electric Power
+Zone1WindAC,Zone Window Air Conditioner Electric Energy
+Zone1WindACFan,fan electric power
+Zone1WindACFan,Fan Rise in Air Temperature
+Zone1WindACFan,Fan Electric Energy
+Zone1WindACCoil,Cooling Coil Total Cooling Rate
+Zone1WindACDXCoil,Cooling Coil Total Cooling Energy
+Zone1WindACDXCoil,Cooling Coil Sensible Cooling Rate
+Zone1WindACDXCoil,Cooling Coil Sensible Cooling Energy
+Zone1WindACDXCoil,Cooling Coil Electric Power
+Zone1WindACDXCoil,Cooling Coil Electric Energy
+Zone1WindAC,Zone Window Air Conditioner Fan Part Load Ratio
+Zone1WindAC,Zone Window Air Conditioner Compressor Part Load Ratio
+Zone1WindACDXCoil,Cooling Coil Latent Cooling Rate
+Zone1WindACDXCoil,Cooling Coil Latent Cooling Energy
+Zone1WindACAirOutletNode,System Node Mass Flow Rate
+0
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+eplusout.eso
+eplusout.csv
+Environment,Site Outdoor Air Drybulb Temperature
+Environment,Site Outdoor Air Dewpoint Temperature
+Environment,Site Outdoor Air Wetbulb Temperature
+Environment,Site Outdoor Air Humidity Ratio
+Environment,Site Outdoor Air Relative Humidity
+Environment,Site Outdoor Air Barometric Pressure
+Environment,Site Wind Speed
+Environment,Site Wind Direction
+Environment,Site Diffuse Solar Radiation Rate per Area
+Environment,Site Direct Solar Radiation Rate per Area
+Environment,Site Outdoor Air Density
+Environment,Site Day Type Index
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE NORTH,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE NORTH,Surface Outside Face Outdoor Air Wind Speed
+ZONE SUBSURFACE 1,Surface Inside face Temperature
+ZONE SUBSURFACE 1,Surface Outside face Temperature
+ZONE SUBSURFACE 1,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SUBSURFACE 1,Surface Outside Face Outdoor Air Wind Speed
+ZONE SURFACE EAST,Surface Inside face Temperature
+ZONE SURFACE EAST,Surface Outside face Temperature
+ZONE SURFACE EAST,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE EAST,Surface Outside Face Outdoor Air Wind Speed
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE SOUTH,Surface Outside Face Outdoor Air Wind Speed
+ZONE SUBSURFACE 2,Surface Inside face Temperature
+ZONE SUBSURFACE 2,Surface Outside face Temperature
+ZONE SUBSURFACE 2,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SUBSURFACE 2,Surface Outside Face Outdoor Air Wind Speed
+ZONE SURFACE WEST,Surface Inside face Temperature
+ZONE SURFACE WEST,Surface Outside face Temperature
+ZONE SURFACE WEST,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE WEST,Surface Outside Face Outdoor Air Wind Speed
+ZONE SURFACE FLOOR,Surface Inside face Temperature
+ZONE SURFACE FLOOR,Surface Outside face Temperature
+ZONE SURFACE FLOOR,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE FLOOR,Surface Outside Face Outdoor Air Wind Speed
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Outside Face Outdoor Air Drybulb Temperature
+ZONE SURFACE ROOF,Surface Outside Face Outdoor Air Wind Speed
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,AFN Node Temperature
+ZONE ONE,AFN Node Humidity Ratio
+ZONE ONE,AFN Node Total Pressure
+NFACADE,AFN Node Temperature
+NFACADE,AFN Node Humidity Ratio
+NFACADE,AFN Node Total Pressure
+NFACADE,AFN Node Wind Pressure
+SFACADE,AFN Node Temperature
+SFACADE,AFN Node Humidity Ratio
+SFACADE,AFN Node Total Pressure
+SFACADE,AFN Node Wind Pressure
+ZONE SUBSURFACE 1,AFN Linkage Node 1 to Node 2 Mass Flow Rate
+ZONE SUBSURFACE 1,AFN Linkage Node 2 to Node 1 Mass Flow Rate
+ZONE SUBSURFACE 1,AFN Linkage Node 1 to Node 2 Volume Flow Rate
+ZONE SUBSURFACE 1,AFN Linkage Node 2 to Node 1 Volume Flow Rate
+ZONE SUBSURFACE 1,AFN Linkage Node 1 to Node 2 Pressure Difference
+ZONE SUBSURFACE 2,AFN Linkage Node 1 to Node 2 Mass Flow Rate
+ZONE SUBSURFACE 2,AFN Linkage Node 2 to Node 1 Mass Flow Rate
+ZONE SUBSURFACE 2,AFN Linkage Node 1 to Node 2 Volume Flow Rate
+ZONE SUBSURFACE 2,AFN Linkage Node 2 to Node 1 Volume Flow Rate
+ZONE SUBSURFACE 2,AFN Linkage Node 1 to Node 2 Pressure Difference
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+NODE_1,System Node Temperature
+NODE_1,System Node Mass Flow Rate
+NODE_1,System Node Humidity Ratio
+NODE_1,System Node Standard Density Volume Flow Rate
+NODE_2,System Node Temperature
+NODE_2,System Node Mass Flow Rate
+NODE_2,System Node Humidity Ratio
+NODE_2,System Node Standard Density Volume Flow Rate
+NODE_3,System Node Temperature
+NODE_3,System Node Mass Flow Rate
+NODE_3,System Node Humidity Ratio
+NODE_3,System Node Standard Density Volume Flow Rate
+SCH 1,Schedule Value
+HEATCOOL SETPOINTS,Schedule Value
+ZONE CONTROL TYPE SCHED,Schedule Value
+FANANDCOILAVAILSCHED,Schedule Value
+OUTVARSCHED,Schedule Value
+COMPACT HVAC-ALWAYS 1,Schedule Value
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

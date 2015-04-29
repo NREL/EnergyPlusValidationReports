@@ -1,0 +1,103 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Diffuse Solar Radiation Rate per Area
+ENVIRONMENT,Site Direct Solar Radiation Rate per Area
+ENVIRONMENT,Site Ground Reflected Solar Radiation Rate per Area
+ENVIRONMENT,Site Deep Ground Temperature
+ENVIRONMENT,Site Exterior Horizontal Sky Illuminance
+ENVIRONMENT,Site Exterior Horizontal Beam Illuminance
+ENVIRONMENT,Site Exterior Beam Normal Illuminance
+ENVIRONMENT,Site Sky Diffuse Solar Radiation Luminous Efficacy
+ENVIRONMENT,Site Beam Solar Radiation Luminous Efficacy
+Internal Gains,Electric Equipment Latent Gain Energy
+Internal gains,Electric Equipment Total Heating Energy
+Base-Lower-South,Surface Inside Face Convection Heat Gain Energy
+Base-Lower-East,Surface Inside Face Convection Heat Gain Energy
+Base-Lower-North,Surface Inside Face Convection Heat Gain Energy
+Base-Lower-West,Surface Inside Face Convection Heat Gain Energy
+Base-Lower-Floor,Surface Inside Face Convection Heat Gain Energy
+Base-Lower-Ceil,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-South-Conc,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-East-Conc,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-North-Conc,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-West-Conc,Surface Inside Face Convection Heat Gain Energy
+Baes-Upper-South-Frame,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-East-Frame,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-North-Frame,Surface Inside Face Convection Heat Gain Energy
+Base-Upper-West-Frame,Surface Inside Face Convection Heat Gain Energy
+BASE-UPPER-FLOOR,Surface Inside Face Convection Heat Gain Energy
+Z2 WEST GABLE,Surface Inside Face Convection Heat Gain Energy
+Z2 EAST GABLE,Surface Inside Face Convection Heat Gain Energy
+Z2 FLOOR FRAMED,Surface Inside Face Convection Heat Gain Energy
+Z2 FLOOR BATT,Surface Inside Face Convection Heat Gain Energy
+Z2 NORTH ROOF,Surface Inside Face Convection Heat Gain Energy
+Z1 SOUTH ROOF,Surface Inside Face Convection Heat Gain Energy
+Z1 SOUTH WALL BATTING,Surface Inside Face Convection Heat Gain Energy
+SOUTH FRAMED 1,Surface Inside Face Convection Heat Gain Energy
+SOUTH WINDOW,Surface Inside Face Convection Heat Gain Energy
+SOUTH ALUM FRAME,Surface Inside Face Convection Heat Gain Energy
+SOUTH FRAMED 2,Surface Inside Face Convection Heat Gain Energy
+SOUTH DOOR,Surface Inside Face Convection Heat Gain Energy
+Z1 WEST WALL BATTING,Surface Inside Face Convection Heat Gain Energy
+WEST FRAMED 1,Surface Inside Face Convection Heat Gain Energy
+WEST FRAMED 2,Surface Inside Face Convection Heat Gain Energy
+WEST ALUM FRAME,Surface Inside Face Convection Heat Gain Energy
+WEST WINDOW,Surface Inside Face Convection Heat Gain Energy
+Z1 EAST WALL BATTING,Surface Inside Face Convection Heat Gain Energy
+EAST FRAMED 1,Surface Inside Face Convection Heat Gain Energy
+EAST FRAMED 2,Surface Inside Face Convection Heat Gain Energy
+EAST ALUM FRAME,Surface Inside Face Convection Heat Gain Energy
+EAST WINDOW,Surface Inside Face Convection Heat Gain Energy
+Z1 NORTH WALL BATTING,Surface Inside Face Convection Heat Gain Energy
+NORTH ALUM FRAME,Surface Inside Face Convection Heat Gain Energy
+NORTH FRAMED 2,Surface Inside Face Convection Heat Gain Energy
+NORTH WINDOW,Surface Inside Face Convection Heat Gain Energy
+NORTH FRAMED 1,Surface Inside Face Convection Heat Gain Energy
+NORTH DOOR,Surface Inside Face Convection Heat Gain Energy
+Z1 FLOOR FRAMED,Surface Inside Face Convection Heat Gain Energy
+Z1 FLOOR NO BATTING,Surface Inside Face Convection Heat Gain Energy
+Z1 CEILING FRAMED,Surface Inside Face Convection Heat Gain Energy
+Z1 CEILING BATT,Surface Inside Face Convection Heat Gain Energy
+INTERIOR WALLS AIR,Surface Inside Face Convection Heat Gain Energy
+INTERIOR WALLS FRAMED,Surface Inside Face Convection Heat Gain Energy
+ZONE-BASEMENT-LOWER,Zone Mean Air Temperature
+ZONE-BASEMENT-UPPER,Zone Mean Air Temperature
+ZONE TWO ATTIC,Zone Mean Air Temperature
+ZONE ONE,Zone Mean Air Temperature
+ZONE TWO ATTIC,Zone Infiltration Air Change Rate
+ZONE ONE,Zone Infiltration Air Change Rate
+ZONE-BASEMENT-LOWER,Zone Air System Sensible Heating Energy
+ZONE-BASEMENT-LOWER,Zone Air System Sensible Heating Energy
+ZONE-BASEMENT-LOWER,Zone Air System Sensible Cooling Energy
+ZONE-BASEMENT-LOWER,Zone Air System Sensible Cooling Energy
+ZONE-BASEMENT-LOWER,Zone Air Temperature
+ZONE-BASEMENT-LOWER,Zone Air Temperature
+ZONE-BASEMENT-UPPER,Zone Air System Sensible Heating Energy
+ZONE-BASEMENT-UPPER,Zone Air System Sensible Heating Energy
+ZONE-BASEMENT-UPPER,Zone Air System Sensible Cooling Energy
+ZONE-BASEMENT-UPPER,Zone Air System Sensible Cooling Energy
+ZONE-BASEMENT-UPPER,Zone Air Temperature
+ZONE-BASEMENT-UPPER,Zone Air Temperature
+ZONE TWO ATTIC,Zone Air System Sensible Heating Energy
+ZONE TWO ATTIC,Zone Air System Sensible Heating Energy
+ZONE TWO ATTIC,Zone Air System Sensible Cooling Energy
+ZONE TWO ATTIC,Zone Air System Sensible Cooling Energy
+ZONE TWO ATTIC,Zone Air Temperature
+ZONE TWO ATTIC,Zone Air Temperature
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Temperature
+DistrictHeating:Facility
+DistrictCooling:Facility
+0
+
+
+
+
+
+
+

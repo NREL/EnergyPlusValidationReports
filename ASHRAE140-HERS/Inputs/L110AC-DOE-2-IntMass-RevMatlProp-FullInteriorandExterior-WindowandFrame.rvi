@@ -1,0 +1,39 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Diffuse Solar Radiation Rate per Area
+ENVIRONMENT,Site Direct Solar Radiation Rate per Area
+ENVIRONMENT,Site Ground Reflected Solar Radiation Rate per Area
+ENVIRONMENT,Site Exterior Horizontal Sky Illuminance
+ENVIRONMENT,Site Exterior Horizontal Beam Illuminance
+ENVIRONMENT,Site Exterior Beam Normal Illuminance
+ENVIRONMENT,Site Sky Diffuse Solar Radiation Luminous Efficacy
+ENVIRONMENT,Site Beam Solar Radiation Luminous Efficacy
+Internal Gains,Electric Equipment Latent Gain Energy
+Internal gains,Electric Equipment Total Heating Energy
+Zone Two Attic,Zone Mean Air Temperature
+Zone One,Zone Mean Air Temperature
+Zone Two Attic,Zone Infiltration Air Change Rate
+Zone One,Zone Infiltration Air Change Rate
+Zone Two Attic,Zone Air System Sensible Heating Energy
+Zone Two Attic,Zone Air System Sensible Cooling Energy
+Zone Two Attic,Zone Air Temperature
+Zone One,Zone Air System Sensible Heating Energy
+Zone One,Zone Air System Sensible Cooling Energy
+Zone One,Zone Air Temperature
+DistrictHeating:Facility
+DistrictCooling:Facility
+
+
+
+
+
+
+0
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Outdoor Air Wetbulb Temperature
+ENVIRONMENT,Site Outdoor Air Dewpoint Temperature
+ENVIRONMENT,Site Outdoor Air Enthalpy
+ENVIRONMENT,Site Outdoor Air Humidity Ratio
+ENVIRONMENT,Site Outdoor Air Relative Humidity
+ENVIRONMENT,Site Outdoor Air Density
+ENVIRONMENT,Site Outdoor Air Barometric Pressure
+ENVIRONMENT,Site Wind Speed
+ENVIRONMENT,Site Diffuse Solar Radiation Rate per Area
+ENVIRONMENT,Site Direct Solar Radiation Rate per Area
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Air Humidity Ratio
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Convection Heat Transfer Coefficient
+Zone One Supply Fan,fan electric power
+Zone One Supply Fan,Fan Rise in Air Temperature
+Zone One Supply Fan,Fan Electric Energy
+Zone One Supply Fan Outlet Node,System Node Mass Flow Rate
+Zone One Supply Fan Outlet Node,System Node Temperature
+Zone One Heating Coil,Heating Coil Air Heating Energy
+Zone One Heating Coil,Heating Coil Air Heating Rate
+Zone One Heating Coil,Heating Coil Gas Energy
+Zone One Heating Coil,Heating Coil Gas Rate
+Zone One Supply Fan,Fan Runtime Fraction
+Zone One Air Loop Outlet Node,System Node Mass Flow Rate
+Zone One Air Loop Outlet Node,System Node Temperature
+Zone One Air Loop Inlet Node,System Node Mass Flow Rate
+Zone One Air Loop Inlet Node,System Node Temperature
+Main Boiler,Boiler Heating Energy
+Main Boiler,Boiler Gas Rate
+Main Boiler,Boiler Gas Energy
+Main Boiler,Boiler Ancillary Electric Energy
+Zone One,Zone Other Equipment Radiant Heating Energy
+Zone One,Zone Other Equipment Convective Heating Energy
+Zone One,Zone Other Equipment Latent Gain Energy
+Zone One,Zone Other Equipment Lost Heat Energy
+Zone One,Zone Other Equipment Total Heating Energy
+Hot Water Loop Hot Water Loop,Plant Supply Side Heating Demand Rate
+Hot Water Loop Hot Water Loop,Plant Supply Side Outlet Temperature
+0
+
+
+
+
+
+
+

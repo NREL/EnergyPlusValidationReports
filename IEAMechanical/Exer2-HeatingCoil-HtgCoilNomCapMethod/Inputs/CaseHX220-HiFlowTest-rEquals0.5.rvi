@@ -1,0 +1,186 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Outdoor Air Wetbulb Temperature
+Site Outdoor Air Humidity Ratio
+Site Day Type Index
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE EAST,Surface Inside face Temperature
+ZONE SURFACE EAST,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE WEST,Surface Inside face Temperature
+ZONE SURFACE WEST,Surface Outside face Temperature
+ZONE SURFACE FLOOR,Surface Inside face Temperature
+ZONE SURFACE FLOOR,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+SCH 1,Schedule Value
+HEAT SETPOINTS,Schedule Value
+COOL SETPOINTS,Schedule Value
+FANANDCOILAVAILSCHED,Schedule Value
+OUTVARSCHED,Schedule Value
+COMPACT HVAC-BOILER,Schedule Value
+COMPACT HVAC-ALWAYS 1,Schedule Value
+COMPACT HVAC-ALWAYS 4,Schedule Value
+COMPACT HVAC-ALWAYS 13,Schedule Value
+COMPACT HVAC-ALWAYS 30,Schedule Value
+COMPACT SYSTEM-1 OUTSIDE AIR SCHED,Schedule Value
+COMPACT HVAC-ALWAYS 70,Schedule Value
+SYSTEM-1 SUPPLY FAN,Fan Electric Power
+SYSTEM-1 SUPPLY FAN,Fan Electric Energy
+SYSTEM-1 HEATING COIL,Heating Coil Heating Energy
+BOILER-1,Boiler Heating Energy
+SYSTEM-1 MIXED AIR OUTLET,System Node Temperature
+SYSTEM-1 MIXED AIR OUTLET,System Node Mass Flow Rate
+SYSTEM-1 MIXED AIR OUTLET,System Node Humidity Ratio
+SYSTEM-1 MIXED AIR OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 MIXED AIR OUTLET,System Node Wetbulb Temperature
+SYSTEM-1 AIR LOOP INLET,System Node Temperature
+SYSTEM-1 AIR LOOP INLET,System Node Mass Flow Rate
+SYSTEM-1 AIR LOOP INLET,System Node Humidity Ratio
+SYSTEM-1 AIR LOOP INLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 AIR LOOP INLET,System Node Wetbulb Temperature
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Temperature
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Mass Flow Rate
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Humidity Ratio
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Wetbulb Temperature
+SYSTEM-1 HEATING COIL OUTLET,System Node Temperature
+SYSTEM-1 HEATING COIL OUTLET,System Node Mass Flow Rate
+SYSTEM-1 HEATING COIL OUTLET,System Node Humidity Ratio
+SYSTEM-1 HEATING COIL OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 HEATING COIL OUTLET,System Node Wetbulb Temperature
+SYSTEM-1 HEATING COIL HW INLET,System Node Temperature
+SYSTEM-1 HEATING COIL HW INLET,System Node Mass Flow Rate
+SYSTEM-1 HEATING COIL HW INLET,System Node Humidity Ratio
+SYSTEM-1 HEATING COIL HW INLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 HEATING COIL HW INLET,System Node Wetbulb Temperature
+SYSTEM-1 HEATING COIL HW OUTLET,System Node Temperature
+SYSTEM-1 HEATING COIL HW OUTLET,System Node Mass Flow Rate
+SYSTEM-1 HEATING COIL HW OUTLET,System Node Humidity Ratio
+SYSTEM-1 HEATING COIL HW OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 HEATING COIL HW OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW SUPPLY BYPASS INLET,System Node Temperature
+HOT WATER LOOP-1 HW SUPPLY BYPASS INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW SUPPLY BYPASS INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW SUPPLY BYPASS INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW SUPPLY BYPASS INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW SUPPLY BYPASS OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW SUPPLY BYPASS OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW SUPPLY BYPASS OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW SUPPLY BYPASS OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW SUPPLY BYPASS OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW SUPPLY INLET,System Node Temperature
+HOT WATER LOOP-1 HW SUPPLY INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW SUPPLY INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW SUPPLY INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW SUPPLY INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW PUMP OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW PUMP OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW PUMP OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW PUMP OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW PUMP OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW SUPPLY OUTLET PIPE INLET,System Node Temperature
+HOT WATER LOOP-1 HW SUPPLY OUTLET PIPE INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW SUPPLY OUTLET PIPE INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW SUPPLY OUTLET PIPE INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW SUPPLY OUTLET PIPE INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW SUPPLY OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW SUPPLY OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW SUPPLY OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW SUPPLY OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW SUPPLY OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND INLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND INLET PIPE OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND INLET PIPE OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND INLET PIPE OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND INLET PIPE OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND INLET PIPE OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND BYPASS INLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND BYPASS INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND BYPASS INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND BYPASS INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND BYPASS INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND BYPASS OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND BYPASS OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND BYPASS OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND BYPASS OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND BYPASS OUTLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND OUTLET PIPE INLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND OUTLET PIPE INLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND OUTLET PIPE INLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND OUTLET PIPE INLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND OUTLET PIPE INLET,System Node Wetbulb Temperature
+HOT WATER LOOP-1 HW DEMAND OUTLET,System Node Temperature
+HOT WATER LOOP-1 HW DEMAND OUTLET,System Node Mass Flow Rate
+HOT WATER LOOP-1 HW DEMAND OUTLET,System Node Humidity Ratio
+HOT WATER LOOP-1 HW DEMAND OUTLET,System Node Standard Density Volume Flow Rate
+HOT WATER LOOP-1 HW DEMAND OUTLET,System Node Wetbulb Temperature
+BOILER-1 HW INLET,System Node Temperature
+BOILER-1 HW INLET,System Node Mass Flow Rate
+BOILER-1 HW INLET,System Node Humidity Ratio
+BOILER-1 HW INLET,System Node Standard Density Volume Flow Rate
+BOILER-1 HW INLET,System Node Wetbulb Temperature
+BOILER-1 HW OUTLET,System Node Temperature
+BOILER-1 HW OUTLET,System Node Mass Flow Rate
+BOILER-1 HW OUTLET,System Node Humidity Ratio
+BOILER-1 HW OUTLET,System Node Standard Density Volume Flow Rate
+BOILER-1 HW OUTLET,System Node Wetbulb Temperature
+SYSTEM-1 OUTSIDE AIR INLET,System Node Temperature
+SYSTEM-1 OUTSIDE AIR INLET,System Node Mass Flow Rate
+SYSTEM-1 OUTSIDE AIR INLET,System Node Humidity Ratio
+SYSTEM-1 OUTSIDE AIR INLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 OUTSIDE AIR INLET,System Node Wetbulb Temperature
+ZONE ONE ZONE AIR NODE,System Node Temperature
+ZONE ONE ZONE AIR NODE,System Node Mass Flow Rate
+ZONE ONE ZONE AIR NODE,System Node Humidity Ratio
+ZONE ONE ZONE AIR NODE,System Node Standard Density Volume Flow Rate
+ZONE ONE ZONE AIR NODE,System Node Wetbulb Temperature
+ZONE ONE RETURN OUTLET,System Node Temperature
+ZONE ONE RETURN OUTLET,System Node Mass Flow Rate
+ZONE ONE RETURN OUTLET,System Node Humidity Ratio
+ZONE ONE RETURN OUTLET,System Node Standard Density Volume Flow Rate
+ZONE ONE RETURN OUTLET,System Node Wetbulb Temperature
+ZONE ONE SUPPLY INLET,System Node Temperature
+ZONE ONE SUPPLY INLET,System Node Mass Flow Rate
+ZONE ONE SUPPLY INLET,System Node Humidity Ratio
+ZONE ONE SUPPLY INLET,System Node Standard Density Volume Flow Rate
+ZONE ONE SUPPLY INLET,System Node Wetbulb Temperature
+SYSTEM-1 SUPPLY PATH INLET,System Node Temperature
+SYSTEM-1 SUPPLY PATH INLET,System Node Mass Flow Rate
+SYSTEM-1 SUPPLY PATH INLET,System Node Humidity Ratio
+SYSTEM-1 SUPPLY PATH INLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 SUPPLY PATH INLET,System Node Wetbulb Temperature
+SYSTEM-1 RETURN AIR OUTLET,System Node Temperature
+SYSTEM-1 RETURN AIR OUTLET,System Node Mass Flow Rate
+SYSTEM-1 RETURN AIR OUTLET,System Node Humidity Ratio
+SYSTEM-1 RETURN AIR OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 RETURN AIR OUTLET,System Node Wetbulb Temperature
+ZONE ONE ZONE EQUIP INLET,System Node Temperature
+ZONE ONE ZONE EQUIP INLET,System Node Mass Flow Rate
+ZONE ONE ZONE EQUIP INLET,System Node Humidity Ratio
+ZONE ONE ZONE EQUIP INLET,System Node Standard Density Volume Flow Rate
+ZONE ONE ZONE EQUIP INLET,System Node Wetbulb Temperature
+SYSTEM-1 RELIEF AIR OUTLET,System Node Temperature
+SYSTEM-1 RELIEF AIR OUTLET,System Node Mass Flow Rate
+SYSTEM-1 RELIEF AIR OUTLET,System Node Humidity Ratio
+SYSTEM-1 RELIEF AIR OUTLET,System Node Standard Density Volume Flow Rate
+SYSTEM-1 RELIEF AIR OUTLET,System Node Wetbulb Temperature
+SYSTEM-1 SUPPLY FAN OUTLET,System Node Relative Humidity
+SYSTEM-1 HEATING COIL OUTLET,System Node Relative Humidity
+0
+
+
+
+

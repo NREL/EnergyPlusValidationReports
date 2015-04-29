@@ -1,0 +1,40 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+Site Ground Reflected Solar Radiation Rate per Area
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE EAST,Surface Inside face Temperature
+ZONE SURFACE WEST,Surface Inside face Temperature
+ZONE SURFACE CEILING,Surface Inside face Temperature
+ZONE SURFACE FLOOR,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE EAST,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE WEST,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE CEILING,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE FLOOR,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE NORTH,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE EAST,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE WEST,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE CEILING,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE FLOOR,Surface Outside Face Convection Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Outside Face Thermal Radiation to Air Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Outside Face Thermal Radiation to Sky Heat Transfer Coefficient
+ZONE SURFACE SOUTH,Surface Outside Face Thermal Radiation to Ground Heat Transfer Coefficient
+0
+
+
+
+
+
+
+

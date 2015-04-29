@@ -1,0 +1,295 @@
+! European Standard CEN 13791 Test Cond-1.idf
+! Basic file description: Heat Conduction Through Opaque Elements.
+! Author:   R. H. Henninger,  GARD Analytics, Inc.
+! Date:     November 29, 2006
+! Run:      Constant temperature design day, no sun, no wind
+! Building: Cube 1m x 1m x 1m, one surface type.
+! Internal: None.
+! System:   None.
+! Plant:    None.
+! Modified:
+
+  VERSION,8.1;
+
+  Site:Location,
+    GOLDEN COLORADO,         !- Name
+    39.80,                   !- Latitude {deg}
+    -104.90,                 !- Longitude {deg}
+    -7.000000,               !- Time Zone {hr}
+    1609.0;                  !- Elevation {m}
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    2,                       !- End Month
+    10,                      !- End Day of Month
+    ,                        !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    ,                        !- Apply Weekend Holiday Rule
+    ,                        !- Use Weather File Rain Indicators
+    ;                        !- Use Weather File Snow Indicators
+
+  Material,
+    LAYER 1,                 !- Name
+    Smooth,                  !- Roughness
+    0.2,                     !- Thickness {m}
+    1.2,                     !- Conductivity {W/m-K}
+    2000.,                   !- Density {kg/m3}
+    1000.0,                  !- Specific Heat {J/kg-K}
+    0.000001,                !- Thermal Absorptance
+    0.000001,                !- Solar Absorptance
+    0.000001;                !- Visible Absorptance
+
+             ! Material layer names follow:
+
+  Construction,
+    TESTSURFACE,             !- Name
+    LAYER 1;                 !- Outside Layer
+
+  Timestep,6;
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE NORTH,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE SOUTH,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE EAST,       !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE WEST,       !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE FLOOR,      !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  SurfaceProperty:ConvectionCoefficients,
+    ZONE SURFACE CEILING,    !- Surface Name
+    Inside,                  !- Convection Coefficient 1 Location
+    Value,                   !- Convection Coefficient 1 Type
+    2.5,                     !- Convection Coefficient 1 {W/m2-K}
+    ,                        !- Convection Coefficient 1 Schedule Name
+    ,                        !- Convection Coefficient 1 User Curve Name
+    Outside,                 !- Convection Coefficient 2 Location
+    Value,                   !- Convection Coefficient 2 Type
+    8.0,                     !- Convection Coefficient 2 {W/m2-K}
+    ,                        !- Convection Coefficient 2 Schedule Name
+    ;                        !- Convection Coefficient 2 User Curve Name
+
+  Site:HeightVariation,
+    0.0,                     !- Wind Speed Profile Exponent
+    370,                     !- Wind Speed Profile Boundary Layer Thickness {m}
+    0.0;                     !- Air Temperature Gradient Coefficient {K/m}
+
+  ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    1;                       !- Calculation Frequency
+
+  Site:GroundReflectance,0,0,0,0,0,0,0,0,0,0,0,0;
+
+  Building,
+    Test Cond-1,             !- Name
+    0.0,                     !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  Zone,
+    ZONE ONE,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    1.000,                   !- Ceiling Height {m}
+    1.000;                   !- Volume {m3}
+
+  ! ZoneCapacitanceMultiplier,1;
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE SOUTH,      !- Name
+    Wall,                    !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,0.0,1.0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    1.0,0.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    1.0,0.0,1.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE WEST,       !- Name
+    Wall,                    !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,1.0,1.0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,1.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0,0.0,1.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE NORTH,      !- Name
+    Wall,                    !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    1.0,1.0,1.0,  !- X,Y,Z ==> Vertex 1 {m}
+    1.0,1.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0,1.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0,1.0,1.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE EAST,       !- Name
+    Wall,                    !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    1.0,0.0,1.0,  !- X,Y,Z ==> Vertex 1 {m}
+    1.0,0.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    1.0,1.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    1.0,1.0,1.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE CEILING,    !- Name
+    Ceiling,                 !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,1.0,1.0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,0.0,1.0,  !- X,Y,Z ==> Vertex 2 {m}
+    1.0,0.0,1.0,  !- X,Y,Z ==> Vertex 3 {m}
+    1.0,1.0,1.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE FLOOR,      !- Name
+    Floor,                   !- Surface Type
+    TESTSURFACE,             !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0,0.0,0.0,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0,1.0,0.0,  !- X,Y,Z ==> Vertex 2 {m}
+    1.0,1.0,0.0,  !- X,Y,Z ==> Vertex 3 {m}
+    1.0,0.0,0.0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Timestep;
+
+  Output:Variable,*,Site Wind Speed,Timestep;
+
+  Output:Variable,*,Zone Mean Air Temperature,Timestep;
+
+  Output:Variable,*,Site Diffuse Solar Radiation Rate per Area,Timestep;
+
+  Output:Variable,*,Site Direct Solar Radiation Rate per Area,Timestep;
+
+  Output:Variable,*,Site Ground Reflected Solar Radiation Rate per Area,Timestep;
+
+  Output:Variable,*,Surface Inside face Temperature,Timestep;
+
+  Output:Variable,*,Surface Outside face Temperature,Timestep;
+
+  Output:Variable,*,Surface Inside Face Convection Heat Transfer Coefficient,Timestep;
+
+  Output:Variable,*,Surface Outside Face Convection Heat Transfer Coefficient,Timestep;
+
+  Output:Variable,*,Zone Air System Sensible Heating Energy,Timestep;
+
+  Output:Variable,*,Zone Air System Sensible Cooling Energy,Timestep;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Surfaces:List,Details;
+
+  Output:Constructions,Constructions;
+

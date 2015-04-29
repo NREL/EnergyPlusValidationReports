@@ -1,0 +1,155 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+ZONE A,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE A,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE A,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE A,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE A,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE B,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE B,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE B,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE B,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE B,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE C,Zone Windows Total Transmitted Solar Radiation Rate
+ZONE C,Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE C,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate
+ZONE C,Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE C,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate
+ZONE A SURFACE SOUTHWEST,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE A SURFACE SOUTHWEST,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE A SURFACE SOUTHWEST,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE A SURFACE SOUTHWEST,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Outside Face Incident Solar Radiation Rate per Area
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Outside Face Incident Beam Solar Radiation Rate per Area
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Window Transmitted Solar Radiation Rate
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Window Heat Gain Rate
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Window Heat Loss Rate
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Window System Solar Transmittance
+ZONE A SURFACE SOUTHWEST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SURFACE SOUTHWEST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A COMMON WALL SURFACE,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A COMMON WALL SURFACE,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE A SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B COMMON WALL SURFACE NORTHEAST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B COMMON WALL SURFACE NORTHEAST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B COMMON WALL SURFACE SOUTHWEST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B COMMON WALL SURFACE SOUTHWEST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE B SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE B SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SURFACE NORTHWEST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SURFACE NORTHEAST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SURFACE NORTHEAST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SURFACE SOUTHEAST,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C COMMON WALL SURFACE,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C COMMON WALL SURFACE,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SUBSURFACE COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SUBSURFACE COMMON WALL WINDOW,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SURFACE FLOOR,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE C SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Absorbed Solar Radiation Rate
+ZONE C SURFACE ROOF,Surface Inside Face Initial Transmitted Diffuse Transmitted Out Window Solar Radiation Rate
+ZONE A SURFACE SOUTHWEST,Surface Inside face Temperature
+ZONE A SURFACE SOUTHWEST,Surface Outside face Temperature
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Inside face Temperature
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Surface Outside face Temperature
+ZONE A SURFACE NORTHWEST,Surface Inside face Temperature
+ZONE A SURFACE NORTHWEST,Surface Outside face Temperature
+ZONE A SURFACE SOUTHEAST,Surface Inside face Temperature
+ZONE A SURFACE SOUTHEAST,Surface Outside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE A COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE A SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside face Temperature
+ZONE A SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Outside face Temperature
+ZONE A SURFACE FLOOR,Surface Inside face Temperature
+ZONE A SURFACE FLOOR,Surface Outside face Temperature
+ZONE A SURFACE ROOF,Surface Inside face Temperature
+ZONE A SURFACE ROOF,Surface Outside face Temperature
+ZONE B SURFACE NORTHWEST,Surface Inside face Temperature
+ZONE B SURFACE NORTHWEST,Surface Outside face Temperature
+ZONE B SURFACE SOUTHEAST,Surface Inside face Temperature
+ZONE B SURFACE SOUTHEAST,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE NORTHEAST,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE NORTHEAST,Surface Outside face Temperature
+ZONE B SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Inside face Temperature
+ZONE B SUBSURFACE NORTHEAST COMMON WALL WINDOW,Surface Outside face Temperature
+ZONE B COMMON WALL SURFACE SOUTHWEST,Surface Inside face Temperature
+ZONE B COMMON WALL SURFACE SOUTHWEST,Surface Outside face Temperature
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Surface Inside face Temperature
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Surface Outside face Temperature
+ZONE B SURFACE FLOOR,Surface Inside face Temperature
+ZONE B SURFACE FLOOR,Surface Outside face Temperature
+ZONE B SURFACE ROOF,Surface Inside face Temperature
+ZONE B SURFACE ROOF,Surface Outside face Temperature
+ZONE C SURFACE NORTHWEST,Surface Inside face Temperature
+ZONE C SURFACE NORTHWEST,Surface Outside face Temperature
+ZONE C SURFACE NORTHEAST,Surface Inside face Temperature
+ZONE C SURFACE NORTHEAST,Surface Outside face Temperature
+ZONE C SURFACE SOUTHEAST,Surface Inside face Temperature
+ZONE C SURFACE SOUTHEAST,Surface Outside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Inside face Temperature
+ZONE C COMMON WALL SURFACE,Surface Outside face Temperature
+ZONE C SUBSURFACE COMMON WALL WINDOW,Surface Inside face Temperature
+ZONE C SUBSURFACE COMMON WALL WINDOW,Surface Outside face Temperature
+ZONE C SURFACE FLOOR,Surface Inside face Temperature
+ZONE C SURFACE FLOOR,Surface Outside face Temperature
+ZONE C SURFACE ROOF,Surface Inside face Temperature
+ZONE C SURFACE ROOF,Surface Outside face Temperature
+ZONE A,Zone Mean Air Temperature
+ZONE B,Zone Mean Air Temperature
+ZONE C,Zone Mean Air Temperature
+ZONE A,Zone Air System Sensible Heating Energy
+ZONE A,Zone Air System Sensible Cooling Energy
+ZONE B,Zone Air System Sensible Heating Energy
+ZONE B,Zone Air System Sensible Cooling Energy
+ZONE C,Zone Air System Sensible Heating Energy
+ZONE C,Zone Air System Sensible Cooling Energy
+ZONE A PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE B PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+ZONE C PURCHASED AIR,Zone Ideal Loads Supply Air Total Cooling Energy
+DistrictCooling:HVAC
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Window Transmitted Solar
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Window Transmitted Beam Solar
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Window Transmitted Beam-to-Beam Solar
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Window Transmitted Beam-to-Diffuse Solar
+ZONE A SUBSURFACE SOUTHWEST WINDOW,Window Transmitted Diffuse Solar
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Window Transmitted Solar
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Window Transmitted Beam Solar
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Window Transmitted Beam-to-Beam Solar
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Window Transmitted Beam-to-Diffuse Solar
+ZONE B SUBSURFACE SOUTHWEST COMMON WALL WINDOW,Window Transmitted Diffuse Solar
+ZONE C SUBSURFACE COMMON WALL WINDOW,Window Transmitted Solar
+ZONE C SUBSURFACE COMMON WALL WINDOW,Window Transmitted Beam Solar
+ZONE C SUBSURFACE COMMON WALL WINDOW,Window Transmitted Beam-to-Beam Solar
+ZONE C SUBSURFACE COMMON WALL WINDOW,Window Transmitted Beam-to-Diffuse Solar
+ZONE C SUBSURFACE COMMON WALL WINDOW,Window Transmitted Diffuse Solar
+0
+
+
+
+

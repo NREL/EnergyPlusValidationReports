@@ -1,0 +1,108 @@
+eplusout.eso
+eplusout.csv
+Site Outdoor Air Drybulb Temperature
+Site Outdoor Air Humidity Ratio
+Site Wind Speed
+Site Diffuse Solar Radiation Rate per Area
+Site Direct Solar Radiation Rate per Area
+Site Day Type Index
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE EAST,Surface Inside face Temperature
+ZONE SURFACE EAST,Surface Outside face Temperature
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE WEST,Surface Inside face Temperature
+ZONE SURFACE WEST,Surface Outside face Temperature
+ZONE SURFACE FLOOR,Surface Inside face Temperature
+ZONE SURFACE FLOOR,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE ONE,Zone Total Internal Radiant Heating Energy
+ZONE ONE,Zone Total Internal Convective Heating Energy
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Total Internal Total Heating Energy
+ZONE ONE LIGHTS 1,Lights Electric Energy
+ZONE ONE ELECTEQ 1,Electric Equipment Electric Energy
+ZONE ONE GASEQ 1,Gas Equipment Total Heating Energy
+ZONE ONE STEAMEQ 1,Steam Equipment Total Heating Energy
+ZONE ONE OTHEQ-HEATING,Other Equipment Total Heating Energy
+ZONE ONE OTHEQ 1,Other Equipment Total Heating Energy
+ZONE ONE OTHEQ 2,Other Equipment Total Heating Energy
+ZONE ONE OTHEQ 3,Other Equipment Total Heating Energy
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Air Humidity Ratio
+ZONE ONE,Zone Predicted Sensible Load to Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Sensible Load to Heating Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Sensible Load to Cooling Setpoint Heat Transfer Rate
+ZONE ONE,Zone Predicted Moisture Load Moisture Transfer Rate
+ZONE ONE,Zone Thermostat Heating Setpoint Temperature
+ZONE ONE,Zone Thermostat Cooling Setpoint Temperature
+SCH OTHEREQ-HEAT,Schedule Value
+SCH OTHEREQ-COOL,Schedule Value
+HEATCOOL SETPOINTS,Schedule Value
+ZONE CONTROL TYPE SCHED,Schedule Value
+FANANDCOILAVAILSCHED,Schedule Value
+OUTVARSCHED,Schedule Value
+COMPACT HVAC-ALWAYS 1,Schedule Value
+COMPACT HVAC-ALWAYS 100,Schedule Value
+COMPACT HVAC-ALWAYS 6.67,Schedule Value
+COMPACT HVAC-ALWAYS 29.44,Schedule Value
+ZONE1FANCOIL,Fan Coil Heating Rate
+ZONE1FANCOIL,Fan Coil Heating Energy
+ZONE1FANCOIL,Fan Coil Total Cooling Energy
+ZONE1FANCOIL,Fan Coil Sensible Cooling Energy
+ZONE1FANCOILFAN,Fan Electric Power
+ZONE1FANCOILFAN,Fan Electric Energy
+ZONE1FANCOILHEATINGCOIL,Heating Coil Heating Energy
+ZONE1FANCOILHEATINGCOIL,Heating Coil Heating Rate
+ZONE1FANCOILCOOLINGCOIL,Cooling Coil Total Cooling Energy
+ZONE1FANCOILCOOLINGCOIL,Cooling Coil Sensible Cooling Energy
+HOT WATER LOOP HOT WATER LOOP,Plant Supply Side Cooling Demand Rate
+HOT WATER LOOP HOT WATER LOOP,Plant Supply Side Heating Demand Rate
+HOT WATER LOOP HOT WATER LOOP,Plant Supply Side Outlet Temperature
+CHILLED WATER LOOP CHILLED WATER LOOP,Plant Supply Side Cooling Demand Rate
+CHILLED WATER LOOP CHILLED WATER LOOP,Plant Supply Side Heating Demand Rate
+CHILLED WATER LOOP CHILLED WATER LOOP,Plant Supply Side Outlet Temperature
+CENTRAL BOILER,Boiler Heating Energy
+CENTRAL BOILER,Boiler Gas Energy
+CENTRAL CHILLER,Chiller Part Load Ratio
+CENTRAL CHILLER,Chiller Cycling Ratio
+CENTRAL CHILLER,Chiller Electric Power
+CENTRAL CHILLER,Chiller Heater Electric Power
+CENTRAL CHILLER,Chiller Electric Energy
+CENTRAL CHILLER,Chiller Heater Electric Energy
+CENTRAL CHILLER,Chiller Evaporator Cooling Energy
+CENTRAL CHILLER,Chiller Heater Evaporator Cooling Energy
+CENTRAL CHILLER,Chiller Evaporator Inlet Temperature
+CENTRAL CHILLER,Chiller Heater Evaporator Inlet Temperature
+CENTRAL CHILLER,Chiller Evaporator Outlet Temperature
+CENTRAL CHILLER,Chiller Heater Evaporator Outlet Temperature
+CENTRAL CHILLER,Chiller Evaporator Mass Flow Rate
+CENTRAL CHILLER,Chiller Heater Evaporator Mass Flow Rate
+CENTRAL CHILLER,Chiller COP
+CENTRAL CHILLER,Chiller Capacity Temperature Modifier Multiplier
+CENTRAL CHILLER,Chiller EIR Temperature Modifier Multiplier
+CENTRAL CHILLER,Chiller EIR Part Load Modifier Multiplier
+CENTRAL CHILLER,Chiller Condenser Inlet Temperature
+CENTRAL CHILLER,Chiller Heater Condenser Inlet Temperature
+CENTRAL CHILLER,Chiller Condenser Outlet Temperature
+CENTRAL CHILLER,Chiller Heater Condenser Outlet Temperature
+CENTRAL CHILLER,Chiller Condenser Mass Flow Rate
+CENTRAL CHILLER,Chiller Heater Condenser Mass Flow Rate
+CHILLED WATER LOOP CNDW SUPPLY PUMP,Pump Electric Power
+CHILLED WATER LOOP CNDW SUPPLY PUMP,Pump Fluid Heat Gain Rate
+HOT WATER LOOP HW SUPPLY PUMP,Pump Electric Power
+HOT WATER LOOP HW SUPPLY PUMP,Pump Fluid Heat Gain Rate
+CHILLED WATER LOOP CHW SUPPLY PUMP,Pump Electric Power
+CHILLED WATER LOOP CHW SUPPLY PUMP,Pump Fluid Heat Gain Rate
+CHILLED WATER LOOP CONDENSER WATER LOOP,Plant Supply Side Cooling Demand Rate
+CENTRAL TOWER,Cooling Tower Heat Transfer Rate
+CENTRAL TOWER,Cooling Tower Fan Electric Power
+0
+
+
+
+

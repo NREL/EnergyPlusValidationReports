@@ -1,0 +1,53 @@
+eplusout.eso
+eplusout.csv
+ENVIRONMENT,Site Outdoor Air Drybulb Temperature
+ENVIRONMENT,Site Outdoor Air Wetbulb Temperature
+ENVIRONMENT,Site Outdoor Air Dewpoint Temperature
+ENVIRONMENT,Site Outdoor Air Enthalpy
+ENVIRONMENT,Site Outdoor Air Humidity Ratio
+ENVIRONMENT,Site Outdoor Air Relative Humidity
+ENVIRONMENT,Site Outdoor Air Density
+ENVIRONMENT,Site Outdoor Air Barometric Pressure
+ENVIRONMENT,Site Wind Speed
+ENVIRONMENT,Site Diffuse Solar Radiation Rate per Area
+ENVIRONMENT,Site Direct Solar Radiation Rate per Area
+ZONE ONE,Zone Mean Air Temperature
+ZONE ONE,Zone Air System Sensible Heating Energy
+ZONE ONE,Zone Air System Sensible Cooling Energy
+ZONE ONE,Zone Air Temperature
+ZONE ONE,Zone Total Internal Latent Gain Energy
+ZONE ONE,Zone Air Humidity Ratio
+ZONE SURFACE SOUTH,Surface Inside face Temperature
+ZONE SURFACE SOUTH,Surface Outside face Temperature
+ZONE SURFACE NORTH,Surface Inside face Temperature
+ZONE SURFACE NORTH,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside face Temperature
+ZONE SURFACE ROOF,Surface Outside face Temperature
+ZONE SURFACE ROOF,Surface Inside Face Convection Heat Transfer Coefficient
+ZONE SURFACE ROOF,Surface Outside Face Convection Heat Transfer Coefficient
+Gas Furnace 1 Furnace,Zone Air System Sensible Heating Energy
+Gas Furnace 1 Furnace,Zone Air System Sensible Cooling Energy
+Gas Furnace 1 Furnace,Zone Air Temperature
+Gas Furnace 1 Furnace,Zone Air Humidity Ratio
+Gas Furnace 1 Supply Fan,fan electric power
+Gas Furnace 1 Supply Fan,Fan Rise in Air Temperature
+Gas Furnace 1 Supply Fan,Fan Electric Energy
+Gas Furnace 1 Supply Fan Outlet Node,System Node Mass Flow Rate
+Gas Furnace 1 Supply Fan Outlet Node,System Node Temperature
+Gas Furnace 1 Heating Coil,Heating Coil Air Heating Energy
+Gas Furnace 1 Heating Coil,Heating Coil Air Heating Rate
+Gas Furnace 1 Heating Coil,Heating Coil Gas Energy
+Gas Furnace 1 Heating Coil,Heating Coil Gas Rate
+Gas Furnace 1 Supply Fan,Fan Runtime Fraction
+Gas Furnace 1 Air Loop Outlet Node,System Node Mass Flow Rate
+Gas Furnace 1 Air Loop Outlet Node,System Node Temperature
+Gas Furnace 1 Air Loop Inlet Node,System Node Mass Flow Rate
+Gas Furnace 1 Air Loop Inlet Node,System Node Temperature
+0
+
+
+
+
+
+
+

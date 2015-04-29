@@ -1,0 +1,50 @@
+- Version: 1.0.2.004
+  Input-File-Changes: Interpolated cooling equipment performance data to get ARI rated conditions
+
+- Version: 1.0.3.001
+  Code-Changes: Added H~g~ psychrometric function as per ASHRAE equations and now use this for latent gain conversion to humidity ratio
+
+- Version: 1.0.3.005
+  Input-File-Changes: New cooling equipment performance curve fits generated for ARI data point in revised specification
+  Code-Changes: Dry coil outlet condition calculation error fixed
+
+- Version: 1.0.3.006
+  Input-File-Changes: Added infiltration during first week of simulation to overcome overdrying of cooling coil
+  Code-Changes: Weather data subhourly time step interpolation fixed
+
+- Version: 1.0.3.013
+  Input-File-Changes: Corrected error with fan outlet node name for mixed air set point manager which had in specified incorrectly
+
+- Version: 1.1.0.020
+  Input-File-Changes: Changed economizer enthalpy limit for Case CE440 from 65.13 to 47.25 kJ/kg per change to specification
+  Code-Changes: Changed moisture balance algorithm to account for space internal loads before HVAC system simulation
+
+- Version: 1.3.0.018
+  Input-File-Changes: Turned off the surface vertical temperature calculation in the new SITE ATMOSPHERIC VARIATION object.
+
+- Version: 1.4.0.025
+  Code-Changes: Changed DX coil sensible and latent outlet calculations to make them consistent with Window Air Conditioner outlet calculations. DX coil and Window Air Conditioner total cooling remained unchanged but the split between sensible and latent coil load did change. (CR 7092)
+
+- Version: 2.1.0.023
+  Code-Changes: Changes made to psychrometric routines to make them valid below 0C. (CR 7282 & CR 7331)
+
+- Version: 2.2.0.023
+  Input-File-Changes: Used EnergyPlus weather files created from TMY2 formatted files provided with Standard 140-2007
+
+- Version: 3.0.0.028
+  Code-Changes: The algorithm for variable system timestep was revised. Changes include uniform system timestep length across zone timestep and stricter management of history terms for zone air conditions.
+
+- Version: 3.1.0.016
+  Code-Changes: DX coil controls were improved to prevent operation at very small loads and improve interaction with economizer lockout.
+
+- Version: 4.0.0.024
+  Input-File-Changes: DX cooling coil performance curves were redone after removing data points for dry coil operating conditions. SHR was changed from 0.804 to 0.78245.
+
+- Version: 7.1.0.012
+  Code-Changes: The interpolation of rain and snow flags in the weather data was revised to better match how the other weather data are interpolated. (CR8800)
+
+- Version: 7.2.0.006
+  Code-Changes: The model coefficients for the DOE-2 outside face convection correlations were changed. This had no impact on results for this test suite since the building was intended as a near-adiabatic test cell with cooling loads driven by internal gains.
+
+- Version: 8.2.0
+  Code-Changes: EnergyPlus code was converted to C++

@@ -1,0 +1,536 @@
+! Test Structure 1.idf
+! Basic file description: B. H. Bland Conduction Step Test No.1.
+! Author:   T. L. Cornell,  GARD Analytics, Inc.
+! Date:     November 3, 1999.
+! Run:      Annual run with Bland Excitation 1 temperature step file.
+! Building: Specified base structure for B. H. Bland steady-state tests.
+! Internal: None.
+! System:   None.
+! Plant:    None.
+! Modified:
+!    MJW 00-05-22 Updated materials to Beta 3 (no moisture properties)
+!    MJW 00-05-22 Used SurfaceConvert to upgrade surfaces to Beta 3
+!    MJW 00-12-12 Dimension changed to 2m by 2m by 0.001m in order to minimize
+!                 the ratio of air mass to wall mass as suggested by Bland.
+!    RHH 10-06-22 Transitioned all filed to EnergyPlus v5.0.0.031
+!    RHH 10-06-23 Used SurfaceProperty:ConvectionCofficients:MultipleSurface objbect to set the required inside and outside surface coefficients
+!    RHH 10-06-23 Changed Timestep from 4 to 1
+!    RHH 10-06-23 Added Site:HeightVariation object
+!SurfaceProperty:ConvectionCoefficients:MultipleSurface,
+!    AllExteriorSurfaces,     !- Surface Type
+!    Outside,                 !- Convection Coefficient 1 Location
+!    Value,                   !- Convection Coefficient 1 Type
+!    20,                      !- Convection Coefficient 1 {W/m2-K}
+!    ,                        !- Convection Coefficient 1 Schedule Name
+!    Inside,                  !- Convection Coefficient 2 Location
+!    Value,                   !- Convection Coefficient 2 Type
+!    5;                       !- Convection Coefficient 2 {W/m2-K}
+
+  Site:HeightVariation,
+    0.0,                     !- Wind Speed Profile Exponent
+    370,                     !- Wind Speed Profile Boundary Layer Thickness {m}
+    0.0;                     !- Air Temperature Gradient Coefficient {K/m}
+
+  Site:Location,
+    CHICAGO ILLINOIS,        !- Name
+    41.78,                   !- Latitude {deg}
+    -87.75,                  !- Longitude {deg}
+    -6.000000,               !- Time Zone {hr}
+    190.0;                   !- Elevation {m}
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    Monday,                  !- Day of Week for Start Day
+    ,                        !- Use Weather File Holidays and Special Days
+    ,                        !- Use Weather File Daylight Saving Period
+    No,                      !- Apply Weekend Holiday Rule
+    Yes,                     !- Use Weather File Rain Indicators
+    Yes;                     !- Use Weather File Snow Indicators
+
+  Material,
+    0.1 MM ALUMINUM,         !- Name
+    Smooth,                  !- Roughness
+    0.00010,                 !- Thickness {m}
+    160.00000,               !- Conductivity {W/m-K}
+    2800.00000,              !- Density {kg/m3}
+    900.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    1 CM CONCRETE,           !- Name
+    Rough,                   !- Roughness
+    0.01000,                 !- Thickness {m}
+    1.40000,                 !- Conductivity {W/m-K}
+    2100.00000,              !- Density {kg/m3}
+    650.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    5 CM CONCRETE,           !- Name
+    Rough,                   !- Roughness
+    0.05000,                 !- Thickness {m}
+    1.40000,                 !- Conductivity {W/m-K}
+    2100.00000,              !- Density {kg/m3}
+    650.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    10 CM CONCRETE,          !- Name
+    Rough,                   !- Roughness
+    0.10000,                 !- Thickness {m}
+    1.40000,                 !- Conductivity {W/m-K}
+    2100.00000,              !- Density {kg/m3}
+    650.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    20 CM CONCRETE,          !- Name
+    Rough,                   !- Roughness
+    0.20000,                 !- Thickness {m}
+    1.40000,                 !- Conductivity {W/m-K}
+    2100.00000,              !- Density {kg/m3}
+    650.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    1 CM INSULATION,         !- Name
+    VeryRough,               !- Roughness
+    0.01000,                 !- Thickness {m}
+    0.03000,                 !- Conductivity {W/m-K}
+    30.00000,                !- Density {kg/m3}
+    1300.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    5 CM INSULATION,         !- Name
+    VeryRough,               !- Roughness
+    0.05000,                 !- Thickness {m}
+    0.03000,                 !- Conductivity {W/m-K}
+    30.00000,                !- Density {kg/m3}
+    1300.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    10 CM INSULATION,        !- Name
+    VeryRough,               !- Roughness
+    0.10000,                 !- Thickness {m}
+    0.03000,                 !- Conductivity {W/m-K}
+    30.00000,                !- Density {kg/m3}
+    1300.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    20 CM INSULATION,        !- Name
+    VeryRough,               !- Roughness
+    0.20000,                 !- Thickness {m}
+    0.03000,                 !- Conductivity {W/m-K}
+    30.00000,                !- Density {kg/m3}
+    1300.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    1 CM WOOD,               !- Name
+    MediumRough,             !- Roughness
+    0.01000,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    500.00000,               !- Density {kg/m3}
+    2500.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    5 CM WOOD,               !- Name
+    MediumRough,             !- Roughness
+    0.05000,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    500.00000,               !- Density {kg/m3}
+    2500.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    10 CM WOOD,              !- Name
+    MediumRough,             !- Roughness
+    0.10000,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    500.00000,               !- Density {kg/m3}
+    2500.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    20 CM WOOD,              !- Name
+    MediumRough,             !- Roughness
+    0.20000,                 !- Thickness {m}
+    0.14000,                 !- Conductivity {W/m-K}
+    500.00000,               !- Density {kg/m3}
+    2500.00000,              !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    2 MM GLASS,              !- Name
+    VerySmooth,              !- Roughness
+    0.00200,                 !- Thickness {m}
+    1.80000,                 !- Conductivity {W/m-K}
+    2200.00000,              !- Density {kg/m3}
+    560.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  Material,
+    5 CM ALUMINUM,           !- Name
+    Smooth,                  !- Roughness
+    0.05000,                 !- Thickness {m}
+    160.00000,               !- Conductivity {W/m-K}
+    2800.00000,              !- Density {kg/m3}
+    900.00000,               !- Specific Heat {J/kg-K}
+    0.0000001,               !- Thermal Absorptance
+    0.0000001,               !- Solar Absorptance
+    0.0000001;               !- Visible Absorptance
+
+  VERSION,.;
+
+  Timestep,6;
+
+  Building,
+    Test Structure 1,        !- Name
+    0.0000000E+00,           !- North Axis {deg}
+    Country,                 !- Terrain
+    3.9999999E-02,           !- Loads Convergence Tolerance Value
+    4.0000002E-03,           !- Temperature Convergence Tolerance Value {deltaC}
+    MinimalShadowing,        !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+!  SurfaceConvectionAlgorithm:Inside,Detailed;
+!  SurfaceConvectionAlgorithm:Outside,Detailed;
+
+  Zone,
+    ZONE ONE,                !- Name
+    0.0000000E+00,           !- Direction of Relative North {deg}
+    0.0000000E+00,           !- X Origin {m}
+    0.0000000E+00,           !- Y Origin {m}
+    0.0000000E+00,           !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    2.0000,                  !- Ceiling Height {m}
+    ;                        !- Volume {m3}
+
+  ! ZoneCapacitanceMultiplier,1;
+! 00-05-22 New surface descriptions generated by SurfaceConvert.exe
+! from 00-05-10 version of 'Test Structure 1.idf'
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    WorldCoordinateSystem;   !- Coordinate System
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE SOUTH,      !- Name
+    Wall,                    !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000000E+00,0.0000000E+00,0.0010000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000000E+00,0.0000000E+00,0.0000000E+00,  !- X,Y,Z ==> Vertex 2 {m}
+    2.000000,0.0000000E+00,0.0000000E+00,  !- X,Y,Z ==> Vertex 3 {m}
+    2.000000,0.0000000E+00,0.0010000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE EAST,       !- Name
+    Wall,                    !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    2.000000,0.0000000E+00,0.0010000,  !- X,Y,Z ==> Vertex 1 {m}
+    2.000000,0.0000000E+00,0.0000000E+00,  !- X,Y,Z ==> Vertex 2 {m}
+    2.000000,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 3 {m}
+    2.000000,2.000000,0.0010000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE NORTH,      !- Name
+    Wall,                    !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    2.000000,2.000000,0.0010000,  !- X,Y,Z ==> Vertex 1 {m}
+    2.000000,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000000E+00,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000000E+00,2.000000,0.0010000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE WEST,       !- Name
+    Wall,                    !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000000E+00,2.000000,0.0010000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000000E+00,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000000E+00,0.0000000E+00,0.0000000E+00,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000000E+00,0.0000000E+00,0.0010000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE BOTTOM,     !- Name
+    Floor,                   !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000000E+00,0.0000000E+00,0.0000000E+00,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000000E+00,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 2 {m}
+    2.000000,2.000000,0.0000000E+00,  !- X,Y,Z ==> Vertex 3 {m}
+    2.000000,0.0000000E+00,0.0000000E+00;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    ZONE SURFACE TOP,        !- Name
+    Roof,                    !- Surface Type
+    WALL,                    !- Construction Name
+    ZONE ONE,                !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.0000000E+00,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000000E+00,2.000000,0.0010000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000000E+00,0.0000000E+00,0.0010000,  !- X,Y,Z ==> Vertex 2 {m}
+    2.000000,0.0000000E+00,0.0010000,  !- X,Y,Z ==> Vertex 3 {m}
+    2.000000,2.000000,0.0010000;  !- X,Y,Z ==> Vertex 4 {m}
+
+           ! Next Arguments represent each hour of day
+
+  Schedule:Day:Hourly,
+    ReportOnDay,             !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    1,                       !- Hour 1
+    1,                       !- Hour 2
+    1,                       !- Hour 3
+    1,                       !- Hour 4
+    1,                       !- Hour 5
+    1,                       !- Hour 6
+    1,                       !- Hour 7
+    1,                       !- Hour 8
+    1,                       !- Hour 9
+    1,                       !- Hour 10
+    1,                       !- Hour 11
+    1,                       !- Hour 12
+    1,                       !- Hour 13
+    1,                       !- Hour 14
+    1,                       !- Hour 15
+    1,                       !- Hour 16
+    1,                       !- Hour 17
+    1,                       !- Hour 18
+    1,                       !- Hour 19
+    1,                       !- Hour 20
+    1,                       !- Hour 21
+    1,                       !- Hour 22
+    1,                       !- Hour 23
+    1;                       !- Hour 24
+
+           ! Next Arguments represent each hour of day
+
+  Schedule:Day:Hourly,
+    ReportOffDay,            !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+           ! Next arguments are names (DaySchedules) for the days
+
+  Schedule:Week:Daily,
+    ReportOnWeek,            !- Name
+    ReportOnDay,             !- Sunday Schedule:Day Name
+    ReportOnDay,             !- Monday Schedule:Day Name
+    ReportOnDay,             !- Tuesday Schedule:Day Name
+    ReportOnDay,             !- Wednesday Schedule:Day Name
+    ReportOnDay,             !- Thursday Schedule:Day Name
+    ReportOnDay,             !- Friday Schedule:Day Name
+    ReportOnDay,             !- Saturday Schedule:Day Name
+    ReportOnDay,             !- Holiday Schedule:Day Name
+    ReportOnDay,             !- SummerDesignDay Schedule:Day Name
+    ReportOnDay,             !- WinterDesignDay Schedule:Day Name
+    ReportOnDay,             !- CustomDay1 Schedule:Day Name
+    ReportOnDay;             !- CustomDay2 Schedule:Day Name
+
+           ! Next arguments are names (DaySchedules) for the days
+
+  Schedule:Week:Daily,
+    ReportOffWeek,           !- Name
+    ReportOffDay,            !- Sunday Schedule:Day Name
+    ReportOffDay,            !- Monday Schedule:Day Name
+    ReportOffDay,            !- Tuesday Schedule:Day Name
+    ReportOffDay,            !- Wednesday Schedule:Day Name
+    ReportOffDay,            !- Thursday Schedule:Day Name
+    ReportOffDay,            !- Friday Schedule:Day Name
+    ReportOffDay,            !- Saturday Schedule:Day Name
+    ReportOffDay,            !- Holiday Schedule:Day Name
+    ReportOffDay,            !- SummerDesignDay Schedule:Day Name
+    ReportOffDay,            !- WinterDesignDay Schedule:Day Name
+    ReportOffDay,            !- CustomDay1 Schedule:Day Name
+    ReportOffDay;            !- CustomDay2 Schedule:Day Name
+
+           ! remaining arguments are grouped [Name (WeekSchedules),startmonth,startday,endmonth,endday]
+           ! 18 periods allowed
+
+  Schedule:Year,
+    ReportSchedule,          !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    ReportOffWeek,           !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    1,                       !- End Month 1
+    30,                      !- End Day 1
+    ReportOnWeek,            !- Schedule:Week Name 2
+    1,                       !- Start Month 2
+    31,                      !- Start Day 2
+    2,                       !- End Month 2
+    06,                      !- End Day 2
+    ReportOffWeek,           !- Schedule:Week Name 3
+    2,                       !- Start Month 3
+    07,                      !- Start Day 3
+    2,                       !- End Month 3
+    27,                      !- End Day 3
+    ReportOnWeek,            !- Schedule:Week Name 4
+    2,                       !- Start Month 4
+    28,                      !- Start Day 4
+    3,                       !- End Month 4
+    06,                      !- End Day 4
+    ReportOffWeek,           !- Schedule:Week Name 5
+    3,                       !- Start Month 5
+    07,                      !- Start Day 5
+    4,                       !- End Month 5
+    29,                      !- End Day 5
+    ReportOnWeek,            !- Schedule:Week Name 6
+    4,                       !- Start Month 6
+    30,                      !- Start Day 6
+    5,                       !- End Month 6
+    06,                      !- End Day 6
+    ReportOffWeek,           !- Schedule:Week Name 7
+    5,                       !- Start Month 7
+    07,                      !- Start Day 7
+    5,                       !- End Month 7
+    30,                      !- End Day 7
+    ReportOnWeek,            !- Schedule:Week Name 8
+    5,                       !- Start Month 8
+    31,                      !- Start Day 8
+    6,                       !- End Month 8
+    06,                      !- End Day 8
+    ReportOffWeek,           !- Schedule:Week Name 9
+    6,                       !- Start Month 9
+    7,                       !- Start Day 9
+    12,                      !- End Month 9
+    31;                      !- End Day 9
+
+! These are report variables Linda uses to trace changes
+
+  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Timestep,ReportSchedule;
+
+  Output:Variable,*,Zone Mean Air Temperature,Timestep,ReportSchedule;
+
+! report variable,,zone latent load,Timestep,ReportSchedule;
+! report variable,,lights return air load,Timestep,ReportSchedule;
+! report variable,,electric load,Timestep,ReportSchedule;
+! report variable,,Electric Load,Timestep,ReportSchedule;
+! report variable,,Mean Radiant Temperature,Timestep,ReportSchedule;
+
+  Output:Variable,*,Surface Inside face Temperature,Timestep,ReportSchedule;
+
+  Output:Variable,*,Surface Outside face Temperature,Timestep,ReportSchedule;
+
+  Output:Variable,*,Surface Inside Face Convection Heat Transfer Coefficient,Timestep,ReportSchedule;
+
+  Output:Variable,*,Surface Outside Face Convection Heat Transfer Coefficient,Timestep,ReportSchedule;
+
+  Output:Variable,*,Zone Air System Sensible Heating Energy,Timestep,ReportSchedule;
+
+  Output:Variable,*,Zone Air System Sensible Cooling Energy,Timestep,ReportSchedule;
+
+! report variable,,Zone/Sys Sensible Heating Rate,Timestep,ReportSchedule;
+! report variable,,Zone/Sys Sensible Cooling Rate,Timestep,ReportSchedule;
+! report variable,,Zone/Sys Air Temp,Timestep,ReportSchedule;
+! report variable,,Zone Air Humidity Ratio,Timestep,ReportSchedule;
+! report variable,,System Node Temp,Timestep,ReportSchedule;
+! report variable,,System Node MassFlowRate,Timestep,ReportSchedule;
+! report variable,,System Node Humidity Ratio,Timestep,ReportSchedule;
+! report variable,,SimAir Iterations,Timestep,ReportSchedule;
+
+  Output:Surfaces:Drawing,dxf;
+
+  Output:Constructions,Constructions;
+
+  Output:VariableDictionary,Regular;
+
