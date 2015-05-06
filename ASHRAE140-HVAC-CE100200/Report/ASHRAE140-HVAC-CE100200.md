@@ -270,7 +270,7 @@ Simulations for all cases were run for a three month period. The first month of
 the simulation period (January) served as an initialization period. The output
 results reported were for the second month of the simulation (February).
 
-**(FIX check table) Table 1 Standard 140-2011 Space Cooling Performance Test Case Descriptions**
+**Table 1 Standard 140-2011 Space Cooling Performance Test Case Descriptions**
 
 <table>
  <tr  >
@@ -852,7 +852,7 @@ Results from the fourth round of simulations with EnergyPlus Version 1.0.0.023 a
 ![](media/image9.svg)
 
 
-**Comparison of Changes that Occurred with Early Versions of EnergyPlus**
+## Comparison of Changes that Occurred with Early Versions of EnergyPlus
 
 This section documents the comparative changes that took place in results (see
 Figures 2 through 9) as modifications were made to the EnergyPlus code or
@@ -1047,7 +1047,12 @@ For EnergyPlus version 8.2.0, the source code was converted from FORTRAN to C++.
 
 The results for EnergyPlus Version 8.2.0 were the same as with Version
 7.1.0.012, 7.2.0.006, 8.0.0.008 and 8.1.0.009. Refer to Table 11 for
-summary of results.
+summary of results. 
+
+**EnergyPlus version {{ engine.config["EnergyPlusVersion"] }} Results**
+
+Refer to Table 12 for results from EnergyPlus version {{ engine.config["EnergyPlusVersion"] }}.
+
 
 **Table 7 - Summary of Pertinent EnergyPlus Changes that were Implemented After EnergyPlus 1.0.0.023**
 
@@ -1067,7 +1072,7 @@ summary of results.
 
 ![](media/image20.png)
 
-**Table 11 - Standard 140 HVAC Results for EnergyPlus Versions 7.1.0.012, 7.2.0.006, 8.0.0.008, 8.1.0.009 and 8.2.0**
+**Table 11 - Standard 140 HVAC Results for EnergyPlus Versions 7.1.0.012, 7.2.0.006, 8.0.0.008, 8.1.0.009**
 
 ![](media/image21.svg)
 
@@ -1276,7 +1281,7 @@ engine.write_chart('ColumnClustered', 'QCL-QZL', 'HVAC BESTEST: Latent Coil Load
 
 *(Note: The excerpted discussion that follows is based on HVAC BESTEST results produced with EnergyPlus 1.0.0.023.)*
 
-### EnergyPlus (GARD Analytics)
+**3.4.7 EnergyPlus (GARD Analytics)**
 
 EnergyPlus is the program recently released by DOE, and is the building energy simulation program that will be supported by DOE. GARD Analytics (GARD) used EnergyPlus's "Window Air-Conditioner" system for its model.
 
@@ -1314,12 +1319,12 @@ The process of correcting these disagreements engendered the
 improvements to EnergyPlus described below.
 
 
-#### Reported Cooling Coil Loads Not Adjusted for Part Load Operation (up to 2500% effect on total coil load, negligible effect on energy consumption)
+*3.4.7.1 Reported Cooling Coil Loads Not Adjusted for Part Load Operation (up to 2500% effect on total coil load, negligible effect on energy consumption)*
 
 In Figure 3-10 it is apparent from the Beta 5-07 results for total coil load (designated by the results labeled "Q Coil Total" for cases E140, E170, and E200) that the total cooling coil load is in error, with the greatest error found in cases with lower PLR. For Beta 5-14 the reporting of cooling coil loads was corrected to account for run time during cycling operation. Because for Beta 5-07 the actual load extracted from the space was already being adjusted for cycling (similar magnitude disagreements do not exist for COP of cases E140 and E170 in Figure 3-9), it appears that this problem had a negligible effect on COP and energy consumption.
 
 
-#### Modified Calculation of SHR and BF (1%-2% total consumption effect)
+*3.4.7.2 Modified Calculation of SHR and BF (1%-2% total consumption effect)*
 
 The problem of sensible coil loads being greater than total coil loads was addressed by modifying the methods of calculating SHR and BF. With the reasonable assumption that the coil load reporting error had negligible effect on energy consumption, the difference in COP between Beta 5-14 and Beta 5-07 (shown in Figure 3-9) illustrates the 1%-2% energy consumption effect of this modification, with a similar degree of change for all cases.
 
@@ -1334,7 +1339,7 @@ These disagreements with the analytical solutions prompted further
 improvements, described below.
 
 
-#### Draw-through Fan, Double-Precision Variables, and Modified Calculation of Coil Outlet Conditions (0.1%-0.7% total consumption effect)
+*3.4.7.3 Draw-through Fan, Double-Precision Variables, and Modified Calculation of Coil Outlet Conditions (0.1%-0.7% total consumption effect)*
 
 Changes leading up to Version 1-11 included:
 
@@ -1353,14 +1358,14 @@ Along with remaining differences in COP apparent for Ver 1-11 in Figure 3-9, GAR
 -   Previous Beta 5-07 disagreements of low ID fan power became worse compared with analytical solution results (see "E170 Q ID Fan × 50" results in Figure 3-10).
 
 
-#### Change to Standard Air Density for Fan Power Calculation (1% decrease in sensible coil load)
+*3.4.7.4 Change to Standard Air Density for Fan Power Calculation (1% decrease in sensible coil load)*
 
 For versions 1-12 through 1-17, results for changes to the software were aggregated with input file changes (notably the revision of system performance curves) so that assessing the effect of software
 revisions-including the implementation of moist air specific heat and the use of standard air properties for calculating supply air mass flow rates-was difficult. However, in Figure 3-10 (for the set of results labeled "E200 Qsens Coil-Zone x 20" for Ver 1-17 versus Ver 1-11), the bulk of the remaining fan heat discrepancy appears to have been addressed in version 1-17 when the fan power calculation was changed to incorporate standard air density. This change appears to have resulted in a 1% change in sensible and total coil load (see results for "E200 Q Coil Total" in Figure 3-10). The effect on ID fan energy appears to be about 3% (see results for "E170 ID Fan Q x 50" for Ver 1-17 versus
 Ver 1-11 in Figure 3-10), which translates to a 0.3% total power effect. The total electricity consumption effect would be greater in cases where the fan is running continuously (e.g. because of outside air requirements) even though the compressor is operating at lower part loads.
 
 
-#### Modified Heat of Vaporization for Converting Zone Latent Load into HVAC
+*3.4.7.5 Modified Heat of Vaporization for Converting Zone Latent Load into HVAC*
 
 System Latent Load (0.4%-2.5% total consumption effect for wet coil
 cases only) For versions 1-18 and 1-19, the effects of input file
@@ -1373,12 +1378,12 @@ From Figure 3-10, the case E180 latent coil load results (designated by "E180 Q 
 loads and removed other small discrepancies.
 
 
-##### ID Fan Power Did Not Include COP f(PLR) Degradation (2% total consumption effect at mid PLR)
+*3.4.7.6 ID Fan Power Did Not Include COP f(PLR) Degradation (2% total consumption effect at mid PLR)*
 
 In Figure 3-10, using the set of results labeled "E170 Q ID Fan × 50" (fan energy use magnified by a factor of 50), it is apparent that indoor fan consumption was about 15% lower than the analytical solution results for case E170. This difference was traced to CDF not being accounted for in the ID fan consumption. Application of COP=f(PLR) was implemented by Ver 1-23, and better agreement with the analytical solution indoor fan energy consumption was the result. The difference in results for Ver 1-23 and Ver 1-19 in Figure 3-9 indicates a 2% effect on total energy consumption for the mid-PLR case E170, with a higher percentage of effect as PLR decreases (e.g., see Figure 3-9 results for case E140 or E190).
 
 
-#### General Comment About Improvements to EnergyPlus
+*3.4.7.7 General Comment About Improvements to EnergyPlus*
 
 Each individual error found in EnergyPlus by itself did not have >3% effect on consumption results. However, these multiple errors do not necessarily compensate each other, and may be cumulative in some cases. Furthermore, some errors that have small effect on total consumption for these cases (e.g. fan model errors when the indoor fan is cycling with the compressor) could have larger effects on total consumption for other cases (e.g., if the indoor fan is operating continuously while the compressor cycles). Therefore, correcting these errors was important.
 
