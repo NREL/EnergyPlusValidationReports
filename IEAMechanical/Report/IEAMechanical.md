@@ -721,12 +721,12 @@ engine.load_sheet('coilcomp_AllResults_May26_2008-With EplusResults-ShortenedB.x
 engine.load_sheet('coilcomp_AllResults_May26_2008-With EplusResults-ShortenedB.xlsx', 'Case260')
 ```
 
-{{ engine.create_table_from_excel_range('IEA Cooling Coil Results-EnergyPlus-SimpleSolution.xlsx', 'Summary Results-EthyleneGlycol', 'A1:J66') }}
+{{ engine.create_table_from_excel_range('IEA Cooling Coil Results-EnergyPlus-SimpleSolution.xlsx', 'Summary Results-EthyleneGlycol', 'A1:J66', [0,1,2,3,4,5,6,7,8,9,10,11]) }}
 
 
 **Table 8 Results of Cooling Coil Tests with EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }}, Cases with 18% Propylene Glycol Mixture**
 
-{{ engine.create_table_from_excel_range('IEA Cooling Coil Results-EnergyPlus-SimpleSolution.xlsx', 'Summary Results-PropyleneGlycol', 'A1:J66') }}
+{{ engine.create_table_from_excel_range('IEA Cooling Coil Results-EnergyPlus-SimpleSolution.xlsx', 'Summary Results-PropyleneGlycol', 'A1:J66', [0,1,2,3,4,5,6,7,8,9,10,11]) }}
 
 {{ engine.write_chart('ColumnClustered', 'CLT', '', [], 'Total Cooling Energy / MWh', 'coilcomp_AllResults_May26_2008-With EplusResults-ShortenedB.xlsx', 'Summary', 'B5:G21', "(C5,B6:B21,C6:C21,1);(D5,B6:B21,D6:D21,2);(E5,B6:B21,E6:E21,3);(F5,B6:B21,F6:F21,4);(G5,B6:B21,G6:G21,5);", []) }}
 
@@ -853,7 +853,7 @@ Appendix B
 
 **Table 10 Results of Heating Coil Tests with EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }}**
 
-{{ engine.create_table_from_excel_range('IEA Heating Coil Results-EnergyPlus.xlsx', 'Summary Results', 'A1:H67') }}
+{{ engine.create_table_from_excel_range('IEA Heating Coil Results-EnergyPlus.xlsx', 'Summary Results', 'A1:H67', [0,1,2,3,4,5,6,7,8,9,10,11]) }}
 
 
 {{ engine.write_chart('ColumnClustered', 'HLT', '', [], 'Total Heating Energy / MWh', 'hcoilcomp_AllResults_May26_2008-EnergyPlusResultsOnlyB.xlsx', 'Summary', 'B2:G18', "(C2,B3:B18,C3:C18,1);(D2,B3:B18,D3:D18,2);(E2,B3:B18,E3:E18,3);(F2,B3:B18,F3:F18,4);(G2,B3:B18,G3:G18,5);", []) }}
