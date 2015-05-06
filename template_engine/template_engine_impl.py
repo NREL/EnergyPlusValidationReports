@@ -1254,13 +1254,17 @@ class TemplateEngine:
             cur_headings = [re.sub('{{(.*?)}}', eval_replacement, heading[1]) for heading in heading_names[:plotsize]]
 
             if not is_nums and len(cur_headings) > 9:
+                logging.debug("xticks labels: " + str(cur_headings) + " " + str(len(cur_headings)))
                 ax.set_xticklabels(cur_headings, rotation=45, horizontalalignment='right', size='xx-small')
+                plt.xlim(0, len(cur_headings))
                 plt.xticks(index + .5, cur_headings)
             else:
                 if not is_nums:
+                    logging.debug("xticks labels: " + str(cur_headings) + " " + str(len(cur_headings)))
                     index = np.arange(plotsize)
-                    ax.set_xticklabels(cur_headings, horizontalalignment='center', size='xx-small')
+                    plt.xlim(0, len(cur_headings))
                     plt.xticks(index + .5, cur_headings)
+                    ax.set_xticklabels(cur_headings, horizontalalignment='center', size='xx-small')
         else:
             xvals = []
             xlabels = []
