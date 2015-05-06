@@ -15,10 +15,14 @@ table td:first-child { border-left: none; }
 </style>
 -->
 <style>
- table { margin: 1em; }
+ table { margin: 1em; page-break-inside: avoid; }
  table thead { border-bottom: 1px solid #000; }
+ thead, tfoot { display: table-row-group }
  table td { padding: 5px; }
  table th { padding: 5px; }
+ H1.pagebreak { 
+   page-break-before: always;
+ }
 </style>
 
 <script>
@@ -26,7 +30,13 @@ table td:first-child { border-left: none; }
     var tables = document.getElementsByTagName("table")
 
     for (i = 0; i < tables.length; ++i) {
-      tables[i].className += " table-striped ";
+      tables[i].className += " table table-striped ";
+    }
+
+    var h1s = document.getElementsByTagName("H1")
+
+    for (i = 0; i < h1s.length; ++i) {
+      h1s[i].className += " pagebreak ";
     }
   }
 
