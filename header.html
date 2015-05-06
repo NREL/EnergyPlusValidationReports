@@ -20,6 +20,7 @@ table td:first-child { border-left: none; }
  thead, tfoot { display: table-row-group }
  table td { padding: 5px; }
  table th { padding: 5px; }
+ table tbody tr { border-top: 1px solid #DDD; }
  H1.pagebreak { 
    page-break-before: always;
  }
@@ -30,7 +31,7 @@ table td:first-child { border-left: none; }
     var tables = document.getElementsByTagName("table")
 
     for (i = 0; i < tables.length; ++i) {
-      tables[i].className += " table table-striped ";
+      tables[i].className += " table-striped ";
     }
 
     var h1s = document.getElementsByTagName("H1")

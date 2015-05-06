@@ -514,9 +514,11 @@ total fan efficiency is therefore 0.01.
 
 Results from the first modeling with EnergyPlus Version 1.0.1.019 are presented in Table 2. Note that all results are expressed in Watts (W) to conform with the units of the analytical results reported in early versions of the test suite specification. The part load operation of the supply fan in Case 1g indicated that there may be a bug in the EnergyPlus code. All other results are within 0.2%.
 
+<div style="page-break-inside: avoid;">
 **Table 2 – Round 1 Furnace HVAC BESTEST Results for EnergyPlus Version 1.0.1.019 (Note that energy values are reported in units of watts)**
 
 ![](./media/image7.svg)
+</div>
 
 
 ## Results – Round 2
@@ -544,14 +546,18 @@ The following changes in EnergyPlus results were observed:
 
 In March 2003, an additional requirement was added to the test suite specification, i.e., the circulating fan volume flow rate was set to 0.355 $\frac{m^3}{s}$ . To accommodate this change and still have the fan input power remain at 200 W, the fan total efficiency input was changed from the previous value of 0.01 used in Rounds 1 and 2 to a new value of 0.441975. As expected, the results for Round 3 were identical to the Round 2 results presented in Table 3.
 
+<div style="page-break-inside: avoid;">
 **Table 3 – Rounds 2 and 3 Furnace HVAC BESTEST Results for EnergyPlus Version 1.0.2.008 (Note that energy values are reported in units of GJ)**
 
 ![](./media/image8.svg)
+</div>
 
+<div style="page-break-inside: avoid;">
 **Table 3 – Rounds 2 and 3 Furnace HVAC BESTEST Results for EnergyPlus Version 1.0.2.008 (Note that energy values are reported in units of GJ)**  
 **(Continued)**
 
 ![](./media/image9.svg)
+</div>
 
 Note: BESTEST analytical results were not available for Cases 2a through 2c, therefore percentage differences could not be calculated
 
@@ -602,42 +608,54 @@ taken place over the testing process are summarized below:
 
 Table 6 also presents a summary of input file and code changes that were made as the testing progressed with each new release of EnergyPlus. Figures 3 - 5 graphically depict the changes in results between versions. More detailed comparisons of the EnergyPlus version {{ engine.config["EnergyPlusVersion"] }} results versus analytical results on an hour by hour basis for those cases where there was varying part load are presented in Appendix A.
 
+<div style="page-break-inside: avoid;">
 **Table 4 – Standard 140-2007 Furnace HVAC Results for EnergyPlus Versions 1.3.0.018, 1.4.0.025, 2.0.0.025, 2.1.0.023 and 2.2.0.023**
 
 ![](./media/image10.svg)
+</div>
 
+
+<div style="page-break-inside: avoid;">
 **Table 4 – Standard 140-2007 Furnace HVAC Results for EnergyPlus Versions 1.3.0.018, 1.4.0.025, 2.0.0.025, 2.1.0.023 and 2.2.0.023**  
 **(Continued)**
 
 ![](./media/image11.svg)
+</div>
 
 Note: analytical results were not available for Cases HE210 through HE230, therefore percentage differences could not be calculated
 
+<div style="page-break-inside: avoid;">
 **Table 5 – Standard 140-2011 Furnace HVAC Results for EnergyPlus Versions 3.0.0.028 through 8.2.0**
 
 ![](./media/image12.svg)
+</div>
 
+<div style="page-break-inside: avoid;">
 **Table 5 – Standard 140-2011 Furnace HVAC Results for EnergyPlus Versions 3.0.0.028 through 8.2.0**  
 **(Continued)**
 
 ![](./media/image13.svg)
 
 Note: BESTEST analytical results were not available for Cases HE210 through HE230, therefore percentage differences could not be calculated
+</div>
 
 
+<div style="page-break-inside: avoid;">
 **Table 5.1 – Standard 140-2011 Furnace HVAC Results for EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }}**
 
 {{ engine.create_table_from_excel_range("Test HE100-130.xlsx", "Data", "A5:D48") }}
+</div>
 
 {{ engine.create_table_from_excel_range("Test HE100-130.xlsx", "Data", "A54:D95") }}
 
 Note: BESTEST analytical results were not available for Cases HE210 through HE230, therefore percentage differences could not be calculated
 
 
+<div style="page-break-inside: avoid;">
 **Table 6 – Summary of Pertinent EnergyPlus Changes that were Implemented**
 
 {{ engine.create_table_from_yaml("EnergyPlusChanges.yaml", ["Version", "Input-File-Changes", "Code-Changes"]) }}
-
+</div>
 
 
 ![](./media/image14.svg)
