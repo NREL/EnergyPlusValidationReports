@@ -810,21 +810,21 @@ Suffix AC refers to Colorado Springs
 
 **Table 13 EnergyPlus Acceptance Test Results - HERS Tier-1 Colorado Springs Annual Heating**
 
-{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier1", "H4:AK27") }}
+{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier1", "H4:AK27", [], 16) }}
 
 **Table 13 EnergyPlus Acceptance Test Results - HERS Tier-1 Colorado Springs Annual Heating (Cont’d)**
 
-{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier1", "AQ4:BS27") }}
+{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier1", "AQ4:BS27", [], 15) }}
 
 **Table 14 EnergyPlus Acceptance Test Results - HERS Tier-2 Colorado Springs Annual Heating**
 
-{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier2 ", "H4:AB27") }}
+{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTable-ColoSprHeat-Tier2 ", "H4:AB27", [], 11) }}
 
 **Table 15 EnergyPlus Acceptance Test Results - HERS Tier-1 Las Vegas Annual Cooling**
 
-{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTableLasVegasCool-Tier1", "H4:AK27") }}
+{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTableLasVegasCool-Tier1", "H4:AK27", [], 16) }}
 
-{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTableLasVegasCool-Tier1", "AN4:AZ27") }}
+{{ engine.create_table_from_excel_range("Acceptance Test Results-Colorado Springs and Las Vegas.xlsx", "ReportTableLasVegasCool-Tier1", "AN4:AZ27", [], 16) }}
 
 
 **Table 16 EnergyPlus Acceptance Test Results - HERS Tier-2 Las Vegas and Colorado Springs Annual Cooling**
