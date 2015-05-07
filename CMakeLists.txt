@@ -96,7 +96,7 @@ function(AddReport reportName)
     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${reportName}/Report/${reportName}.md  ${CMAKE_CURRENT_SOURCE_DIR}/template_engine/template_engine_impl.py ${CMAKE_CURRENT_SOURCE_DIR}/template_engine/template_engine.py ${reportName}_simulations ${compiled_sheets})
 
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}/${reportName}-${ENERGYPLUS_VERSION}.html
-    COMMAND ${PANDOC_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md -o ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-${ENERGYPLUS_VERSION}.html --toc --mathjax -s --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -t html -N -H ${CMAKE_CURRENT_SOURCE_DIR}/header.html -A ${CMAKE_CURRENT_SOURCE_DIR}/footer.html
+    COMMAND ${PANDOC_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md -o ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-${ENERGYPLUS_VERSION}.html --toc --mathjax -s --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -t html -N -H ${CMAKE_CURRENT_SOURCE_DIR}/header.html -A ${CMAKE_CURRENT_SOURCE_DIR}/footer.html
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}/media
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}/generated_media
     COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/media ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}/media
@@ -106,7 +106,7 @@ function(AddReport reportName)
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md ${CMAKE_CURRENT_SOURCE_DIR}/header.html ${CMAKE_CURRENT_SOURCE_DIR}/footer.html)
 
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html
-    COMMAND ${PANDOC_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md -o ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html --mathjax -s --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -t html -N -H ${CMAKE_CURRENT_SOURCE_DIR}/header.html -A ${CMAKE_CURRENT_SOURCE_DIR}/footer.html
+    COMMAND ${PANDOC_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md -o ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html --mathjax -s --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -t html -N -H ${CMAKE_CURRENT_SOURCE_DIR}/header.html -A ${CMAKE_CURRENT_SOURCE_DIR}/footer.html
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md ${CMAKE_CURRENT_SOURCE_DIR}/header.html ${CMAKE_CURRENT_SOURCE_DIR}/footer.html)
 
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}-${ENERGYPLUS_VERSION}.pdf
