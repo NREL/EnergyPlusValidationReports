@@ -19,6 +19,7 @@ Washington, D.C.
 Originally Created by:
 
 Robert H. Henninger and Michael J. Witte  
+GARD Analytics, Inc.  
 115 S. Wilke Road, Suite 105  
 Arlington Heights, IL 60005-1500  
 USA  
