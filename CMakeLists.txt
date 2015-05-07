@@ -110,7 +110,7 @@ function(AddReport reportName)
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}.md ${CMAKE_CURRENT_SOURCE_DIR}/header.html ${CMAKE_CURRENT_SOURCE_DIR}/footer.html)
 
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}-${ENERGYPLUS_VERSION}.pdf
-    COMMAND ${WKHTMLTOPDF_EXECUTABLE} --page-size Letter --load-error-handling abort --load-media-error-handling abort --minimum-font-size 3 --footer-center [page] --javascript-delay 20000  toc ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}-${ENERGYPLUS_VERSION}.pdf 
+    COMMAND ${WKHTMLTOPDF_EXECUTABLE} --page-size Letter --load-error-handling abort --load-media-error-handling abort --minimum-font-size 3 --footer-center [page] --javascript-delay 60000  toc ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html ${CMAKE_CURRENT_BINARY_DIR}/Products/${reportName}-${ENERGYPLUS_VERSION}.pdf 
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${reportName}/${reportName}-notoc.html)
 
 

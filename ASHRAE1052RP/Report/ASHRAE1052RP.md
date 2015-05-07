@@ -372,7 +372,7 @@ eliminated.
 ### Step-Up in External Temperature
 
 ```{exec_python}
-engine.write_chart('Combo', '10 cm Wood-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 Version 1.0\nResults for ASHRAE Analytical Test TC2-Step Up\nTransient Conduction, Non-Adiabatic Wall, 10 cm Wood\n50 C Step Change in External Temperature (20C to 70C)\nIndoor Temperature Constant at 20C', 'Hour of Year', ['Temperature (C)', 'Zone Load (W)'], 'Test TC2-StepUp-TS6.xlsx', 'EPlus 10cm Wood', 'B6:N117', "(C6,B7:B117,C7:C117,1);('ASHRAE 10cm Wood'!D7,B7:B117,'ASHRAE 10cm Wood'!D8:D118,2);('ASHRAE 10cm Wood'!E7,B7:B117,'ASHRAE 10cm Wood'!E8:E118,3);(I6,B7:B117,I7:I117,4);(J6,B7:B117,J7:J117,5)#('ASHRAE 10cm Wood'!H7,B7:B117,'ASHRAE 10cm Wood'!H8:H118,6);(N6,B7:B117,N7:N117,7);", ['E-Plus TimeStep=6\nTimeStep=1'], [], ['b--', 'mx', 'g*', 'm-', 'g-', 'y^', 'y-']) 
+engine.write_chart('Combo', '10 cm Wood-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 Version 1.0\nResults for ASHRAE Analytical Test TC2-Step Up\nTransient Conduction, Non-Adiabatic Wall, 10 cm Wood\n50 C Step Change in External Temperature (20C to 70C)\nIndoor Temperature Constant at 20C', 'Hour of Year', ['Temperature (C)', 'Zone Load (W)'], 'Test TC2-StepUp-TS6.xlsx', 'EPlus 10cm Wood', 'B6:N117', "(C6,B7:B117,C7:C117,1);('ASHRAE 10cm Wood'!D7,B7:B117,'ASHRAE 10cm Wood'!D8:D118,2);('ASHRAE 10cm Wood'!E7,B7:B117,'ASHRAE 10cm Wood'!E8:E118,3);(I6,B7:B117,I7:I117,4);(J6,B7:B117,J7:J117,5)#('ASHRAE 10cm Wood'!H7,B7:B117,'ASHRAE 10cm Wood'!H8:H118,6);(N6,B7:B117,N7:N117,7);", ['E-Plus TimeStep=6'], [], ['b--', 'mx', 'g*', 'm-', 'g-', 'y^', 'y-']) 
 ```
 
 During the transient period before reaching steady state EnergyPlus is
@@ -393,7 +393,7 @@ Test Parameter      |  Units     | 1052RP           |  EnergyPlus      |  % diff
 
 ```{exec_python}
 
-engine.write_chart('Combo', '10 cm Wood-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 Version 1.0\nResults for ASHRAE Analytical Test TC2-Step Down\nTransient Conduction, Non-Adiabatic Wall, 10 cm Wood\n100 C Step Change in External Temperature (70C to -30C)\nIndoor Temperature Constant at 20C', 'Hour of Year', ['Temperature (C)', 'Zone Load (W)'], 'Test TC2-StepDown-TS6.xlsx', 'EPlus 10cm Wood', 'B6:O52', "(C6,B7:B52,C7:C52,1);('ASHRAE 10cm Wood'!D7,B7:B52,'ASHRAE 10cm Wood'!D8:D53,2);('ASHRAE 10cm Wood'!E7,B7:B52,'ASHRAE 10cm Wood'!E8:E53,3);(I6,B7:B52,I7:I52,4);(J6,B7:B52,J7:J52,5)#('ASHRAE 10cm Wood'!H7,B7:B52,'ASHRAE 10cm Wood'!H8:H53,6);(O6,B7:B52,O7:O52,7);", ['E-Plus TimeStep=6\nTimeStep=1'], [], ['b--', 'mx', 'g*', 'm-', 'g-', 'y^', 'y-']) 
+engine.write_chart('Combo', '10 cm Wood-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 Version 1.0\nResults for ASHRAE Analytical Test TC2-Step Down\nTransient Conduction, Non-Adiabatic Wall, 10 cm Wood\n100 C Step Change in External Temperature (70C to -30C)\nIndoor Temperature Constant at 20C', 'Hour of Year', ['Temperature (C)', 'Zone Load (W)'], 'Test TC2-StepDown-TS6.xlsx', 'EPlus 10cm Wood', 'B6:O52', "(C6,B7:B52,C7:C52,1);('ASHRAE 10cm Wood'!D7,B7:B52,'ASHRAE 10cm Wood'!D8:D53,2);('ASHRAE 10cm Wood'!E7,B7:B52,'ASHRAE 10cm Wood'!E8:E53,3);(I6,B7:B52,I7:I52,4);(J6,B7:B52,J7:J52,5)#('ASHRAE 10cm Wood'!H7,B7:B52,'ASHRAE 10cm Wood'!H8:H53,6);(O6,B7:B52,O7:O52,7);", ['E-Plus TimeStep=6'], [], ['b--', 'mx', 'g*', 'm-', 'g-', 'y^', 'y-']) 
 
 ```
 
@@ -453,7 +453,6 @@ chosen as having a 90° tilt (vertical) and two orientations -- 180° azimuth
 
 
 ### South Facing Surface
-
 ```{exec_python}
 engine.write_chart('Combo', 'SolRad-South-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 ver 1.0\nResults for ASHRAE Analytical Test ExtSolRad\nAtlanta, August 21\nSouth Facing Opaque Surface', 'Time of Day', ['Incident Solar or Solar Flux (W/m2)', 'Zone Load (W/m2)'], 'Test ExtSolRad.xlsx', 'ASHRAE-ExtSolRad', 'B5:Q114', "(F5,'EPlus-ExtSolRad'!B7:B85,F6:F84,1);('EPlus-ExtSolRad'!O6,'EPlus-ExtSolRad'!B7:B85,'EPlus-ExtSolRad'!O7:O85,2)#(G5,'EPlus-ExtSolRad'!B7:B85,G6:G84,3);('EPlus-ExtSolRad'!Q6,'EPlus-ExtSolRad'!B7:B85,'EPlus-ExtSolRad'!Q7:Q85,4);", ['E-Plus TimeStep=6'], [], ['bx', 'r--', 'm*', 'g-'])
 
@@ -518,9 +517,9 @@ below, much better agreement resulted with the 1052-RP Toolkit data.
 
 
 ```{exec_python}
-engine.write_chart('Combo', 'SolRad-East-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 ver 1.0\nResults for ASHRAE Analytical Test ExtSolRad\nAtlanta, August 21\nEast Facing Opaque Surface', 'Time of Day', ['Incident Solar or Solar Flux (W/m2)', 'Zone Load (W/m2)'], '821Test ExtSolRad.xlsx', 'ASHRAE-ExtSolRad-East', 'B5:Q114', "(F5,'EPlus-ExtSolRad-East'!B7:B85,F6:F84,1);('EPlus-ExtSolRad-East'!O6,'EPlus-ExtSolRad-East'!B7:B85,'EPlus-ExtSolRad-East'!O7:O85,2)#(G5,'EPlus-ExtSolRad-East'!B7:B85,G6:G84,3);('EPlus-ExtSolRad-East'!Q6,'EPlus-ExtSolRad-East'!B7:B85,'EPlus-ExtSolRad-East'!Q7:Q85,4);", ['E-Plus TimeStep=6'], [], ['bx', 'r--', 'm*', 'g-'])
+engine.write_chart('Combo', 'SolRad-East-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 ver 1.0\nResults for ASHRAE Analytical Test ExtSolRad\nAtlanta, August 21\nEast Facing Opaque Surface', 'Time of Day', ['Incident Solar or Solar Flux (W/m2)', 'Zone Load (W/m2)'], '821Test ExtSolRad.xlsx', 'ASHRAE-ExtSolRad-East', 'B5:Q114', "(F5,'EPlus-ExtSolRad-East'!B7:B85,F6:F84,1);('EPlus-ExtSolRad-East'!O6,'EPlus-ExtSolRad-East'!B7:B85,'EPlus-ExtSolRad-East'!O7:O85,2)#(G5,'EPlus-ExtSolRad-East'!B7:B85,G6:G84,3);('EPlus-ExtSolRad-East'!Q6,'EPlus-ExtSolRad-East'!B7:B85,'EPlus-ExtSolRad-East'!Q7:Q85,4);", ['E-Plus TimeStep=6; 10 Minute Weather Data'], [], ['bx', 'r--', 'm*', 'g-'])
 
-engine.write_chart('ScatterLinesNoMarkers', 'Temp-East-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 ver 1.0\nResults for ASHRAE Analytical Test ExtSolRad\nAtlanta, August 21\nEast Facing Opaque Surface', 'Time of Day', 'Temperature (C)', '821Test ExtSolRad.xlsx', 'EPlus-ExtSolRad-East', 'B6:L114', "(C6,B7:B85,C7:C85,1);('ASHRAE-ExtSolRad-East'!B5,B7:B85,'ASHRAE-ExtSolRad-East'!B6:B84,2);(K6,B7:B85,K7:K85,3);('ASHRAE-ExtSolRad-East'!C5,B7:B85,'ASHRAE-ExtSolRad-East'!C6:C84,4);(L6,B7:B85,L7:L85,5);", ['E-Plus TimeStep=6'], [], ['g--', 'gx', 'r-', 'm*', 'b-']) 
+engine.write_chart('ScatterLinesNoMarkers', 'Temp-East-Chart', 'EnergyPlus Version {{ engine.config["EnergyPlusVersion"] }} & ASHRAE 1052 ver 1.0\nResults for ASHRAE Analytical Test ExtSolRad\nAtlanta, August 21\nEast Facing Opaque Surface', 'Time of Day', 'Temperature (C)', '821Test ExtSolRad.xlsx', 'EPlus-ExtSolRad-East', 'B6:L114', "(C6,B7:B85,C7:C85,1);('ASHRAE-ExtSolRad-East'!B5,B7:B85,'ASHRAE-ExtSolRad-East'!B6:B84,2);(K6,B7:B85,K7:K85,3);('ASHRAE-ExtSolRad-East'!C5,B7:B85,'ASHRAE-ExtSolRad-East'!C6:C84,4);(L6,B7:B85,L7:L85,5);", ['E-Plus TimeStep=6; 10 Minute Weather Data'], [], ['g--', 'gx', 'r-', 'm*', 'b-']) 
 ```
 
 
@@ -638,13 +637,13 @@ engine.write_chart('ScatterLines', 'SunLit Chart-South', 'Results for ASHRAE Ana
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |         
+With Overhang                |            |                  |                  |        |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!H152", "'EPlus-Shade-South-Horiz'!S153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!H153", "'EPlus-Shade-South-Horiz'!S154") }} 
-With Fin                     |            |                  |                  |         
+With Fin                     |            |                  |                  |        |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!I152", "'EPlus-Shade-South-Vert'!S153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!I153", "'EPlus-Shade-South-Vert'!S154") }} 
-With Overhang & Fin          |            |                  |                  |         
+With Overhang & Fin          |            |                  |                  |        |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!G152", "'EPlus-Shade-South-HorVer'!S154") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-South'!G153", "'EPlus-Shade-South-HorVer'!S155") }} 
 
@@ -666,13 +665,13 @@ engine.write_chart('ScatterLines', 'SunLit Chart-West', 'Results for ASHRAE Anal
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |
+With Overhang                |            |                  |                  |     |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!H152", "'EPlus-Shade-West-Horiz'!T153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!H153", "'EPlus-Shade-West-Horiz'!T154") }} 
-With Fin                     |            |                  |                  |
+With Fin                     |            |                  |                  |     |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!I152", "'EPlus-Shade-West-Vert'!S153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!I153", "'EPlus-Shade-West-Vert'!S154") }} 
-With Overhang & Fin          |            |                  |                  |
+With Overhang & Fin          |            |                  |                  |     |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!G152", "'EPlus-Shade-HorVer'!S153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!G153", "'EPlus-Shade-HorVer'!S154") }} 
 
@@ -693,13 +692,13 @@ engine.write_chart('ScatterLines', 'Solar Chart-West', 'Results for ASHRAE Analy
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |
+With Overhang                |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{W}{m^2}$   |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!H152", "'EPlus-Shade-West-Horiz'!T153") }} 
 Peak Load                    |  $\frac{Wh}{m^2}$     |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!H153", "'EPlus-Shade-West-Horiz'!T154") }} 
-With Fin                     |            |                  |                  |
+With Fin                     |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{W}{m^2}$   |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!I152", "'EPlus-Shade-West-Vert'!S153") }} 
 Peak Load                    |  $\frac{Wh}{m^2}$     |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!I153", "'EPlus-Shade-West-Vert'!S154") }} 
-With Overhang & Fin          |            |                  |                  |
+With Overhang & Fin          |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{W}{m^2}$   |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!G152", "'EPlus-Shade-HorVer'!S153") }} 
 Peak Load                    |  $\frac{Wh}{m^2}$     |  {{ engine.format_diff_row("821Test SolRadShade.xlsx", "'ASHRAE-Shade-West'!G153", "'EPlus-Shade-HorVer'!S154") }} 
 
@@ -724,7 +723,7 @@ engine.write_chart('ScatterLines', 'SunLit Chart-South', 'EnergyPlus Version {{ 
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |
+With Overhang                |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test WinReveal.xlsx", "'ASHRAE Data-Setback'!E123", "'EPlus Data-WithSetback'!AL153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test WinReveal.xlsx", "'ASHRAE Data-Setback'!E124", "'EPlus Data-WithSetback'!AL154") }} 
 
@@ -762,7 +761,7 @@ engine.write_chart('ScatterLines', 'Zone Load-East Chart', 'EnergyPlus Version {
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |
+With Overhang                |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("Test IntSolDist.xlsx", "'ASHRAE Data-Shade'!D123", "'EPlus Data-Shade'!AL154") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("Test IntSolDist.xlsx", "'ASHRAE Data-Shade'!D124", "'EPlus Data-Shade'!AL155") }} 
 
@@ -798,7 +797,7 @@ engine.write_chart('ScatterLines', 'Zone Load-East Chart', 'EnergyPlus Version {
 
 Test Parameter               |  Units     | 1052RP           |  EnergyPlus      |  % diff
 -----------------------------|------------|------------------|------------------|---------
-With Overhang                |            |                  |                  |
+With Overhang                |            |                  |                  |   |
 24-Hour Head Gain            |  $\frac{Wh}{m^2}$   |  {{ engine.format_diff_row("821Test IntSolDist.xlsx", "'ASHRAE Data-Shade'!D123", "'EPlus Data-Shade'!AL153") }} 
 Peak Load                    |  $\frac{W}{m^2}$     |  {{ engine.format_diff_row("821Test IntSolDist.xlsx", "'ASHRAE Data-Shade'!D124", "'EPlus Data-Shade'!AL154") }} 
 

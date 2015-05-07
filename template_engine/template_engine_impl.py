@@ -1043,7 +1043,7 @@ class TemplateEngine:
         logging.debug("Creating chart: " + chart_name)
         chart_title = re.sub('{{(.*?)}}', eval_replacement, chart_title)
         self.dump_cache_info()
-        output = ""
+        output = "<div style=\"page-break-inside: avoid;\">\n"
 
         outdir = os.path.join(self.outdir, "generated_media")
         outfilename = os.path.join(outdir, str(self._num_charts).zfill(3) + "_" + chart_name) + ".svg"
@@ -1132,6 +1132,7 @@ class TemplateEngine:
 
             hatch = ''
 
+            min_y = 0
 
             if chart_type == "ColumnClustered":
                 # logging.debug("Col " + str(i) + " vals " + str(values))
@@ -1212,6 +1213,8 @@ class TemplateEngine:
                                      label=name
                                     )
 
+                        min_y = min(min_y, min(filteredvals))
+
             else:
                 raise Exception("Unknown chart_type: " + chart_type)
 
@@ -1227,7 +1230,11 @@ class TemplateEngine:
                 plt.ylabel(yaxis, size='small')
 
 
-        plt.title(chart_title, size='small')
+        if len(chart_title.splitlines()) > 5:
+            plt.title(chart_title, size='x-small')
+        else:
+            plt.title(chart_title, size='small')
+
         plt.tick_params(axis='both', which='major', labelsize='xx-small')
 
 #        if plotsize == len(headings):
@@ -1296,10 +1303,27 @@ class TemplateEngine:
         elif any(len(l) > 20 for l in labels):
             legendcolumns = 3
 
+        ax.margins(0, 0.01)
+
+#        ax.relim()
+#        ax.autoscale(True, 'both', False)
+#        ax.autoscale_view(False)
+
         if ax2:
+            ax2.margins(0, 0.01)
+            bottomlim, toplim = ax2.get_ylim()
+            if min_y < 0:
+                bottomlim *= 1.2
+            toplim *= 1.2
+            ax2.set_ylim(bottomlim, toplim)
+#            ax2.relim()
             lines2, labels2 = ax2.get_legend_handles_labels()
             lines += lines2
             labels += labels2
+
+#            ax2.autoscale(True, 'both', False)
+#            ax2.autoscale_view(False)
+
 
         ax.legend(lines, labels, loc='upper center', bbox_to_anchor=(0.5, -0.25),
                           fancybox=True, shadow=False, ncol=legendcolumns, fontsize='xx-small').get_frame().set_alpha(1)
@@ -1317,10 +1341,10 @@ class TemplateEngine:
         elif len(notes) > 0:
             notetext = "<strong>Notes:</strong>" + "<br/>".join([re.sub('{{(.*?)}}', eval_replacement, line) for line in notes])
 
-        output += "![" + notetext + "](" + urllib.parse.quote(outfile) +")\n\n"
+        output += "![" + notetext + "](" + urllib.parse.quote(outfile) +")\n"
 
         fig = plt.gcf()
-        fig.set_size_inches(8.5,5.5)
+        fig.set_size_inches(8.5,5.25)
 
         if not os.path.exists(outdir):
             os.makedirs(outdir)
@@ -1330,6 +1354,8 @@ class TemplateEngine:
         plt.close()
 
         logging.debug("Creating chart: " + chart_name + " finished: " + outfilename)
+
+        output += "</div>\n\n"
 
         return output
 

@@ -21,6 +21,9 @@ table td:first-child { border-left: none; }
  table td { padding: 5px; }
  table th { padding: 5px; }
  table tbody tr { border-top: 1px solid #DDD; page-break-inside: avoid; }
+ H4.pagebreak { page-break-after: avoid; }
+ H3.pagebreak { page-break-after: avoid; }
+ H2.pagebreak { page-break-after: avoid; }
  H1.pagebreak { 
    page-break-before: always;
  }
@@ -35,12 +38,26 @@ table td:first-child { border-left: none; }
     }
 
     var h1s = document.getElementsByTagName("H1")
-
     for (i = 0; i < h1s.length; ++i) {
       h1s[i].className += " pagebreak ";
     }
-  }
+/*
+    var h2s = document.getElementsByTagName("H2")
+    for (i = 0; i < h2s.length; ++i) {
+      h2s[i].className += " pagebreak ";
+    }
 
+    var h3s = document.getElementsByTagName("H3")
+    for (i = 0; i < h3s.length; ++i) {
+      h3s[i].className += " pagebreak ";
+    }
+
+    var h4s = document.getElementsByTagName("H4")
+    for (i = 0; i < h4s.length; ++i) {
+      h4s[i].className += " pagebreak ";
+    }
+  }
+*/
 <!--
 /*
 //Add a div to each table cell so these don't break across pages when printed
