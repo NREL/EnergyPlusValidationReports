@@ -1117,18 +1117,13 @@ The following is observed from examining the results:
 
     - 100% of the internal loads showed up as sensible and latent cooling loads in the space, therefore energy balance at the zone level was achieved.
 
-
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A11:N33") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A39:H58") }}
 
-
-
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A62:L69,A73:L73,A75:L75,A77:L77,A79:L79,A81:L81,A83:L83,A85:L85") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A91:H94,A98:H98,A100:H100,A102:H102,A104:H104,A106:H106,A108:H108,A110:H110") }}
-
-
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A115:K122,A124:K124") }}
 
@@ -1136,16 +1131,13 @@ The following is observed from examining the results:
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A144:F147,A149:L149") }}
 
-
-
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A154:L160,A162:F162,A164:F164,A166:F166,A168:F168,A170:F170,A172:F172,A174:F174,A176:F176") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A154:L156,A158:L160,A164:L164,A166:L166,A168:L168,A170:L170,A172:L172,A174:L174,A176:L176") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A182:F185,A187:F187,A189:F189,A191:F191,A193:F193,A195:F195,A197:F197,A199:F199,A201:F201") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A206:I212,A214:I214,A216:I216,A218:I218,A220:I220,A222:I222,A224:I224,A226:I226,A228:I228") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A234:I240,A242:I242,A244:I244,A246:I246,A248:I248,A250:I250,A252:I252,A254:I254,A256:I256") }}
-
 
 - Coil Level Energy Balance
 
@@ -1268,17 +1260,17 @@ with the annual comparison tests:
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A34:H50") }}
 
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A56:L72") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A56:L62,A68:L72") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A81:H89") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A94:K108") }}
 
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A114:L127") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A114:L116,A118:L127") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A133:F143") }}
 
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A147:L158") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A147:L149,A151:L158") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-8.2.0.xlsx","CSV Labels Hidden", "A164:F172") }}
 
