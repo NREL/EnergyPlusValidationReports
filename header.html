@@ -41,6 +41,12 @@ table td:first-child { border-left: none; }
     for (i = 0; i < h1s.length; ++i) {
       h1s[i].className += " pagebreak ";
     }
+
+    var code = document.getElementsByTagName("code")
+    for (i = 0; i < code.length; ++i) {
+      code[i].style.fontFamily = "\"Liberation Mono\", \"Courier New\", \"monospace\"";
+    }
+
 /*
     var h2s = document.getElementsByTagName("H2")
     for (i = 0; i < h2s.length; ++i) {
