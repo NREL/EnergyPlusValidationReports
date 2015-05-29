@@ -848,7 +848,7 @@ The ability of EnergyPlus to predict thermal loads was tested using a test suite
 ANSI/ASHRAE 2011. Standard 140-2011, Standard Method of Test for the Evaluation of Building Energy Analysis Computer Programs, American
 Society of Heating, Refrigerating and Air-Conditioning Engineers, Atlanta, GA.
 
-EnergyPlus 2014. U.S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies.
+EnergyPlus {{ engine.year() }}. U.S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 
 NREL 1995. Judkoff, R. and J. Neymark. Home Energy Rating System Building Energy Simulation Test (HERS BESTEST), National Renewable Energy Laboratory, November 1995, NREL/TP-472-7332a.

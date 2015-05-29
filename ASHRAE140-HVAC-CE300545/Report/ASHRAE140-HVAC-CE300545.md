@@ -1229,7 +1229,7 @@ The Standard 140 HVAC tests are a very valuable testing tool which provides exce
 ANSI/ASHRAE 2011. Standard 140-2011, Standard Method of Test for the
 Evaluation of Building Energy Analysis Computer Programs, American Society of Heating, Refrigerating and Air-Conditioning Engineers, Atlanta, GA.
 
-EnergyPlus 2014. U.S. Department of Energy, Energy Efficiency and
+EnergyPlus {{ engine.year() }}. U.S. Department of Energy, Energy Efficiency and
 Renewable Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 

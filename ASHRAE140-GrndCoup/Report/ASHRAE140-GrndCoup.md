@@ -941,7 +941,7 @@ Clements, Edward, 2004, Three Dimensional Foundation Heat Transfer
 Modules for Whole-Building Energy Analysis, MS Thesis, Pennsylvania
 State University.
 
-EnergyPlus 2014. U.S. Department of Energy, Energy Efficiency and
+EnergyPlus {{ engine.year() }}. U.S. Department of Energy, Energy Efficiency and
 Renewable Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 

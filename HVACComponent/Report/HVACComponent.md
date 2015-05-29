@@ -1372,7 +1372,7 @@ DOE-2 1993a. “DOE-2 Supplement, Version 2.1E,” Section 4 –Plant, page
 DOE-2 1993b. “DOE-2 Supplement, Version 2.1E,” Section 4 –Plant, page
 4.82. LBL-34947. November 1993.
 
-EnergyPlus 2014. U.S. Department of Energy, Energy Efficiency and
+EnergyPlus {{ engine.year() }}. U.S. Department of Energy, Energy Efficiency and
 Renewable Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 

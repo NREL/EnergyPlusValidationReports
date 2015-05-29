@@ -746,7 +746,7 @@ The ANSI/ASHRAE Standard 140-2011 is a valuable testing tool which provides exce
 
 ANSI/ASHRAE 2011. Standard 140-2011, Standard Method of Test for the Evaluation of Building Energy Analysis Computer Programs, American Society of Heating, Refrigerating and Air-Conditioning Engineers, Atlanta, GA.
 
-EnergyPlus 2014. U,S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies. <http://www.energyplus.gov/>
+EnergyPlus {{ engine.year() }}. U,S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies. <http://www.energyplus.gov/>
 
 Purdy, J. and Beausoleil-Morrison, I. 2003. *International Energy Agency Building Energy Simulation Test for Heating, Ventilating, and Air-Conditioning Equipment Models (HVAC BESTEST): Fuel-Fired Furnace Test Cases*, CANMET Energy Technology Centre, Ottawa, Canada. March 2003.<span id="_Toc500051534" class="anchor"></span>
 

@@ -220,6 +220,9 @@ class TemplateEngine:
         global engine
         engine = self
 
+    def year(self):
+        return datetime.date.today().strftime("%Y")
+
     def month_year(self):
         return datetime.date.today().strftime("%B %Y")
 

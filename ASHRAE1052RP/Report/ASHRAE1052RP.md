@@ -1103,7 +1103,7 @@ basic modeling algorithms were working properly.
 
 Building Systems Laboratory. 1999. *BLAST 3.0 Users Manual*. Urbana-Champaign: Building Systems Laboratory, Department of Mechanical and Industrial Engineering, University of Illinois.
 
-EnergyPlus 2014. U.S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies.
+EnergyPlus {{ engine.year() }}. U.S. Department of Energy, Energy Efficiency and Renewable Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 
 Spitler, J.D., Rees, S.J., and Dongyi, X., 2001. Development of an Analytical Verification Test Suite for Whole Building Energy Simulation Programs – Building Fabric, ASHRAE 1052-RP Final Report, April 2001.

@@ -216,7 +216,7 @@ upstream, downstream, or average? It is not clear from the document.
 
 # References
 
-EnergyPlus 2014. Department of Energy, Energy Efficiency and Renewable
+EnergyPlus {{ engine.year() }}. Department of Energy, Energy Efficiency and Renewable
 Energy, Office of Building Technologies.
 [www.energyplus.gov](http://www.energyplus.gov)
 
