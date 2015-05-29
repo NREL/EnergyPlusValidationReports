@@ -1134,9 +1134,9 @@ The following is observed from examining the results:
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A154:L156,A158:L160,A164:L164,A166:L166,A168:L168,A170:L170,A172:L172,A174:L174,A176:L176") }}
 
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A182:F185,A187:F187,A189:F189,A191:F191,A193:F193,A195:F195,A197:F197,A199:F199,A201:F201") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A182:F185,A189:F189,A191:F191,A193:F193,A195:F195,A197:F197,A199:F199,A201:F201") }}
 
-{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A206:I212,A214:I214,A216:I216,A218:I218,A220:I220,A222:I222,A224:I224,A226:I226,A228:I228") }}
+{{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A206:I212,A216:I216,A218:I218,A220:I220,A222:I222,A224:I224,A226:I226,A228:I228") }}
 
 {{ engine.create_table_from_excel_range("Global Energy Balance Sheet-WithPumpsAndFan-16Days-8.2.0.xlsx","CSV Labels Hidden", "A234:I240,A242:I242,A244:I244,A246:I246,A248:I248,A250:I250,A252:I252,A254:I254,A256:I256") }}
 
